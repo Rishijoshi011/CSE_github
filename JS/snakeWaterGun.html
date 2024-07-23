@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+    <!-- 
+        Gun > snake     water > gun         sanke > water
+       Gun < water      water < snake       sanke < gun
+    -->
+    
+        <script>
+            function randomAlphabet() {
+                let alphabet = ['W','S','G'];
+                let randomAlphabetIndex = Math.floor(Math.random() * alphabet.length );
+                return alphabet[randomAlphabetIndex];
+            }
+            let botWon = 0, userWon = 0;
+            let options = ['W','S','G'] 
+            let i = 0;
+            let bot = randomAlphabet();
+            while (i < 10){
+                bot = randomAlphabet();
+                let userChoice = prompt("Enter Your Choice W, S or G");
+                if(bot == userChoice){
+                    console.log("equal");
+                } else if ((bot == 'W') && (userChoice == "G")){
+                    console.log("Bot Won");
+                    botWin += 1;
+                } else if ((bot == 'W') && (userChoice == 'S')){
+                    console.log("User Won");
+                    userWon++;
+                } else if((bot == 'G') && (userChoice == 'S')){
+                    console.log("Bot Won");
+                    botWin += 1;
+                } else if((bot == 'G') && (userChoice == 'W')){
+                    console.log("User Won");
+                    userWon++;
+                } else if((bot == 'S') && (userChoice == 'W')){
+                    console.log("Bot Won");
+                    botWon += 1;
+                } else if((bot == 'S') && (userChoice == 'G')){
+                    console.log("User Won");
+                    userWon++;
+                }
+                i++;
+            }
+            if (userWon == botWon){
+                console.log("Match is tie");
+            } else if (userWon > botWon){
+                console.log(`${userWon}: times You won`);
+            } else if (userWon < botWon){
+                console.log(`${botWon}: times Bot won`);
+            }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            html{
+                width: 100%;
+                height: 100%;    
+            }
+            body{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-content: center;
+            }
+            #template{
+                width: 30%;
+                height: 200px;
+                display: flex;
+                flex-direction: column;
+                border: 2px solid black;
+            }
+
+            #caption{
+                width: 100%;
+                height: 10px;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                text-transform: uppercase;
+                color: green;
+                font-size: larger;
+                font-weight: 600;
+            }
+            
+            #joke{
+                display: flex;
+                justify-content: center;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="template">
+            <p id="caption"> Joke of the day</p>
+            <p id="joke"></p>
+        </div>
+
+        <script>
+            let jokesArray = [
+                'Why don\'t scientists trust atoms?<br>Because they make up everything!',
+                'Why did the scarecrow win an award?<br>Because he was outstanding in his field!',
+                'What did one wall say to the other wall?<br>\"I\'ll meet you at the corner!\"',
+                'How do you organize a space party?<br>You planet!',
+                'Why did the math book look sad?<br>Because it had too many problems'
+        ]
+
+        let joke = document.getElementById('joke');
+        let index = Math.floor(Math.random() * jokesArray.length );
+        joke.innerHTML = jokesArray[index];
+        </script>
+    </body>
+</html>

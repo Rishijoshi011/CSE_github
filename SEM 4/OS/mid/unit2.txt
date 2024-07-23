@@ -1,0 +1,60 @@
+# ! Concurrency:
+Principles of Concurrency, Critical Section problem, Mutual
+Exclusion H/W Support, software approaches, Semaphores and
+Mutex, Message Passing, Monitors 
+# ! Classical Problems of Synchronization:
+Readers-Writers Problem, Producer Consumer Problem, Dining
+Philosopher problem
+# ! Deadlock:
+System model, Deadlock characterization, Methods for handling
+deadlocks, Deadlock prevention, Deadlock avoidance, Deadlock
+detection, Recovery from deadlock.
+
+
+
+
+
+
+
+
+
+# ! What is System call? Discuss different types of system calls.
+
+
+A system call is a mechanism used by programs to request services from the operating system kernel. It provides a way for user-level processes to interact with the operating system and access resources such as file operations, network communication, process management, and hardware devices. When a program makes a system call, it transitions from user mode to kernel mode, allowing the operating system to perform privileged operations on behalf of the program. Once the system call is completed, control returns to the user-level process.
+
+f pi mcd 
+
+f file system calls - read write open close seek 
+
+p process control calls - exec, wait , exit 
+
+i information maintainance calls - getpid, getuid , getgid 
+
+m memory management calls - mmap, brk
+
+c communication calls - send, recieve, pipe 
+
+d device control calls - read, write, ioctl
+
+
+# ! Context switching
+
+Context switching is the process of saving the state of a currently executing process or thread so that it can be restored later, allowing another process or thread to run. Here's a brief overview:
+
+Definition: Context switching involves saving the current state of a process or thread, including its program counter, register values, and other relevant information, and loading the state of another process or thread so that it can resume execution.
+
+Purpose: Context switching allows the operating system to efficiently switch between multiple processes or threads, enabling multitasking and concurrency in modern computer systems.
+
+Occurrence: Context switches occur when the scheduler decides to preempt the currently running process or thread and allocate CPU time to another process or thread. This can happen due to time slicing (preemptive multitasking), interrupt handling, or explicit blocking calls (voluntary relinquishing of CPU).
+
+Overhead: Context switching incurs overhead due to the need to save and restore the state of processes or threads. Minimizing this overhead is essential for maintaining system responsiveness and efficiency.
+
+Mechanism: During a context switch, the operating system saves the state of the current process or thread to a data structure known as the process control block (PCB) or thread control block (TCB). It then selects the next process or thread to run, loads its state from its corresponding PCB or TCB, and resumes execution.
+
+Frequency: Context switches occur frequently in multitasking systems, especially in preemptive scheduling environments where the scheduler can preempt processes or threads to give CPU time to others based on priority or time quantum.
+
+Impact: Efficient context switching is crucial for overall system performance, as excessive context switches can lead to increased overhead and reduced throughput. Proper scheduling algorithms and optimizations are employed to minimize the impact of context switching on system performance.
+
+# !  Explain the IPC Problem known as Dining Philosopher Problem.
+

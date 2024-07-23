@@ -1,0 +1,22 @@
+-----------------------RIAUHAS AMMUNATION---------------------
+
+Customer Name: John
+Customer Age: 26
+
+
+***************************PRIMARY WEAPON*********************
+
+
+Product Name: Vector
+Product Price: 650
+Product Category: Sub Machines
+
+
+*************************SECONDARY WEAPON*********************
+
+
+Product Name: 
+Product Price: 513
+Product Category: Knives
+
+--------------------------------------------------------------

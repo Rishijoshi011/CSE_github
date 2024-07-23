@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Clock</title>
+        <style>
+            html{
+                height: 99%;
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                height: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: center;
+                justify-content: center;
+            }
+            #box{
+                width: 700px;
+                height: 400px;
+                border: 2px solid black;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                /* background-color: red; */
+            }
+            #hour{
+                width: 31.33%;
+                height: inherit;
+                background: rgb(240, 163, 163);
+            }
+            #min{
+                width: 31.33%;
+                height: inherit;
+                background: rgb(204, 240, 163);
+                
+            }
+            #sec{
+                width: 31.33%;
+                height: inherit;
+                background: rgb(163, 189, 240);
+                
+            }
+            .colon{
+                width: 3%;
+                height: inherit;
+                background: #ccf0a3;
+
+            }
+            #hour, #min, #sec, .colon{
+                font-size: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            <div id="hour"></div>
+            <div class="colon">:</div>
+            <div id="min"></div>
+            <div class="colon">:</div>
+            <div id="sec"></div>
+        </div>
+
+        <script>
+            let boxDiv = document.getElementById('box');
+            let hDiv = box.firstElementChild;
+            let mDiv = box.firstElementChild.nextElementSibling.nextElementSibling;
+            let sDiv = box.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
+            
+            let currntTime;
+            let hour; 
+            let min; 
+            let sec;
+          
+            // console.log(boxDiv);
+            // console.log(hDiv);
+            // console.log(mDiv);
+            // console.log(sDiv);
+            
+            function updateClock(){
+                currntTime = new Date();
+                hour = currntTime.getHours();
+                min = currntTime.getMinutes();
+                sec = currntTime.getSeconds();
+                
+                hDiv.textContent = hour;
+                mDiv.textContent = min;
+                sDiv.textContent = sec;
+                // console.log(hour,min,sec);   
+            }
+            function fillColor() {
+                let stepSize = 0;
+                const intervalId = setInterval(function () {
+                    sDiv.style.height = `${stepSize}%`;
+                    sDiv.style.background = "#a3bdf0";
+                    stepSize += 10;
+                    
+                    if (stepSize > 100) {
+                        clearInterval(intervalId); 
+                    }
+                }, 10);
+            }
+            function fillColor2(){
+                let stepSize = 0;
+                const intervalId2 = setInterval(function () {
+                        if(sec === 0 ){
+                        mDiv.style.height = `${stepSize}%`;
+                        mDiv.style.background = "#ccf0a3";
+                        stepSize += 10;
+    
+                        if (stepSize > 100) {
+                            clearInterval(intervalId2); 
+                        }
+                    }
+                },10);
+            }
+            function fillColor3(){
+                let stepSize = 0;
+                const intervalId3 = setInterval(function () {
+                        if(min === 0 ){
+                        hDiv.style.height = `${stepSize}%`;
+                        hDiv.style.background = "#cb5a5a";
+                        stepSize += 10;
+    
+                        if (stepSize > 100) {
+                            clearInterval(intervalId3); 
+                        }
+                    }
+                },10);
+            }
+            setInterval(updateClock,1000);
+            setInterval(fillColor,1000);
+            setInterval(fillColor2,1000);
+            setInterval(fillColor3,1000);
+
+        </script>
+    </body>
+</html>

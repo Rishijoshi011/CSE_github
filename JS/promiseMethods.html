@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Promise Methods</title>
+    </head>
+    <body>
+        <script>
+
+            let p1 = new Promise((resolve, reject) => {
+                setTimeout(() =>{
+                    resolve("value 1");
+                    // reject(new Error("Error"));
+                }, 1000);
+            });
+
+            let p2 = new Promise((resolve, reject) => {
+                setTimeout(() =>{
+                    resolve("value 2");
+                    // reject(new Error("Error"));
+                }, 2000);
+            });
+            
+            let p3 = new Promise((resolve, reject) => {
+                setTimeout(() =>{
+                    resolve("value 3");
+                    // reject(new Error("Error"));
+                }, 3000);
+            });
+
+
+            // p1.then((value) => {
+            //     console.log(value);
+            // });
+
+            // p2.then((value) => {
+            //     console.log(value);
+            // });
+
+            // p3.then((value) => {
+            //     console.log(value);
+            // });
+
+
+            // let allPromise = Promise.all([p1, p2, p3]);
+            // let allPromise = Promise.allSettled([p1, p2, p3]);
+            // let allPromise = Promise.race([p1, p2, p3]);
+            // let allPromise = Promise.resolve(11);
+            let allPromise = Promise.reject(11);
+            allPromise.then((value) => {
+                console.log(value);
+            });
+
+           
+        </script>
+    </body>
+</html>

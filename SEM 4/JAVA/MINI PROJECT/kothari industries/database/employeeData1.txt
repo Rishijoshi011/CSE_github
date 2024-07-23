@@ -1,0 +1,11 @@
+Employee ID: KT001
+Name: Rishi Joshi
+Designation: Chairman
+DOB: 12-08-2005
+Gender: male
+Age: 18
+Phone: 1234567890
+Personal Email: rj011@gmail.com
+Address: porbandar
+Salary: 100.0
+Password: 123456

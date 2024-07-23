@@ -1,0 +1,11 @@
+# ! Architecture of OS
+
+1. Monolithic kernel
+2. Microkernel
+3. Hybrid kernel
+4. Exokernel
+5. Layered kernel
+
+# * Monolithic kernel
+
+    ->

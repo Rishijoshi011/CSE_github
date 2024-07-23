@@ -1,0 +1,8 @@
+2024-04-20 20:23:16 Sender Account Number: 559
+2024-04-20 20:23:16 Receiver Account Number: 551
+2024-04-20 20:23:16 Transfered Amount: 2000.0
+
+2024-04-20 20:24:01 Sender Account Number: 551
+2024-04-20 20:24:01 Receiver Account Number: 559
+2024-04-20 20:24:01 Transfered Amount: 500.0
+

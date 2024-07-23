@@ -1,0 +1,52 @@
+123456
+2024-04-06 17:42:48 = 500 is credited
+2024-04-06 17:42:48 Total balance is: 500
+
+2024-04-06 17:42:57 = 200 is debited
+2024-04-06 17:42:57 Total balance is: 300
+
+2024-04-06 17:44:48 = 250 is credited
+2024-04-06 17:44:48 Total balance is: 550
+
+2024-04-06 17:48:23 = 250 is debited
+2024-04-06 17:48:23 Total balance is: 300
+
+2024-04-06 17:50:06 = 250 is credited
+2024-04-06 17:50:06 Total balance is: 550
+
+2024-04-06 17:50:56 = 250 is debited
+2024-04-06 17:50:56 Total balance is: 300
+
+2024-04-06 17:52:34 = 250 is credited
+2024-04-06 17:52:34 Total balance is: 550
+
+2024-04-06 17:53:17 = 250 is credited
+2024-04-06 17:53:17 Total balance is: 800
+
+2024-04-07 14:09:36 = 250 is credited
+2024-04-07 14:09:36 Total balance is: 1050
+
+2024-04-17 11:33:18 = 50 is credited
+2024-04-17 11:33:18 Total balance is: 1100
+
+2024-04-17 13:52:57 = 50 is debited
+2024-04-17 13:52:57 Total balance is: 1050
+
+2024-04-17 14:13:06 = 50 is credited
+2024-04-17 14:13:06 Total balance is: 1100
+
+2024-04-17 15:20:36 = 500 is credited
+2024-04-17 15:20:36 Total balance is: 1600
+
+2024-04-17 15:20:46 = 600 is debited
+2024-04-17 15:20:46 Total balance is: 1000
+
+2024-04-17 15:21:29 = 1000 is debited
+2024-04-17 15:21:29 Total balance is: 0
+
+2024-04-17 17:24:58 = 500.25 is credited
+2024-04-17 17:24:58 Total balance is: 500.25
+
+2024-04-18 09:14:46 = 50000.0 is credited
+2024-04-18 09:14:46 Total balance is: 50500.25
+

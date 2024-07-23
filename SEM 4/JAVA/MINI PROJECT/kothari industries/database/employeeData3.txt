@@ -1,0 +1,11 @@
+Employee ID: KT003
+Name: Rudra
+Designation: CFO
+DOB: 10-01-2003
+Gender: Male
+Age: 21
+Phone: 1234567890
+Personal Email: rudra@gmail.com
+Address: Gujarat
+Salary: 10000.0
+Password: 123456

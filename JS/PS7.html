@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <nav id="navBar">
+        <ul>
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Contact Us</li>
+        </ul>
+    </nav>
+    <script>
+        let navBar = document.getElementById("navBar");
+        navBar.style.width = '100%';
+        navBar.style.height = '8vh';
+        navBar.style.background = "#bbf3bb";
+        navBar.firstElementChild.style.listStyle = 'none';
+        navBar.firstElementChild.style.display = 'flex';
+        navBar.firstElementChild.style.width = '40%';
+        navBar.firstElementChild.style.height = 'inherit';
+        navBar.firstElementChild.childNodes[1].style.margin = '12px'
+        navBar.firstElementChild.childNodes[3].style.margin = '12px'
+        navBar.firstElementChild.childNodes[5].style.margin = '12px'
+        navBar.firstElementChild.childNodes[1].style.color = 'green'
+        navBar.firstElementChild.childNodes[3].style.color = 'red'
+        navBar.firstElementChild.childNodes[5].style.color = 'red'
+        
+        navBar.firstElementChild.firstElementChild.style.color = 'green'
+        navBar.firstElementChild.lastElementChild.style.color = 'green'
+        
+        Array.from(document.getElementsByTagName('li')).forEach((element) => {
+            element.style.background = 'cyan';
+        });
+        
+    </script>
+</body>
+</html>

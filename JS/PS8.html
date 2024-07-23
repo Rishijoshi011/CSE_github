@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PS 8</title>
+        <style>
+            html{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-content: center;
+            }
+            #container{
+                width: 400px;
+                height: 400px;
+                border-radius: 100%;
+                border: none;
+            }
+            .colormode{
+                background-color: rgb(131, 96, 205);
+            }
+
+        </style>
+    </head>
+    <body>
+        <!-- <div id="buttons">
+            <button id="B1">Button 1</button>
+            <button id="B2">Button 2</button>
+            <button id="B3">Button 3</button>
+        </div> -->
+
+        <!-- <div id="bookmark">
+            <input type="text" name="url" id="inpURL">
+            <button> Bookmark </button>
+        </div> -->
+
+        <button id="container" class="colormode"></button>
+        <script>
+            // let b1 = document.getElementById('buttons').firstElementChild;
+            // let b2 = document.getElementById('buttons').firstElementChild.nextElementSibling;
+            // let b3 = document.getElementById('buttons').firstElementChild.nextElementSibling.nextElementSibling;
+
+            // console.log(b1);
+            // console.log(b2);
+            // console.log(b3);
+
+            // b1.addEventListener('click', function() {
+            //     alert("Hello from b1");
+            // });
+            // b2.addEventListener('click', function() {
+            //     alert("Hello from b2");
+            // });
+            // b3.addEventListener('click', function() {
+            //     alert("Hello from b3");
+            // });
+                    
+            // document.addEventListener('click', function(event) {
+            //     if (event.target === b1){
+            //         alert("Hello from b1");
+            //     } else if (event.target === b2){
+            //         alert("Hello from b2");
+            //     } else if (event.target === b3){
+            //         alert("Hello from b3");
+            //     }
+            // });
+       
+
+// ------------------------------------------------------------------------------------------------
+
+            
+            // let bookmarkBtn = document.getElementById('bookmark').firstElementChild.nextElementSibling;
+            // let inp = document.getElementById('inpURL');
+            
+            // console.log(inp);
+            // console.log(bookmarkBtn);
+            
+            // let a = "";
+            // bookmarkBtn.addEventListener('click', function() {
+                //     a = window.location.href;
+                //     console.log("URL is: ",a);
+                // });
+            
+            // let main = document.getElementById('bookmark');
+
+            // bookmarkBtn.addEventListener('click', function() {
+            //     a = inp.value;
+            //     console.log("URL is: ",a);
+            //     let p = document.createElement('p');
+            //     p.innerHTML = `<a href="http://${a}"> ${a}</a>`;
+            //     main.append(p); 
+            // });
+
+            let bulb = document.getElementById('container');
+        
+            bulb.addEventListener('click', function(event){
+                bulb.classList.toggle('colormode');
+                document.body.classList.toggle('colormode');
+            });
+            
+            // setInterval(async function(){
+            //     bulb.classList.toggle('colormode');
+            //     document.body.classList.toggle('colormode');    
+            // },1000);
+            
+        </script>
+
+    </body>
+</html>

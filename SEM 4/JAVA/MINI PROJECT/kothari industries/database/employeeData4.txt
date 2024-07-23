@@ -1,0 +1,11 @@
+Employee ID: KT004
+Name: madhvi bera
+Designation: Managing Director
+DOB: 01-01-2001
+Gender: male
+Age: 23
+Phone: 1234567890
+Personal Email: anything@gmail.com
+Address: gujarat
+Salary: 10
+Password: 123456

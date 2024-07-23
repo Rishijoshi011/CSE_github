@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="output">Move your mouse over this area.</div>
+        <!-- <div> -->
+            <!-- <img src="abc.gif" alt="..fsaf." width="400px"> -->
+        <!-- </div> -->
+        <script>
+            const output = document.getElementById('output');
+            const imageElement = document.createElement('img');
+            document.body.style.background = 'black'
+            document.body.style.color = 'purple'
+            document.addEventListener('mousemove', (event) => {
+                // Display the mouse coordinates in the output element
+                output.textContent = `Mouse Coordinates: X ${event.clientX}, Y ${event.clientY}`;
+                imageElement.src = 'abc.gif';
+                imageElement.style.position = 'relative';
+                imageElement.style.width = '70px';
+                imageElement.style.transform = 'scaleX(-1)';
+                let x = (event.clientY - imageElement.height / 2) + 180;
+                let y = (event.clientX - imageElement.width / 2) - 20;
+                imageElement.style.top = x + 'px';
+                imageElement.style.left = y + 'px';
+                output.appendChild(imageElement);
+            });
+    </script>
+    </body>
+</html>

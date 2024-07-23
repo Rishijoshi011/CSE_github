@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            function loadScript(src, callback){
+                var script = document.createElement('script');
+                script.src = src;
+                script.onload = function() {
+                    console.log("Script loaded with URL: " + src);
+                    callback(src, null);
+                };
+                script.onerror = function(){
+                    confirmation(new Error(src));
+                }   
+                // script.onload = () => callback(src);
+                document.body.appendChild(script);
+            }
+            function confirmation(src, error){
+                if(error){
+                    alert("Script has some issues: " + src);
+                    return
+                }
+                alert('Script loaded successfully: ' + src);
+            }
+            loadScript("https://code.jqury.com/jquery-3.6.4.min.js",confirmation);
+        </script>
+    </body>
+</html>

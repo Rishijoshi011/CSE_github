@@ -1,0 +1,277 @@
+# !Explain the working of Central Processing Unit (CPU) of a computer.
+
+    -> fetch
+    -> decode
+    -> execute
+    -> store (memory access)
+
+# ! classification of Memory
+
+    https://www.google.com/imgres?imgurl=https%3A%2F%2Fstatic.javatpoint.com%2Fcomputer%2Fimages%2Fclassification-of-memory.png&tbnid=RzP_oZvimCa6VM&vet=12ahUKEwjGo9nF8oKFAxUtkGMGHSA_DyIQMygCegQIARBP..i&imgrefurl=https%3A%2F%2Fwww.javatpoint.com%2Fclassification-of-memory&docid=JSFA2Xrh9ODq-M&w=668&h=396&q=classification%20of%20computer%20memory&ved=2ahUKEwjGo9nF8oKFAxUtkGMGHSA_DyIQMygCegQIARBP
+
+# ! Explain the different types of computer architectures.
+
+Von Neumann Architecture:
+
+The Von Neumann architecture, proposed by John von Neumann in the 1940s, is the most common type of computer architecture.
+It consists of a single shared memory for both data and instructions.
+Instructions and data are fetched from memory and processed sequentially by the CPU.
+Von Neumann architecture is used in most general-purpose computers, including personal computers and servers.
+
+Harvard Architecture:
+
+In the Harvard architecture, separate memories are used for instructions and data.
+This architecture allows for simultaneous fetching of instructions and data, leading to potentially faster performance.
+Harvard architecture is commonly found in embedded systems and microcontrollers.
+
+Modified Harvard Architecture:
+
+The modified Harvard architecture combines features of both Von Neumann and Harvard architectures.
+It uses separate memories for instructions and data but allows data memory to be accessed by the CPU for both instructions and data.
+This architecture is often used in some microcontrollers and digital signal processors (DSPs).
+
+Parallel Architecture:
+
+Parallel architectures use multiple processing units working together to perform tasks simultaneously.
+These architectures can be classified into shared-memory and distributed-memory systems, depending on how they access and share data.
+Parallel architectures are commonly used in high-performance computing (HPC) systems and supercomputers.
+
+
+# ! What are the different types of control lines used in computer? Explain about itsfunctions
+
+Clock Signal (CLK):
+
+The clock signal is a periodic signal that synchronizes the operation of the entire computer system.
+It provides timing information to coordinate the execution of instructions and the transfer of data between different components.
+The frequency of the clock signal determines the speed at which the CPU and other components operate.
+Read Enable (RE) and Write Enable (WE):
+
+Read enable and write enable signals are used to control memory operations, such as reading data from memory (RE) or writing data to memory (WE).
+When the read enable signal is asserted, it indicates that the CPU or other components are requesting to read data from memory.
+When the write enable signal is asserted, it indicates that the CPU or other components are requesting to write data to memory.
+Address Lines (ADDR):
+
+Address lines are used to specify memory locations or I/O device addresses.
+The CPU generates address signals to select the memory location or I/O device to be accessed.
+The number of address lines determines the maximum addressable memory size of the computer system.
+Data Lines (DATA):
+
+Data lines are used to transfer data between the CPU, memory, and I/O devices.
+The CPU sends data signals to memory or I/O devices for writing data (write operation) or receives data signals from memory or I/O devices for reading data (read operation).
+Control Signals (Control):
+
+Control signals encompass various signals used to control specific operations within the computer system.
+Examples of control signals include interrupt request (IRQ), reset, bus request (BR), bus grant (BG), and memory select (MSEL).
+These signals are used to initiate specific actions such as interrupt handling, system initialization, and bus arbitration.
+Status Signals (Status):
+
+Status signals convey information about the status or condition of various components within the computer system.
+Examples of status signals include busy, ready, error, acknowledge (ACK), and wait (WAIT).
+These signals provide feedback to the CPU or other components regarding the outcome of operations or the availability of resources.
+
+# ! Explain the steps to be followed for the addition of floating point numbers.
+
+Align the Exponents:
+
+Before adding the mantissas (the significands) of the floating-point numbers, ensure that the exponents are aligned.
+Adjust the smaller exponent by shifting its mantissa and adjusting the exponent accordingly until both exponents are the same.
+Add or Subtract the Mantissas:
+
+Once the exponents are aligned, add or subtract the mantissas of the floating-point numbers.
+If the signs of the numbers are the same (both positive or both negative), simply add the mantissas together.
+If the signs are different, subtract the smaller mantissa from the larger one.
+Normalize the Result:
+
+After adding or subtracting the mantissas, normalize the result by ensuring that there is exactly one non-zero digit to the left of the decimal point.
+Adjust the exponent accordingly to maintain the correct value.
+Round the Result:
+
+Since floating-point arithmetic may introduce rounding errors, round the normalized result to the desired precision.
+Determine the appropriate rounding method based on the desired precision and the specific rounding rules (e.g., round to the nearest, round up, round down).
+Handle Overflow and Underflow:
+
+Check for overflow (result too large to represent) or underflow (result too small to represent) and handle these cases appropriately.
+Overflow may occur if the result exceeds the maximum representable value, while underflow may occur if the result is too close to zero.
+Handle Special Cases:
+
+Be aware of special cases such as zero, infinity, NaN (Not a Number), and denormalized numbers, and handle them according to the IEEE 754 floating-point standard.
+Finalize the Result:
+
+Once the result is rounded and any special cases are handled, the addition of the floating-point numbers is complete.
+Ensure that the result is represented in the appropriate format (e.g., scientific notation, decimal notation) and with the correct sign.
+
+# ! Explain Relative addressing mode and Base Register addressing Mode with example.
+
+Relative Addressing Mode:
+
+In relative addressing mode, the operand's address is specified relative to the current value of the program counter (PC) or instruction pointer (IP).
+The operand's address is expressed as an offset or displacement from the current program counter value.
+This mode is useful for accessing data located near the current instruction or for implementing control transfer instructions such as branches or jumps.
+Example:
+Suppose the current instruction is located at memory address 2000, and the relative address of the operand is +50 (indicating a forward displacement of 50 memory locations). To calculate the effective address, we add the relative address to the current program counter value:
+
+Effective Address = Current Program Counter + Relative Address
+                  = 2000 + 50
+                  = 2050
+
+
+Base Register Addressing Mode:
+
+In base register addressing mode, the operand's address is specified as an offset or displacement from a base address stored in a dedicated register called the base register.
+The base register contains the starting address of a memory region, and the operand's address is calculated by adding the displacement to the value stored in the base register.
+This mode is useful for accessing data located within a specific memory segment or data structure.
+Example:
+Suppose the base register (BR) contains the value 3000, and the displacement of the operand is +100 (indicating an offset of 100 memory locations from the base address). To calculate the effective address, we add the displacement to the value stored in the base register:
+
+Effective Address = Base Register + Displacement
+                  = 3000 + 100
+                  = 3100
+
+# ! What is memory interleaving? Explain it with necessary figures
+
+Memory interleaving is a technique used in computer architecture to improve memory access performance by distributing data across multiple memory modules or banks in a systematic manner. This helps to reduce memory access contention and increase the effective memory bandwidth.
+
+
+https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.geeksforgeeks.org%2Fmemory-interleaving%2F&psig=AOvVaw1B4puYxKgc7rKmCjl78EFb&ust=1711030332309000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCODyxumCg4UDFQAAAAAdAAAAABAE
+
+
+# ! Explain the two bus organization and its working principle.
+
+https://upload.wikimedia.org/wikipedia/commons/6/68/Computer_system_bus.svg
+
+
+
+# TODO: remove control bus in above image to create 2 bus diag.
+
+
+Two-bus organization, also known as separate I/O bus organization, is a computer architecture design that separates the data and address buses into two distinct buses: one for data transfer (Data Bus) and another for address transfer (Address Bus). Here's an explanation of the two-bus organization and its working principle:
+
+Working Principle:
+
+Data Bus:
+
+The Data Bus is responsible for carrying data between the CPU, memory, and I/O devices.
+It is bidirectional, allowing data to be transferred between the CPU and memory or I/O devices in both directions.
+The width of the data bus determines the number of bits that can be transferred simultaneously. For example, a 32-bit data bus can transfer 32 bits (4 bytes) of data in parallel.
+During a read operation, data flows from memory or an I/O device to the CPU via the data bus. During a write operation, data flows from the CPU to memory or an I/O device.
+Address Bus:
+
+The Address Bus is responsible for carrying memory addresses generated by the CPU.
+It is unidirectional, carrying addresses only from the CPU to memory or I/O devices.
+The width of the address bus determines the maximum addressable memory space. For example, a 32-bit address bus can address up to 2^32 (4 GB) memory locations.
+When the CPU needs to read or write data from/to memory or an I/O device, it places the memory address on the address bus.
+
+# ! How are numbers represented in Computer system? Explain any number representation briefly.
+
+
+Numbers in a computer system are represented using various number systems, with the most common ones being binary (base-2), decimal (base-10), and hexadecimal (base-16). Each number system has its own set of symbols and rules for representing numerical values.
+
+Let's briefly explain the binary number representation:
+
+Binary Number Representation:
+
+Binary is a base-2 number system, meaning it uses only two symbols: 0 and 1.
+Each digit in a binary number represents a power of 2, starting from the rightmost digit.
+The value of each digit is calculated by multiplying the digit by 2 raised to the power of its position.
+For example, the binary number 1011 is calculated as follows:
+(1 * 2^3) + (0 * 2^2) + (1 * 2^1) + (1 * 2^0) = 8 + 0 + 2 + 1 = 11 in decimal.
+
+
+# ! Explain the 8085 instruction set.
+
+Data Transfer Instructions:
+
+MOV: Move data from a source register/memory location to a destination register/memory location.
+MVI: Move an immediate value (constant) into a register or memory location.
+LXI: Load immediate value into a register pair.
+
+Arithmetic Instructions:
+
+ADD: Add the contents of a register/memory location to the accumulator.
+SUB: Subtract the contents of a register/memory location from the accumulator.
+INR: Increment the contents of a register or memory location.
+DCR: Decrement the contents of a register or memory location.
+
+Logical Instructions:
+
+ANA: Perform a logical AND operation between the accumulator and a register/memory location.
+ORA: Perform a logical OR operation between the accumulator and a register/memory location.
+XRA: Perform a logical XOR operation between the accumulator and a register/memory location.
+
+Branching Instructions:
+
+JMP: Unconditional jump to a specified memory address.
+JZ, JNZ, JC, JNC, JM, JP, etc.: Conditional jump instructions based on the status of the flags in the flag register.
+
+Subroutine Call and Return Instructions:
+
+CALL: Call a subroutine at a specified memory address.
+RET: Return from a subroutine.
+
+Input/Output Instructions:
+
+IN: Input data from an I/O port into the accumulator.
+OUT: Output data from the accumulator to an I/O port.
+
+Control Instructions:
+
+NOP: No operation.
+HLT: Halt the microprocessor.
+
+Stack Instructions:
+
+PUSH: Push the contents of a register pair onto the stack.
+POP: Pop the contents of the stack into a register pair.
+
+Intrrupt instructions:
+RIM(Read Intrrupt Mask)
+SIM(Set Intrrupt Mask)
+EI(Enable Itrrupt)
+DI(Disable Itrrupt)
+
+# ! Differentiate the computer architecture characteristics
+
+Certainly! Here's the differentiation of computer architecture characteristics in a tabular format:
+
+|-----------------------|--------------------------------------------------------|--------------------------------------------------------|
+| Instruction Set       | Complex instructions performing multiple operations    | Simplified instructions performing one operation each   |
+| Memory Hierarchy      | Von Neumann Architecture                                | Harvard Architecture                                    |
+| Pipelining            | Single pipeline                                         | Multiple pipelines running in parallel                  |
+| Parallelism           | Less parallelism                                        | More parallelism                                        |
+| Addressing Modes      | Support for various addressing modes                    | Limited addressing modes                                |
+| Control Unit          | Hardwired Control Unit                                  | Microprogrammed Control Unit                            |
+| Data Path Width       | Variable word size (8-bit to 64-bit)                    | Consistent word size (usually 32-bit)                   |
+
+
+# ! List out the Addressing modes of 8085 and explain in detail.
+
+Certainly! Here's the revised table without the "Base" column and with the addition of the base addressing mode:
+
+| Addressing Mode                | Description                                                                                                                                                                                                                                   |
+|--------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Immediate                      | The operand is specified directly in the instruction itself. For example, `MVI A, 05` loads the immediate value `05` into register A.                                                                                                         |
+| Direct                         | The memory address of the operand is specified directly in the instruction. For example, `LDA 2000H` loads the accumulator with the contents of memory location `2000H`.                                                                     |
+| Register                       | The operand is stored in one of the CPU registers. For example, `MOV B, C` copies the content of register C into register B.                                                                                                                  |
+| Register Indirect              | The memory address of the operand is stored in a register, and the actual data is located at the memory address stored in that register. For example, `LDA (HL)` loads the accumulator with the contents of the memory location whose address is stored in the HL register pair. |
+| Indexed                        | The effective address of the operand is obtained by adding an index value to a base address. For example, `MOV A, (X)` copies the content of the memory location whose address is obtained by adding the content of the X register to the base address.            |
+| Stack Pointer Relative         | The operand is obtained by adding an offset value to the stack pointer (SP). For example, `MOV A, (SP)` copies the content of the memory location whose address is obtained by adding an offset value to the stack pointer.                         |
+
+
+# ! Explain Amdahl’s law.
+
+Amdahl's Law, formulated by computer architect Gene Amdahl in 1967, is a principle used to predict the theoretical speedup that can be achieved in a computational task when only a portion of that task is parallelizable. The law is particularly relevant in the context of parallel computing and multiprocessing systems.
+
+The principle behind Amdahl's Law is based on the observation that not all parts of a computational task can be parallelized. Even in applications that are designed for parallel execution, there are often sequential or serial portions that cannot be parallelized due to dependencies, resource limitations, or other constraints. Amdahl's Law quantifies the impact of these sequential portions on the overall speedup achievable through parallelization.
+
+Amdahl's Law is typically expressed using the following formula:
+
+speedup = 1 / (1 - P) + P / N
+
+Where:
+
+Speedup
+Speedup is the theoretical speedup achieved by parallelizing the task.
+P is the proportion of the task that can be parallelized (expressed as a fraction between 0 and 1).
+N is the number of processors or processing units available for parallel execution.
+
+

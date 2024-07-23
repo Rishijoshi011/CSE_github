@@ -1,0 +1,219 @@
+#! Fetures of java
+
+# * SARS HD PPMODI
+
+=> Simple
+    -> Java is very easy to learn, and its syntax is simple, clean and easy to understand.
+=> Architecture neutral
+    -> Java is architecture neutral because there are no implementation dependent features, for example, the size of primitive types is fixed.  
+=> Robust
+    -> Java's robustness refers to its ability to provide strong memory management, exception handling, and built-in security features, ensuring reliable and secure execution of code.
+=> Secured
+    -> Java is best known for its security. With Java, we can develop virus-free systems.
+=> High Performance
+    -> Java is faster than other traditional interpreted programming languages because Java bytecode is "close" to native code. It is still a little bit slower than a compiled language (e.g., C++). Java is an interpreted language that is why it is slower than compiled languages
+=> Dynamic 
+    -> Java is a dynamic language. It supports the dynamic loading of classes. It means classes are loaded on demand. It also supports functions from its native languages
+=> Portable
+    -> Java is portable because it facilitates you to carry the Java bytecode to any platform. It doesn't require any implementation.
+=> Platform independent
+    -> Java is platform independent because it is different from other languages like C, C++, etc. which are compiled into platform specific machines while Java is a write once, run anywhere language. A platform is the hardware or software environment in which a program runs.
+=> Multithreaded
+    -> A thread is like a separate program, executing concurrently. We can write Java programs that deal with many tasks at once by defining multiple threads. The main advantage of multi-threading is that it doesn't occupy memory for each thread. It shares a common memory area. 
+=> Object-Oriented
+    -> Java is an object-oriented programming language. Everything in Java is an object. Object-oriented means we organize our software as a combination of different types of objects that incorporate both data and behavior.
+=> Distributed
+    -> Java is distributed because it facilitates users to create distributed applications in Java. RMI and EJB are used for creating distributed applications. This feature of Java makes us able to access files by calling the methods from any machine on the internet.
+=> Interpreted
+    -> Java is a dynamic language. It supports the dynamic loading of classes. It means classes are loaded on demand. It also supports functions from its native languages
+
+# ! Bytecode
+
+    -> Bytecode: Java source code is compiled into bytecode. Bytecode is a set of instructions understandable by the JVM.
+Bytecode and JVM (Java Virtual Machine) are key components of the Java programming language.
+
+    -> Bytecode: Java source code is compiled into bytecode. Bytecode is a set of instructions understandable by the JVM. It's an intermediate representation of the program that is platform-independent. This means that once the Java source code is compiled into bytecode, it can be run on any platform that has a JVM installed without the need for recompilation.
+
+# ! JVM
+Java Virtual Machine (JVM): JVM is an abstract computing machine that enables Java bytecode to be executed on any platform. It acts as a runtime engine for running Java applications. When you run a Java program, the JVM loads the bytecode, interprets it, and executes the program. JVM is responsible for various tasks such as memory management, garbage collection, and dynamic class loading.
+
+Here's a brief overview of how JVM works:
+
+Class Loader: JVM's class loader loads bytecode into the JVM.
+Bytecode Verifier: It checks the bytecode to ensure it doesn't violate Java's security constraints.
+Interpreter and Just-In-Time (JIT) Compiler: JVM can interpret bytecode directly or compile it into native machine code for better performance through a JIT compiler.
+Garbage Collector: JVM manages memory allocation and deallocation automatically through its garbage collector.
+Execution Engine: JVM executes bytecode instructions on the host hardware.
+
+# ! JDK
+
+JDK (Java Development Kit) is a software development kit that includes tools for developing Java applications, such as compilers, debuggers, and libraries, essential for Java development.
+
+# ! Data Types
+
+Primitive Data Types:
+
+Integral Types: byte, short, int, long
+Floating-Point Types: float, double
+Boolean Type: boolean
+Character Type: char
+Reference Data Types:
+
+Class Types: Any class you define or use in Java
+Interface Types: Interfaces defined in Java
+Array Types: Arrays, which are also objects in Java
+Enumeration Types: Enums, a special kind of class used to define collections of constants
+
+Arithmetic Operators: Perform arithmetic operations on numerical values.
+
+Addition (+)
+Subtraction (-)
+Multiplication (*)
+Division (/)
+Modulus (%)
+Increment (++)
+Decrement (--)
+Relational Operators: Compare values and return a boolean result.
+
+Equal to (==)
+Not equal to (!=)
+Greater than (>)
+Less than (<)
+Greater than or equal to (>=)
+Less than or equal to (<=)
+Logical Operators: Perform logical operations on boolean values.
+
+Logical AND (&&)
+Logical OR (||)
+Logical NOT (!)
+Assignment Operators: Assign values to variables.
+
+Simple assignment (=)
+Compound assignment (e.g., +=, -=, *=, /=)
+Bitwise Operators: Perform operations at the bit level.
+
+Bitwise AND (&)
+Bitwise OR (|)
+Bitwise XOR (^)
+Bitwise NOT (~)
+Left shift (<<)
+Right shift (>>)
+Unsigned right shift (>>>)
+Conditional Operator (Ternary Operator): Provides a concise way to write conditional expressions.
+
+Conditional ? expression1 : expression2
+Instanceof Operator: Checks if an object is an instance of a particular class or interface.
+
+instanceof
+
+# ! loops
+
+if: Executes a block of code if a condition is true.
+else: Executes a block of code if the preceding if condition is false.
+nested if: An if statement inside another if statement.
+if-else ladders: A series of if-else statements to handle multiple conditions.
+Switch: Evaluates an expression and executes a block of code based on different cases.
+while: Executes a block of code repeatedly as long as a condition is true.
+do-while: Executes a block of code repeatedly until a condition becomes false (executes at least once).
+for: Executes a block of code a fixed number of times.
+for-each: Iterates over elements of an array or collection.
+break: Exits from the loop or switch statement.
+continue: Skips the current iteration of a loop and proceeds to the next iteration.
+
+# ! array
+
+Single and Multidimensional Array: Arrays store multiple values of the same type in a single variable, where a single array has one dimension, while multidimensional arrays have multiple dimensions.
+
+# ! string
+
+String class: Represents a sequence of characters and provides various methods to manipulate strings, such as concatenation, comparison, and substring extraction.
+
+StringBuffer class: A mutable sequence of characters, allowing modification of its contents. It's more efficient for extensive string manipulation compared to String.
+
+Operations on strings: Includes concatenation using the + operator or the concat() method, comparison using equals() or compareTo(), extraction using substring(), and manipulation using methods like replace() and toLowerCase().
+
+# ! cmd line
+
+Command line argument: Allows passing arguments to a Java program from the command line during its execution, accessible within the main method's args parameter.
+
+# ! wrapper class
+
+Use of Wrapper Class: Wrapper classes provide a way to use primitive data types as objects. They encapsulate primitive data types and offer utility methods. For example, Integer for int, Double for double, etc. This is useful in scenarios where an object is required instead of a primitive type, such as collections.
+
+#! class and object 
+Class: Blueprint or template for creating objects that defines attributes (fields) and behaviors (methods) shared by objects of that class.
+
+Object: Instance of a class, representing a single, unique entity in memory with its own set of data and methods.
+
+Object reference: A reference variable that points to an object in memory, enabling access to its attributes and methods.
+
+# ! constructors
+
+Constructor: Special type of method used to initialize objects. It has the same name as the class and is invoked implicitly when an object is created.
+
+Constructor Overloading: Defining multiple constructors within a class with different parameter lists, allowing objects to be initialized in various ways.
+
+# ! method Overloading
+
+Method Overloading: Defining multiple methods in a class with the same name but different parameter lists, enabling the use of the same method name for different behaviors.
+
+# ! recursion
+
+Recursion: A programming technique where a method calls itself to solve a problem. It's often used for tasks that can be broken down into smaller, similar subtasks.
+
+# ! passing and returning obj 
+
+Passing and Returning Objects from Method: Objects can be passed as arguments to methods, enabling the method to operate on those objects. Similarly, methods can return objects as their result, allowing the method to generate or modify objects.
+
+# ! new operator
+
+new operator: Used to dynamically allocate memory for an object and initialize it. It invokes a class constructor to create a new instance of a class.
+
+# ! this keyword
+
+this keyword: Refers to the current object within a method or constructor, used to access instance variables or call other constructors.
+
+# ! static
+
+static keyword: Used to declare members (fields and methods) of a class that belong to the class itself, rather than to instances of the class. Static members can be accessed directly through the class name without needing an instance of the class.
+
+# finalize ()
+
+finalize() method: A method provided by the Object class that is called by the garbage collector before reclaiming the memory occupied by an object when it becomes unreachable.
+
+# ! access modes
+
+Access control modifiers: Keywords used to control the access level of classes, methods, and variables in Java.
+
+public: Accessible from any other class.
+private: Accessible only within the same class.
+protected: Accessible within the same package and subclasses.
+default (no modifier): Accessible only within the same package.
+
+# ! Modifiers: Keywords used to modify classes, methods, and variables to change their behavior or visibility.
+
+final: Indicates that a class cannot be subclassed, a method cannot be overridden, or a variable cannot be reassigned.
+static: Indicates that a member belongs to the class itself rather than to instances of the class.
+abstract: Indicates that a class cannot be instantiated and may contain abstract methods that must be implemented by subclasses.
+synchronized: Ensures that only one thread can access a synchronized method or block at a time.
+volatile: Indicates that a variable's value may be modified by multiple threads.
+transient: Indicates that a variable should not be serialized when the object is serialized.
+
+# ! nested class
+Nested class: A class defined within another class. It can be static or non-static (inner class) and has access to the members of the enclosing class.
+new demo() {
+    fsdf
+}
+# ! inner class
+Inner class: A non-static nested class that has access to the members of the enclosing class, including private members.
+
+# ! Anonymous class
+
+Anonymous inner class: A local inner class without a name that is declared and instantiated in a single expression. Often used for one-time use.
+
+# ! abstract class
+
+Abstract class: A class that cannot be instantiated and may contain abstract methods that must be implemented by its subclasses. It serves as a template for other classes to extend and implement.
+
+
+

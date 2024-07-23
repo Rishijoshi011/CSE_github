@@ -1,0 +1,180 @@
+What is Robot?
+-> A robot is a programmable machine designed to perform tasks in the physical world. It typically consists of mechanical components, sensors, actuators, and a control system, often powered by electricity or other energy sources. 
+-> Robots can be guided by computer programs, remote control, or a combination of both. They are capable of carrying out a wide range of functions, from simple repetitive tasks to complex operations requiring decision-making and adaptability.
+
+What is Robotics? 
+-> The robotics is a science, which deals with the issues related to design,development, applications of robots to perform a variety of tasks. 
+-> Robotics involves the study of how robots work, how to build them, how to control their movements and actions, and how to integrate them into different environments and applications.
+
+------------- Question 3 --------------- classify Robot and explain each in brief.
+
+    -> Classifying robots can be done in various ways based on different criteria. Here's a classification of robots based on their application and functionality, along with brief explanations of each type:
+
+=> Industrial Robots
+   -> Used in manufacturing and production settings to automate repetitive tasks such as assembly, welding, painting, and packaging.
+   -> Typically have multi-axis arms with end-effectors designed for specific tasks.
+   -> Examples include robotic arms in automotive assembly lines and CNC (Computer Numerical Control) machines.
+
+=> Medical Robots
+   -> It is used in healthcare sector for diagnosis, surgery, rehabilitation, and telemedicine.
+   -> These robots can also help doctors with surgeries that don't need big cuts, assist patients in getting better with exercises, and support people who need help with daily tasks like moving around.
+   -> Examples include the da Vinci Surgical System, robotic exoskeletons, and teleoperated surgical robots.
+
+=> Humanoid Robots
+   -> It is designed to mimic human movement and behaviors.
+   -> These robots can do things like talking with people, entertaining, studying how humans think, and copying what humans do in dangerous places.
+   -> Examples include ASIMO, Pepper, and Atlas robots.
+
+=> Educational and Research Robots
+   -> Used for educational purposes, experimentation, and research in robotics and related fields.
+   -> Typically modular and programmable, allowing users to learn about robotics concepts, programming, and engineering principles.
+   -> Examples include LEGO Mindstorms, Arduino-based robots, and research platforms used in academic institutions and research laboratories.
+
+=> Service Robots
+   -> This type of robot is designed to assist or serve humans in various feilds like homes. hospitals and at public places
+   -> Include domestic robots (e.g., robotic vacuum cleaners, lawn mowers), medical robots (e.g., surgical robots, telepresence robots for remote healthcare), and assistant robots for the elderly or people with disabilities.
+
+=> Military and Defense Robots
+   -> Designed for various military applications, including reconnaissance, surveillance, search and rescue, bomb disposal, and combat operations.
+   -> Can be ground-based, aerial, or aquatic, and may have capabilities for autonomous or remote operation.
+   -> Examples include unmanned aerial vehicles (UAVs), bomb disposal robots, and unmanned ground vehicles (UGVs).
+
+------------- Question 4 --------------- Explain Robot Anatomy in detail.
+
+====> Description:
+    -> Robot anatomy refers to the physical structure and components of a robot. It may consist of various mechanical, electrical, and computational elements that make up the robot's body.
+
+====> Components:
+
+=> Body/Frame
+	-> The skeleton or structure that supports the robot, providing a base for other components.
+
+=> Joints
+    -> It is a places where robot parts are linked together and can move. Common types include revolute, prismatic, and spherical joints.
+
+=> Links
+    -> Rigid segments that connect joints, forming the robot's body. Links can be diffrent in shape, size, and material depending on the application.
+
+=> End-Effector
+    -> The "hands" of the robot, end effectors are tools or devices attached to the robot to interact with the environment. Examples include grippers, welders, and cameras.
+
+=> Actuators
+    -> The "muscles" of the robot, actuators move parts of the robot's body. They can be motors (electric, hydraulic, pneumatic) that control limbs, wheels, or other moving parts. 
+
+=> Sensors
+    -> The "senses" of the robot, sensors help the robot to perceive its environment. They can detect light, sound, heat, pressure, and other physical quantities.
+
+=> Controller
+    -> The "brain" of the robot, the control system processes information from the sensors and sends commands to the actuators. It includes onboard computers, software, and sometimes connections to external systems.     
+
+=> Power Supply
+    -> Provides the necessary electrical energy to drive the robot's actuators, sensors, and control systems.
+
+------------- Question 5 --------------- Explain types of joints used in Robot with neat sketch.
+
+=> Revolute Joint:
+    -> The revolute joint, also known as a rotary joint, allows rotational motion around a fixed axis. It's like a hinge or a pivot.
+ 
+=> Prismatic Joint:
+    -> The prismatic joint, also called a linear or translational joint, enables linear motion along a specified axis.
+ 
+=> Spherical Joint:
+    -> The spherical joint, also known as a ball-and-socket joint, allows rotation in all three axes, offering a high degree of freedom.
+ 
+=> Planar Joint:
+    -> The planar joint restricts motion to a plane, typically allowing translation along two axes and rotation around one axis perpendicular to the plane.
+ 
+=> Cylindrical Joint:
+    -> The cylindrical joint combines a revolute joint and a prismatic joint, allowing rotation around one axis and translation along another axis.
+ 
+=> Universal Joint:
+    -> The universal joint allows rotation in two perpendicular axes, typically used to transmit motion between non-collinear shafts.
+ 
+=> Twisting Joint:
+    -> The twisting joint allows twisting or torsional motion along a flexible axis, such as wires, cables, or flexible shafts.
+
+
+------------- Question 6 --------------- Explain different arm configuration used in robotics.
+
+=> Articulated Arm: 
+    -> The articulated arm consists of multiple revolute joints arranged in a serial chain, similar to a human arm. Each joint provides a degree of freedom, allowing the arm to move in multiple directions. Articulated arms are versatile and widely used in industrial and research applications for tasks such as assembly, welding, and material handling.
+
+=> SCARA (Selective Compliance Assembly Robot Arm)
+    -> The SCARA arm features two parallel revolute joints (shoulder and elbow) and a prismatic joint (vertical axis). This configuration provides planar motion, allowing the arm to move in the XY plane while maintaining a fixed Z-axis orientation. SCARA robots are commonly used in assembly and pick-and-place applications due to their high speed and precision.
+
+=> Cartesian Robot:
+    -> The Cartesian robot, also known as a gantry robot, features three prismatic joints arranged in a Cartesian coordinate system (X, Y, Z). This configuration provides linear motion along each axis, enabling precise positioning and control. Cartesian robots are commonly used in CNC machining, 3D printing, and material handling applications.
+
+=> PUMA (Programmable Universal Machine for Assembly):
+    -> The PUMA robots feature a serial chain of revolute joints arranged in a 6-degree-of-freedom (DOF) configuration, providing high flexibility and maneuverability. Widely used in industrial automation, PUMA robots offer precise control and repeatability for tasks such as assembly, material handling, and machining.
+
+------------- Question 7 --------------- Why jacobian matrix used in Robotics system design.
+
+    -> The Jacobian matrix is used in robotics system design to relate the velocities of a robot's joints to the velocities of its end-effector (e.g., tool or gripper). 
+    -> It can be used to analyze the robot's kinematics and dynamics, including its motion and manipulability. 
+    -> This information is crucial for tasks such as trajectory planning, motion control, and optimizing the robot's performance and efficiency in various applications.
+
+------------- Question 8 --------------- Explain about different Referencing system in detail.
+
+=> Cartesian Coordinate System:
+    -> The Cartesian coordinate system is the most commonly used referencing system in robotics and engineering. It consists of three mutually perpendicular axes (X, Y, Z) that intersect at a common origin. 
+    -> Positions of points are defined by their distances along each axis from the origin. This system is ideal for describing positions in a 3D space.
+
+=> Joint Coordinate System:
+    -> In robotic manipulators, the joint coordinate system refers to a set of coordinate frames attached to each joint of the robot arm. 
+    -> The position and orientation of the end-effector (tool or gripper) are described relative to these joint frames. Joint angles or joint displacements are used to specify the configuration of the robot arm.
+
+=> Universal Coordinate System:
+    -> The Universal coordinate system, also known as the global coordinate system, is a fixed reference frame used to describe positions and orientations in the robot's workspace. 
+    -> It serves as a common reference for all other coordinate systems within the robotic system. The universal coordinate system provides a consistent frame of reference for specifying positions and movements in a global context.
+
+=> Base Coordinate System:
+    -> The base coordinate system refers to a fixed reference frame attached to the base of a robotic manipulator. It serves as the starting point for all other coordinate systems in the robot's kinematic chain. 
+    -> The position and orientation of the robot arm are described relative to the base coordinate system.
+
+------------- Question 9 --------------- types of Grippers and application
+
+-----> Mechanical Grippers:
+
+=> Description
+    -> Mechanical grippers use mechanical force to grasp objects, typically employing jaws or fingers that close around the object.
+=> Application
+    -> Mechanical grippers are commonly utilized in manufacturing and industrial automation for gripping objects such as metal parts, plastic components, and machine components on assembly lines and CNC machines.
+
+-----> Vacuum Cups:
+
+=> Description
+    -> Vacuum cups create suction to hold objects securely, making them suitable for handling flat or non-porous objects.
+=> Application
+    -> Vacuum cups are extensively used in packaging, printing, and material handling industries for lifting and moving items such as cardboard boxes, glass sheets, and plastic panels on conveyor systems and robotic arms.
+
+-----> Magnetic Grippers:
+
+=> Description
+    -> Magnetic grippers utilize magnetic forces to pick up ferrous objects without the need for mechanical contact.
+=> Application
+    -> Magnetic grippers find applications in industries handling metal sheets, components, and parts, such as automotive manufacturing, metal fabrication, and recycling facilities.
+
+-----> Adhesive Grippers:
+
+=> Description
+    -> Adhesive grippers use adhesive materials to adhere to and pick up objects without applying excessive force.
+=> Application
+    ->Adhesive grippers are employed in industries such as electronics assembly and semiconductor manufacturing for handling delicate components and materials with smooth surfaces, ensuring gentle and secure gripping without causing damage.
+
+-----> Hook Grippers:
+
+=> Description
+    -> Hook grippers feature hooks or claws that engage with holes, slots, or loops on objects to lift and move them.
+=> Application
+    -> Hook grippers are commonly used in industries handling items with hanging features, such as textiles, garments, bags, and automotive parts with hanging loops or handles.
+
+-----> Pneumatic Grippers:
+
+=> Description
+    -> Pneumatic grippers use compressed air to actuate the gripping mechanism. They offer fast and powerful gripping capabilities, making them suitable for high-speed applications.
+=> Application
+    -> Pneumatic grippers are widely used in industries such as automotive manufacturing, electronics assembly, and material handling for rapid and efficient gripping of objects on assembly lines and conveyor systems.
+
+------------- Question 10 --------------- Differentiate between kinematics and dynamics in Robot
+photo 

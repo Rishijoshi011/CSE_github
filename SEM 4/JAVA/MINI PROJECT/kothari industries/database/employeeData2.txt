@@ -1,0 +1,11 @@
+Employee ID: KT002
+Name: Prathmesh Kothari
+Designation: Managing Director
+DOB: 01-02-2000
+Gender: Male
+Age: 24
+Phone: 1234567890
+Personal Email: kt@gmail.com
+Address: dubai
+Salary: 5000.0
+Password: 123456

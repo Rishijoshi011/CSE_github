@@ -1,0 +1,148 @@
+#  ! What is Leadership? How it is different from management?
+
+-> Leadership is the ability to inspire, influence, and guide others towards a common goal or vision. It involves setting direction, motivating people, and fostering collaboration and innovation within a group or organization.
+
+------> Focus: 
+    -> Management primarily involves planning, organizing, coordinating, and controlling resources and activities to achieve specific objectives and goals. In contrast, leadership focuses on inspiring and empowering people, setting a vision, and driving change.
+
+------> People vs. Processes: 
+    -> Management is more concerned with tasks, processes, and systems, while leadership is about people, relationships, and emotions. Managers focus on achieving results through efficient use of resources, while leaders focus on influencing and inspiring others to achieve collective success.
+
+------> Authority vs. Influence: 
+    -> Managers typically have formal authority and power derived from their position in the organizational hierarchy. They enforce rules, make decisions, and allocate resources based on their authority. On the other hand, leaders may not have formal authority but influence others through their personal qualities, vision, and ability to inspire and motivate.
+
+------> Transactional vs. Transformational: 
+    ->  Transactional management deals with everyday tasks like setting goals, tracking progress, and rewarding performance based on set standards. Meanwhile, transformational leadership is about shaking things up by challenging the way things are done, encouraging new ideas, and motivating people to work towards a common goal.
+
+------> Short-term vs. Long-term Orientation: 
+    -> Management tends to have a short-term focus, emphasizing efficiency, stability, and sudden results. In contrast, leadership takes a long-term perspective, focusing on innovation, growth, and sustainability by envisioning and working towards future opportunities and challenges.
+
+
+# ! What is strategic planning? Explain the strategic planning process.
+
+    -> Strategic planning is the art of formulating business strategies, implementing them, and evaluating their impact based on organizational objectives.
+    -> The concept focuses on integrating various business departments to achieve organizational goals.
+    -> The term strategic planning is synonymous with strategic management. 
+    
+-----> Strategic Planning Process
+    -> The application of strategic planning in business is a result of difficult managerial decisions that comprise good and less desirable courses of action.
+    -> The development and execution of strategic plans is a well-thought-out plan performed in three critical steps:
+
+1. Strategy Formulation
+    -> In the formulation of strategies, the business measures its current situation by performing an internal and external audit
+    -> Strategy formulation also involves identifying the organization's strengths and weaknesses, as well as opportunities and threats.
+    -> As a result, managers get to decide which new markets they can venture or abandon, how to allocate the required resources, and whether to expand its operations through a joint venture or mergers.
+    ->  Business strategies result in long-term effects on organizational success; only top business executives understand their impact and are authorized to assign the resources necessary for their implementation.
+
+2. Strategy Implementation
+    -> After the strategy formulation, the company needs to establish short-term goals (usually one-year goals), devise policies, and allocate resources for their execution.
+    -> It is also referred to as the action stage and is the most important phase of strategic planning. The success of the implementation stage is determined by the firm's ability to nurture an environment and a culture that motivates employees to work.
+    -> A manager's interpersonal skills are critical during this stage.
+    -> Effective strategy implementation also involves developing a functional organizational structure, maximum utilization of information systems, and redirecting marketing efforts.
+
+3. Strategy Evaluation
+    -> Any practical business person knows that success today does not guarantee success tomorrow. As such, it is important for managers to evaluate the performance of various strategies after the
+    -> implementation phase.
+    -> Strategy evaluation involves three crucial activities: reviewing the internal and external factors affecting the implementation of the strategies, measuring performance, and taking corrective steps.
+    -> All the three steps in strategic planning occur in three hierarchical levels: the corporate, middle, and operational levels.
+    -> Thus, it is imperative to adopt communication and interaction among the employees and managers in all the levels so as to help the firm to operate as a functional team.
+
+# ! What is Budgeting? Explain the budgeting as a process.
+
+
+    -> Budgeting has always been part of the activities of any business organization of any size, but formal budgeting in its present form, using modern budgeting disciplines, emerged in the 1950s as the numerical supporting of corporate planning.
+    -> Modern formal budgets not only limit expenditures; they also predict income, profits, and returns on investment a year ahead.
+    -> They have evolved into tools of control and are also used as a means of determining such rewards as profit-sharing and bonuses.
+    -> Unless the budgetary process is managed with extreme skill and care, the very qualities of budgeting can turn into negatives—and have, of late, emerged into a movement actively working to change this process.
+
+-----> Budgeting as a Process:
+    -> In large corporations, budgeting is a collective process in which operating units prepare their plans in conformity with corporate goals published by top management.
+    -> Each unit plan is intended to contribute to the achievement of the corporate goals. Unit managers prepare projections of sales operating costs, overhead costs, and capital requirements.
+    -> They calculate operating profits and returns on the investment they intend to use.
+    -> As part of this process, each unit presents its plans and budget to a reviewing upper management panel and may, thereafter, make whatever changes result from instructions from or negotiations with the higher level.
+    -> By regularly consulting a budget, business leaders can compare actual figures and catch potential business shortfalls or other problems early. Budgets can also be instrumental in winning over investors, convincing banks your business is a good loan risk, or bringing on new partners or customers.
+
+# ! What is a risk? Explain the four basic ways to handle a risk.
+
+    -> There are no guarantees on any project. Even the simplest activity can turn into unexpected problems. Anything that might occur to change the outcome of a project activity, we call that a risk. A risk can be an event or it can be a condition.
+
+-----> There are four basic ways to handle a risk.
+    -> Avoid: The best thing you can do with a risk is avoid it. If you can prevent it from happening, it definitely won't hurt your project. The easiest way to avoid this risk is to walk away from the cliff, but that may not be an option on this project.
+    ->  Mitigate: If you can't avoid the risk, you can mitigate (reduce) it. This means taking some sort of action that will cause it to do as little damage to your project as possible.
+    -> Transfer: One effective way to deal with a risk is to pay someone else to accept it for you. The most common way to do this is to buy insurance.
+    -> Accept: When you can't avoid, mitigate, or transfer a risk, then you have to accept it. But even when you accept a risk, at least you've looked at the alternatives and you know what will happen if it occurs. If you can't avoid the risk, and there's nothing you can do to reduce its impact, then accepting it is your only choice.
+
+# ! Explain with a line diagram the Enterprise Risk Management
+
+    -> Managing risks on projects is a process that includes risk assessment and a mitigation strategy for those risks. Risk assessment includes both the identification of potential risk and the evaluation of the potential impact of the risk.
+    ->  A risk mitigation plan is designed to eliminate or minimize the impact of the risk events—occurrences that have a negative impact on the project. Identifying risk is both a creative and a disciplined process.
+    -> The creative process includes brainstorming sessions where the team is asked to create a list of everything that could go wrong. All ideas are welcome at this stage with the evaluation of the ideas coming later.
+
+# ! Explain risk identification 
+    -> A more disciplined process involves using checklists of potential risks and evaluating the likelihood that those events might happen on the project.
+    -> Some companies and industries develop risk checklists based on experience from past projects. These checklists can be helpful to the project manager and project team in identifying both specific risks on the checklist and expanding the thinking of the team.
+    -> The past experience of the project team, project experience within the company, and experts in the industry can be valuable resources for identifying potential risk on a project. Identifying the sources of risk by category is another method for exploring potential risk on a project. Some examples of categories for potential risks
+
+    -> include the following:   # * WTFPCSPECC 
+        -> Weather
+        -> Technical
+        -> Financial
+        -> People
+        -> Contractual
+        -> Schedule
+        -> Political
+        -> Environmental
+        -> Client
+        -> Cost
+
+# ! Explain risk mitigation.
+
+    -> Risk mitigation involves developing plans and strategies to minimize the impact of unexpected events on a project, including actions such as avoiding, sharing, reducing, or transferring risks to ensure project success and minimize potential losses or liabilities.
+
+-----> Risk Avoidance:
+-> Involves steering clear of activities or strategies that pose significant risks to the project, thus preventing potential negative consequences and ensuring smoother project execution.
+
+-----> Risk Sharing:
+-> Entails spreading the impact of the risk among multiple parties, like team members or stakeholders, to reduce the financial or operational burden associated with it.
+
+-----> Risk Reduction:
+-> Focuses on implementing measures to minimize the likelihood or impact of the risk, such as enhancing safety protocols or quality control processes, to increase the chances of project success.
+
+-----> Risk Transfer:
+-> Shifts the responsibility for managing the risk to another party, often through contracts or insurance, thereby mitigating the project team's exposure to potential losses or liabilities.
+
+# !  Explain project risk by phases.
+
+-----> Project Risk by Phases
+    -> Project risk is dealt with in different ways depending on the phase of the project.
+1. Initiation
+    -> Risk is associated with things that are unknown. More things are unknown at the beginning of a project, but risk must be considered in the initiation phase and weighed against the potential benefit of the project’s success in order to decide if the project should be chosen.
+2. Planning Phase
+    -> Once the project is approved and it moves into the planning stage, risks are identified with each major group of activities. A risk breakdown structure (RBS) can be used to identify increasing levels of detailed risk analysis.
+3. Implementation Phase
+    ->  As the project progresses and more information becomes available to the project team, the total risk on the project typically reduces, as activities are performed without loss.
+    ->  Understanding where the risks occur on the project is important information for managing the contingency budget and managing cash reserves. Most organizations develop a plan for financing the project from existing organizational resources.
+4. Closeout Phase
+    -> During the closeout phase, agreements for risk sharing and risk transfer need to be concluded and the risk breakdown structure examined to be sure all the risk events have been avoided or mitigated.
+    -> The final estimate of loss due to risk can be made and recorded as part of the project documentation. If a simulation was done, the result can be compared to the predicted result
+
+# ! Explain risk response strategies
+
+-----> Risk Response Strategies
+    -> The choices of response strategies for THREATS include:
+        -> AVOID: Focus on eliminating the cause and thus, eliminating the threat.
+        -> MITIGATE: There are certain risks that cannot be eliminated. However, their impact can be reduced. This is termed as mitigation of risks.
+        -> TRANSFER: Transfer the risk to some other party. Insurance purchases, warranties, guarantees, etc are examples of risk transfers
+        -> The choices of response strategies for OPPORTUNITIES include:
+        -> EXPLOIT: Add work or change the project to make sure the opportunity occurs
+        -> ENHANCE: Increase the probability and positive impact of risk events
+        -> SHARE: Allocate ownership of opportunity to a third-party. A response strategy for BOTH threats and opportunities:
+        -> ACCEPT: Passive acceptance leaves action to be determined as needed, in case of a risk event. Active acceptance may involve contingency plans to be implemented if risk occurs and allocation of time and cost reserves to the project. A decision to accept risk must be communicated to stakeholders.
+        -> ESCALATE: Risks which cannot be monitored and handled by the project are escalated to the upper level, for example to program management.
+    -> Whenever the project manager is responding to threats or opportunities:
+    -> Execution of strategies must be time-bound
+    -> Effort selected must be appropriate to the severity of the risk
+    -> A single response can be an act of multiple risk events
+    -> A strategy can be selected not only by the project manager but also by the team, the stakeholders and experts. Outputs Of Plan Risk Responses
+    ->  Risk register, project management plans and project documents need to be updated as outputs of Plan Risk Responses. Project Management Plan Updates
+    ->  Project Management Plan can be updated by new work activities/packages that could be added, removed, or assigned to different resources, thus, making planning an iterative process.

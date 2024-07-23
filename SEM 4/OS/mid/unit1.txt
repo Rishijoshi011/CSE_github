@@ -1,0 +1,164 @@
+# ! architecture of os
+
+    ->Kernel: Manages system resources, provides essential services.
+
+    ->Hardware Abstraction Layer (HAL): Abstracts hardware details for portability.
+
+    ->Device Drivers: Enable OS to communicate with hardware devices.
+
+    ->File System: Organizes and manages data storage on storage devices.
+
+    ->Process Management: Controls execution of processes on the system.
+
+    ->Memory Management: Allocates and manages system memory efficiently.
+
+    ->I/O Management: Handles input/output operations with peripheral devices.
+
+    ->Security Subsystem: Implements security mechanisms for system protection.
+
+    ->Networking Stack: Provides networking capabilities for communication.
+
+    ->User Interface: Interface for users to interact with the system.
+
+# ! types of kernels
+
+    -> Monolithic Systems: Traditional operating systems where all operating system services run in a single address space.
+    
+    -> Layered Systems: Operating systems that are structured into layers, with each layer providing services to the layer above it and using services from the layer below it.
+    
+    -> Microkernel: An operating system architecture where the kernel is kept minimal, and additional services are provided by user-level processes, promoting modularity and flexibility.
+    
+    -> Client-Server Model: An architecture where tasks are divided between servers (providing services) and clients (requesting services), communicating over a network.
+    
+    -> Virtual Machines: Software-based emulation of computer systems, allowing multiple operating systems to run concurrently on the same physical hardware.
+        
+        -> VM/370: An early virtual machine system developed for the IBM System/370 mainframe computers, allowing multiple virtual machines to run multiple instances of the OS simultaneously.
+        
+        -> Virtual Machines Rediscovered: A resurgence of interest in virtual machine technology, particularly in the context of server consolidation and cloud computing.
+        
+        -> Java Virtual Machine (JVM): A virtual machine that executes Java bytecode, providing platform independence for Java applications.
+    
+    -> Exokernels: An operating system architecture where the kernel provides minimal abstractions for hardware resources, allowing applications to directly manage hardware resources for performance optimization.
+
+# ! operating system objectives and functions
+    
+    ->Program Development: This involves the process of creating software applications or programs. It includes activities like coding, debugging, testing, and documentation.
+
+    
+    ->Program Execution: Once a program is developed, it needs to be executed by the computer's hardware. This involves loading the program into memory and executing its instructions by the CPU.
+
+    
+    ->Access to I/O Devices (Resource Allocation): Programs often need to interact with input and output devices such as keyboards, displays, disk drives, etc. Resource allocation involves managing access to these devices efficiently so that multiple programs can use them concurrently without conflicts.
+
+    
+    ->Memory Management: This involves managing the computer's memory resources. It includes tasks like allocating memory to programs, ensuring efficient memory usage, and handling memory deallocation when programs no longer need it.
+
+    
+    ->Controlled Access to File: Operating systems provide mechanisms for programs to access and manipulate files stored on disk. Controlled access ensures that only authorized programs can read from or write to specific files, and it prevents unauthorized access or modification.
+
+    
+    ->Communication: Operating systems facilitate communication between different processes or programs running on the same computer or on different computers in a network. This includes mechanisms for inter-process communication (IPC) and networking protocols for communication over a network.
+
+    
+    ->Error Detection and Response: Operating systems are responsible for detecting and handling errors that occur during program execution or system operation. This includes handling hardware errors, software exceptions, and providing mechanisms for error recovery.
+
+    
+    ->Accounting: Operating systems often include accounting mechanisms to track resource usage by programs. This may include tracking CPU usage, memory usage, disk usage, and network usage for billing purposes or performance monitoring.
+
+    
+    ->Protection & Security: Operating systems implement security measures to protect the system and its resources from unauthorized access, malicious software, and other security threats. This includes user authentication, access control mechanisms, encryption, and security policies enforcement.
+
+# ! virtual computers
+# ! Interaction of os 
+# ! hardware architecture
+# ! evolution of os 
+    -> batch
+    -> multiprogramming
+    -> multitasking
+    -> multiuser
+    -> parallel 
+    -> distributed
+    -> real time os 
+# ! System calls 
+# ! os shell 
+# ! linux shell commands
+# ! shell programming 
+# ! examples of os 
+    -> linux
+    -> ms windows 
+    -> handheld os
+# ! Process, Process description, Process states, Process control,
+# ! Threads, Processes and Threads, 
+# ! Uniprocessor Scheduling: Types of scheduling
+# ! Scheduling algorithms: FCFS, SJF, Priority, Round Robin
+# ! UNIX Multi-level feedback queue scheduling,
+
+# ! Thread Scheduling
+
+
+Thread scheduling is a critical aspect of operating system design, particularly in systems that support multithreading, where multiple threads of execution can run concurrently within a single process. The primary goal of thread scheduling is to efficiently utilize the available CPU resources while providing fairness, responsiveness, and optimal performance for executing threads. 
+
+Thread Priority: Thr`eads are assigned priorities, determining their urgency for CPU execution.
+
+Scheduling Policies: Rules and algorithms to choose which thread runs next, including fixed-priority, round-robin, priority-based, and multi-level queue scheduling.
+
+Thread States: Threads transition between states such as ready, running, blocked/waiting, and terminated.
+
+Context Switching: Saving and restoring thread states to allow different threads to run, incurring overhead.
+
+Thread Synchronization: Coordination mechanisms like mutexes and semaphores ensure safe resource access among threads.
+
+Affinity Scheduling: Assigning threads to specific CPU cores to improve cache usage and reduce inter-core communication.
+
+# ! Multiprocessor Scheduling concept
+
+Multiprocessor scheduling involves efficiently allocating and managing tasks across multiple processors or cores in a computer system. Here are the key points regarding multiprocessor scheduling:
+
+->Task Partitioning: Tasks need to be divided among the available processors. This can be done statically or dynamically based on factors like system load and resource availability.
+
+->Scheduling Policies:
+
+        Global Scheduling: Treats all processors as a single scheduling domain, allowing tasks to be migrated between processors dynamically.
+        
+        Partitioned Scheduling: Divides tasks among processors, with each processor responsible for a subset of tasks.
+        
+        Work-Conserving vs. Non-Work-Conserving: Work-conserving schedulers keep processors busy whenever possible, while non-work-conserving schedulers may allow processors to idle to improve overall system performance.
+        
+        Load Balancing: Techniques aim to distribute tasks evenly across processors to avoid overloading or underutilizing some processors. Tasks may be migrated dynamically to achieve optimal resource utilization.
+        
+-> Processor Affinity: Refers to tasks' preference for executing on specific processors. Affinity can be soft, where tasks prefer certain processors but can execute elsewhere if needed, or hard, where tasks are bound to specific processors.
+
+-> Task Synchronization and Communication: Tasks may need to synchronize their execution or communicate with each other. Mechanisms such as semaphores and mutexes enable efficient coordination and resource access.
+
+-> Scalability: Multiprocessor scheduling algorithms should scale effectively with the number of processors. They should distribute tasks efficiently without introducing significant overhead or contention as the system grows.
+
+-> Fault Tolerance: Techniques detect and recover from failures such as processor crashes or communication errors, ensuring system reliability.
+
+-> Real-Time Constraints: Some systems have real-time requirements, where tasks must meet specific timing constraints. Real-time scheduling algorithms prioritize tasks based on deadlines while maximizing system performance.
+
+
+# ! Real Time Scheduling concept
+
+
+Real-time scheduling is a crucial aspect of operating systems design, particularly for systems where tasks or processes have timing constraints that must be met to ensure correct system behavior. Real-time scheduling aims to schedule tasks in such a way that deadlines are met, ensuring timely response to events and maintaining system reliability. Here are the key concepts related to real-time scheduling:
+
+Task Characteristics: Real-time tasks typically have specific timing requirements, including deadlines, periods, and execution times.
+
+Deadline: The time by which a task must complete its execution.
+Period: The time between successive instances of a periodic task.
+Execution Time: The time required for a task to complete its execution.
+Preemption: Real-time scheduling often involves preemptive scheduling, where higher-priority tasks can interrupt lower-priority tasks to execute. Preemption ensures that critical tasks can be executed promptly, even if lower-priority tasks are currently running.
+
+Scheduling Policies: Real-time scheduling algorithms are governed by specific scheduling policies that determine how tasks are scheduled and prioritized. Common scheduling policies include:
+
+Rate-Monotonic (RM): Prioritizes tasks based on their periods, with shorter periods receiving higher priority.
+Earliest Deadline First (EDF): Prioritizes tasks based on their absolute deadlines, ensuring that tasks with earlier deadlines are scheduled first.
+Deadline Monotonic (DM): Similar to RM, but tasks are prioritized based on their deadlines rather than periods.
+Priority Inversion: Priority inversion occurs when a low-priority task holds a resource required by a higher-priority task, causing the higher-priority task to be blocked. Priority inheritance and priority ceiling protocols are mechanisms used to mitigate priority inversion.
+
+Task Synchronization: Real-time tasks may need to synchronize their execution or access shared resources. Synchronization mechanisms such as semaphores, mutexes, and condition variables ensure that tasks can coordinate their activities without violating timing constraints.
+
+Resource Management: Real-time systems often have limited resources, such as CPU time, memory, and I/O devices. Effective resource management techniques, including resource reservation, budget enforcement, and admission control, are essential for meeting timing constraints and guaranteeing system performance.
+
+Response Time Analysis: Response time analysis is a method used to determine whether real-time tasks can meet their deadlines under a given scheduling policy. It involves calculating the worst-case response time of each task and verifying that it does not exceed its deadline.
+

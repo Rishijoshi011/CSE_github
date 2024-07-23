@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About Me</li>
+                <li>Hire Me</li>
+            </ul>
+        </nav>
+        <div class="container">
+            <p>I am good boy</p>
+        </div>
+    </body>
+    <script>
+        // let b = document.body;
+        // console.log("First child of body is: ", b.firstChild);
+        // console.log("First Element child of body is: ", b.firstElementChild);
+
+        // let navTag = b.firstElementChild;
+        // console.log("First child Element of nav: ",navTag.firstElementChild);
+        
+        // let ulTag = navTag.firstElementChild;
+        // console.log("First child Element of ul: ",ulTag.firstElementChild);
+        // console.log("Text of first child Element of ul:",ulTag.firstElementChild.textContent);
+        // console.log("Content of sibling of li tag: ",ulTag.firstElementChild.nextElementSibling.textContent);
+        // console.log("Parent of ul tag: ",ulTag.parentElement);
+        
+
+        // let printText = navTag.nextElementSibling;
+        // console.log("The last Tag: ", printText);
+        // let para = printText.firstElementChild;
+        // console.log("The p Tag: ", para);
+        // console.log("contents of p: ", para.textContent);
+        // para.textContent = "sup dude";
+        // console.log("changing contents of p: ", para.textContent);
+
+        let Body_liTag = document.body.firstElementChild.firstElementChild.firstElementChild;
+        console.log(Body_liTag, Body_liTag.textContent);
+        console.log(Body_liTag.nextElementSibling, Body_liTag.nextElementSibling.textContent);
+
+    </script>
+</html>
+

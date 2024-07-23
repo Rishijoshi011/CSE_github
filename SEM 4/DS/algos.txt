@@ -1,0 +1,151 @@
+Linear search 
+'a' is a given array with 'n' number of elements as per user's requirement, x is the element which you want to search.
+Step 1: start
+Step 2: initialize the iterator variable i = 0 , flag = 0
+Repeat step 2 till i < n 
+	If a[i] == x then Flag++
+i++
+Step 3: if flag > 0 then Display element found number of times 
+	Else 
+	Display element not found 
+Step 4: stop
+
+Binary search 
+
+'a' is a given array with 'n' number of elements as per user's requirement, low indicates lower bound, high indicates upper bound, mid indicates mid index, x is the element which you want to search.
+
+Step 1: start
+Step 2: initialize the variables 
+High = n-1
+low = 0  
+result = -1 
+step 3: repeat step 4 while low <= high
+step 4: initialize mid = (low + high) / 2
+	if a[mid] == x then result = mid 
+	goto step 5
+		else if a[mid] < x then low = mid + 1
+		else high = mid - 1
+step 5: if result != -1 then display result 
+	else 
+display element not found
+step 6: stop
+
+Bubble sort 
+
+step 1 : start
+step 2 : initialize iterator variable i = j = 0
+step 3 : repeat through step 7 while i < n - 1 
+step 4 : repeat through step 6 while j < n - 1 
+step 5 : if a[j] > a[j+1] then swap(a[j],a[j+1])
+step 6 : j++ 
+step 7 : i++
+step 8 : stop
+
+Selection sort
+
+step 1 : start
+step 2 : initialize iterator variable i = j = 0
+step 3 : repeat step 7 untill i < n - 1
+step 4 : repeat step 6 untill j < n
+		if (a[j]<a[min_index]) then min_index = j
+step 5 : if (min_index > i) then swap(a[i], a[min_index])
+step 6 : j++
+step 7 : i++
+step 8 : stop
+
+Quick sort
+'a' is a given array with 'n' number of elements as per user's requirement, start indicates lower bound, end indicates upper bound.
+
+
+int quick(int a[],int start,int end) 
+
+step 1 : start 
+step 2 : initialize pivot = a[start] and count = 0
+step 3 : repeat step 4 where iterator variable i = start + 1 till i <= end 
+step 4 : if a[i] <= pivot then count++
+step 5 : initialize pivotindex = start + count
+step 6 : swap(a[pivotindex],a[start])
+step 7 : initialize i = start and j = end 
+step 8 : repeat step 11 till i < pivotindex && j > pivotindex
+step 9 : repeat while a[i] <= pivot then i++
+step 10 : repeat while a[j] > pivot then j--
+step 11 : if (i < pivotindex && j > pivotindex) then swap(a[i++], a[j--])
+step 12 : return pivotindex
+step 13 : stop
+
+QuickSort(int a[],int start, int end)
+step 1 : start
+step 2 : if(start >= end) then return
+step 3 : initialize pivot = quick(a[],start,end)
+step 4 : QuickSort(a[],start, pivot - 1)
+step 5 : QuickSort(a[],pivot + 1, end)
+step 6 : stop
+
+Merge sort
+'arr' is a given array with 'n' number of elements as per user’s requirement, left indicates lower bound, right indicates upper bound, mid is arrays mid index.
+
+void merge(int arr[], int low, int mid, int high)
+
+step 1: START
+step 2: Initailize i = low, j = mid + 1. k = low
+step 3: Initailize array temp[100]
+step 4: Repeat Step 5 while k <= high
+step 5: if (i <= mid && (j > high || arr[i] <= arr[j])) then
+        temp[k - low] = arr[i]
+        i++
+        else
+            temp[k - low] = arr[j]
+            j++
+step 6: Repeat step 7 where k = low till k <= high
+step 7: arr[k] = temp[k - low]
+step 8: STOP
+
+void mergeSort(int arr[], int low, int high)
+
+step 1: START
+step 2: if low < high then
+step 3: initalize mid = (low + high) / 2
+step 4: mergeSort(arr[], low, mid)
+step 5: mergeSort(arr[], mid + 1, high)
+step 6: merge(arr[], low, mid, high)
+step 7: STOP
+
+
+
+
+// other
+int merge(int a[],int left,int mid, int right) 
+step 1 : start
+step 2 : initialize n1 = mid - left + 1
+step 3 : initialize n2 = right - mid
+step 4 : initialize array L[n1] and R[n2]
+step 5 : repeat step 6 where iterator variable i = 0 till i < n1 
+step 6 : L[i] = a[left + i]
+step 7 : repeat   where iterator variable j = 0 till i < n2
+step 8 : R[j] = a[mid + 1 + j]
+step 9 : initialize i = j = 0 and k = left ;
+step 10 : repeat step 13 while i < n1 && j < n2
+step 11 : if (L[i] <= R[j]) then a[k] = L[i], i++
+step 12 : else a[k] = R[j], j++
+step 13 : k++
+step 14 : repeat while i < n1 then a[k] = L[i], i++ ,k++
+step 15 : repeat while j < n2 then a[k] = R[j], j++ ,k++
+step 16 : stop
+
+MergeSort(int a[],int left, int right) 
+step 1 : start
+step 2 : if(left < right) then mid = left + (right - left) / 2 
+step 3 : MergeSort( a[], left, mid) 
+step 4 : MergeSort( a[], mid + 1, right) 
+step 5 : merge(a[], left,mid,right)
+step 6 : stop
+
+
+	factorial(int num)
+
+	step 1: START
+	step 2:  IF (num == 1) then
+			return 1
+	step 3:  else return num * fact(num - 1) 	
+	step 4: exit
+

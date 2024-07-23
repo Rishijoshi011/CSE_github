@@ -1,0 +1,66 @@
+------------- Question 1 ----- State the difference between Revolute and Prismatic Joints with a neat sketch and examples.
+    photo
+
+------------- Question 2 --------------- Derive the Homogeneous Transformation matrix.
+
+------------- Question 3 --------------- Derive the Rotation Matrix and state its properties.
+
+------------- Question 4 --------------- Compare the Cartesian, Cylindrical and Spherical Coordinate Systems for robotics.
+    photo
+------------- Question 5 --------------- Briefly discuss Roll, Pitch and Yaw angles α, β and γ.
+
+    -> Roll, pitch, and yaw are terms used to describe the orientation of an object or coordinate system in 3-D space. These angles represent rotations around the object's or coordinate system's axes. 
+
+=> Roll (α):
+    -> Roll refers to the rotation of an object around its longitudinal axis, also known as the X-axis.
+    -> It causes the object to tilt from side to side, like a rolling motion.
+    -> In aviation, roll is used to describe the rotation of an aircraft about its longitudinal axis, causing it to bank left or right.
+ 
+=> Pitch (β):
+
+    -> Pitch refers to the rotation of an object around its lateral axis, also known as the Y-axis.
+    -> It causes the object to tilt up or down, like a pitching motion.
+    -> In aviation, pitch is used to describe the rotation of an aircraft about its lateral axis, causing it to nose up or down.
+
+=> Yaw (γ):
+    -> Yaw refers to the rotation of an object around its vertical axis, also known as the Z-axis.
+    -> It causes the object to rotate left or right, like a yawning motion.
+    -> In aviation, yaw is used to describe the rotation of an aircraft about its vertical axis, causing it to turn left or right.
+
+------------- Question 6 --------------- State the advantages & disadvantages of Denavit-Hartenberg approach.
+    photo
+
+------------- Question 7 --------------- Explain D-H Parameters for link and joint in detail.
+
+------------- Question 8 --------------- sum from assignmet - 2 
+
+------------- Question 9 --------------- define following
+
+=> What is Frame?
+    -> A "frame" refers to a coordinate system used to specify the position and orientation of objects relative to a reference point. Frames are essential for defining the spatial relationships between different components within a system.
+
+=> What is Link Length and Link offset?
+    -> The link length refers to the physical distance between two adjacent joints along a segment of a robotic arm or mechanical system. It determines the reach and size of each segment, influencing the overall geometry and capabilities of the system.
+
+    -> Link offset denotes the perpendicular distance between the axes of adjacent joints in a robotic manipulator or mechanical system. It affects the geometric arrangement of the joints, influencing the system's flexibility and motion planning capabilities.
+
+=> What is Joint axis?
+    -> The "joint axis" refers to the imaginary line or axis about which a joint rotates or translates in a robotic manipulator or mechanical system.
+    -> The joint axis defines the direction in which the joint can move, whether it's rotation around an axis or translation along an axis.
+
+=> What is Path planning? (motion planning)
+    -> Path planning, also known as motion planning, is a fundamental concept in robotics and automation. It involves determining a feasible path for a robot or an autonomous agent to move from its current position to a specified goal position while avoiding obstacles and adhering to constraints.
+
+=> What is Rotory Joint?
+    -> A rotary joint, also known as a revolute joint, is a type of mechanical joint that allows rotation around a single axis. It is commonly used in robotic arms, manipulators, and mechanical systems to enable angular motion between connected links or components.
+
+=> What is Forward or Direct kinematics and Inverse kinematics?
+    -> Forward kinematics is like tracing the path of a robot's arm from its base to its hand. It takes the angles of the robot's joints as input and figures out where the hand is in space based on how much each joint has moved. It's like knowing how much each part of your arm has bent and figuring out where your hand is as a result.
+
+    -> Inverse kinematics is the opposite of forward kinematics. Instead of figuring out where the hand is based on the joint angles, inverse kinematics helps us find the joint angles needed to reach a specific position or orientation for the hand. It's like knowing where you want your hand to be and figuring out how to bend each part of your arm to get it there.
+ 
+    -> In simpler terms, forward kinematics predicts where the end of the robot arm will be based on how its parts move, while inverse kinematics calculates how the parts of the arm need to move to reach a desired spot in space.
+
+=> What is kinematics?
+    -> Kinematics is a branch of physics and mathematics that deals with the motion of objects without considering the forces that cause the motion. It focuses on describing the position, velocity, and acceleration of objects as they move through space.
+

@@ -1,0 +1,120 @@
+# ! JDK, JVM, JRE
+
+---------> JDK (Java Development Kit):
+
+    -> JDK is a software development kit used for developing Java applications.
+    -> It includes tools and libraries necessary for developing Java programs, such as compilers, debuggers, and documentation.
+    -> JDK provides the necessary environment for writing, compiling, and running Java code.
+    -> It contains the JRE along with development tools such as javac (Java compiler), java (Java interpreter), and javadoc (Java documentation generator).
+    -> JDK is required for Java developers to create Java applications.
+
+---------> JRE (Java Runtime Environment):
+
+    -> JRE is a runtime environment used for running Java applications.
+    -> It includes the JVM (Java Virtual Machine) and libraries required to run Java bytecode.
+    -> JRE does not contain development tools such as compilers and debuggers.
+    -> JRE is necessary for end-users who want to run Java applications on their systems but do not need to develop Java programs.
+
+---------> JVM (Java Virtual Machine):
+    -> JVM is an abstract computing machine that provides the runtime environment for executing Java bytecode.
+    -> It interprets the Java bytecode and translates it into machine-specific instructions that the underlying operating system and hardware can execute.
+    -> JVM provides features such as memory management, garbage collection, and security.
+    -> It ensures platform independence by executing Java bytecode on any platform that has a compatible JVM implementation.
+    -> JVM implementations are available for various operating systems, such as Windows, macOS, Linux, and others.
+
+# ! What is Wrapper class
+
+    -> The wrapper class in Java provides the mechanism to convert
+primitive into object and object into primitive.
+
+    -> autoboxing (primitive -> wrapper) (int -> Integer)
+The automatic conversion of primitive data type into its corresponding
+wrapper class is known as autoboxing, for example, byte to Byte, char
+to Character, int to Integer and so on.
+
+    -> Unboxing  (primitive <- wrapper) (int <- Integer)
+The automatic conversion of wrapper type into its corresponding
+primitive type is known as unboxing. It is the reverse process of
+autoboxing..
+
+#! cmd line
+
+    -> The java commadn line arg is an arg passed at the time of running the java program. arg passed from the console can be recived in the java program and it is used as an input. 
+
+# ! Anonymous inner class
+
+    -> Java anonymous inner class is an inner class without a name and for which only a single object is created. An anonymous inner class can be useful when making an instance of an object with certain "extras" such as overloading methods of a class or interface, without having to actually subclass a class.
+
+abstract class Animal {
+    abstract void bark();
+}
+
+public class AnonymousClassExample{
+
+    public static void main(String[] args) {
+        Animal dog = new Animal(){
+            @Override
+            void bark(){
+                System.out.println("Dog barks..");
+            }
+        };
+        dog.bark();
+    }
+}
+
+# ! diff between string, string builder, str buffer
+
+Here's the information in tabular format:
+# ! string buffer vs String
+
+| Feature                      | String                                   | StringBuffer                            |
+|------------------------------|------------------------------------------|-----------------------------------------|
+| Mutability                   | Immutable (unchangeable)                 | Mutable (changeable)                    |
+| Concatenation                | Slower due to creating new instances     | Faster due to direct modification       |
+| Memory Consumption           | Consumes more memory due to new instances| Consumes less memory due to mutation    |
+| Comparison with equals()     | Uses overridden equals() method          | Does not override equals() method       |
+| Performance in Concatenation | Slower                                   | Faster                                  |
+| Memory Usage                 | String Constant Pool                     | Heap Memory                             |
+
+
+
+# ! string buffer vs string builder
+
+
+
+| Feature                   | StringBuffer                                   |       StringBuilder                |
+|---------------------------|------------------------------------------------|------------------------------------|
+| Synchronization           | Synchronized (thread-safe)                     | Non-synchronized (not thread-safe) |
+| Efficiency                | Less efficient                                 | More efficient                     |
+| Introduction in Java      | Introduced in Java 1.0                         | Introduced in Java 1.5             |
+
+# ! list and explain features of java. 
+
+# * SARS HD PPMODI
+
+=> Simple
+    -> Java is very easy to learn, and its syntax is simple, clean and easy to understand.
+=> Architecture neutral
+    -> Java is architecture neutral because there are no implementation dependent features, for example, the size of primitive types is fixed.  
+=> Robust
+    -> Java's robustness refers to its ability to provide strong memory management, exception handling, and built-in security features, ensuring reliable and secure execution of code.
+=> Secured
+    -> Java is best known for its security. With Java, we can develop virus-free systems.
+=> High Performance
+    -> Java is faster than other traditional interpreted programming languages because Java bytecode is "close" to native code. It is still a little bit slower than a compiled language (e.g., C++). Java is an interpreted language that is why it is slower than compiled languages
+=> Dynamic 
+    -> Java is a dynamic language. It supports the dynamic loading of classes. It means classes are loaded on demand. It also supports functions from its native languages
+=> Portable
+    -> Java is portable because it facilitates you to carry the Java bytecode to any platform. It doesn't require any implementation.
+=> Platform independent
+    -> Java is platform independent because it is different from other languages like C, C++, etc. which are compiled into platform specific machines while Java is a write once, run anywhere language. A platform is the hardware or software environment in which a program runs.
+=> Multithreaded
+    -> A thread is like a separate program, executing concurrently. We can write Java programs that deal with many tasks at once by defining multiple threads. The main advantage of multi-threading is that it doesn't occupy memory for each thread. It shares a common memory area. 
+=> Object-Oriented
+    -> Java is an object-oriented programming language. Everything in Java is an object. Object-oriented means we organize our software as a combination of different types of objects that incorporate both data and behavior.
+=> Distributed
+    -> Java is distributed because it facilitates users to create distributed applications in Java. RMI and EJB are used for creating distributed applications. This feature of Java makes us able to access files by calling the methods from any machine on the internet.
+=> Interpreted
+    -> Java interpreter is a computer program (system software) that implements the JVM. It is responsible for reading and executing the program. It is designed in such a way that it can read the source program and translate the source code instruction by instruction. It converts the high-level program into assembly language (machine language).
+
+# ! list and explain functions of java

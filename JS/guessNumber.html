@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <script>
+        let num = Math.floor((Math.random() * 100) + 1);
+        num = Math.round(num);
+        let chances = 10;
+        let userNum;
+        do {
+            userNum = parseInt(prompt("Enter a num"));
+            if (chances == 0){
+                console.log(`${chances} : Gueses available`)
+                console.log("Game Over");
+            } else if (userNum == num){
+                console.log("Your guess is right");
+                console.log(`${chances} : chances remaining`);
+                break;
+            } else if (userNum > num) {
+                console.log("Think of Lesser number");
+                chances--;
+                console.log(`${chances} : chances remaining`);
+            } else if (userNum < num) {
+                console.log("Think of Higher number");
+                chances--;
+                console.log(`${chances} : chances remaining`);
+            }
+        } while ((chances != 0) || (userNum == num))
+        console.log(`Number is: ${num}`)
+    </script>
+
+    </body>
+</html>

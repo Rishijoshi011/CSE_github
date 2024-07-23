@@ -1,0 +1,149 @@
+What is Robot?
+	-> A robot is a programmable machine designed to perform tasks in the physical world. It typically consists of mechanical components, sensors, actuators, and a control system, often powered by electricity or other energy sources. 
+	-> Robots can be guided by computer programs, remote control, or a combination of both. They are capable of carrying out a wide range of functions, from simple repetitive tasks to complex operations requiring decision-making and adaptability.
+
+What is Robotics? 
+	-> The robotics is a science, which deals with the issues related to design,development, applications of robots to perform a variety of tasks. 
+	-> Robotics involves the study of how robots work, how to build them, how to control their movements and actions, and how to integrate them into different environments and applications.
+
+------------- Question 1 ---------------: Explain the historical development in Robot technology .
+
+-> Robot technology has undergone significant development throughout history, evolving from early mechanical devices to sophisticated machines capable of complex tasks.
+-> The roots of modern robotics can be traced back to ancient civilizations, where simple automated devices such as water clocks and mechanical toys were created.
+-> The industrial revolution in the 18th and 19th centuries brought about advancements in automation, leading to the invention of early industrial robots like textile looms and automated machinery.
+-> The term "robot" was coined in 1920 by Czech playwright Karel Čapek in his play "R.U.R. (Rossum's Universal Robots)", which introduced the concept of artificial beings created to serve humans.
+-> The mid-20th century saw the development of the first programmable electronic computers, laying the foundation for modern robotics. In 1954, George Devol and Joseph Engelberger created the first industrial robot, the Unimate, which revolutionized manufacturing processes.
+-> Throughout the latter half of the 20th century and into the 21st century, advancements in electronics, sensors, actuators, and computing technology have propelled robotics to new heights.
+-> Robots have become increasingly versatile and capable, with applications ranging from manufacturing and logistics to healthcare, exploration, and entertainment.
+-> Today, robotics continues to advance rapidly, driven by innovations in artificial intelligence, machine learning, and human-robot interaction, paving the way for a future where robots play an increasingly integral role in society.
+
+------------- Question 2 ---------------: Explain Laws of Robotics & write about progressive advancement in robotics.
+
+The Three Laws of Robotics are as follows:
+	1. First Law: A robot must not harm a human, and allow a human to be harmed.
+	2. Second Law: A robot must obey the orders given it by human beings, except where such orders would conflict with the First Law.
+	3. Third Law: A robot must protect its own existence as long as such protection does not conflict with the First and Second Laws.
+
+The progressive advancement in robotics has been remarkable, with significant developments occurring in various areas:
+
+-> Technological Innovation: Advances in electronics, sensors, actuators, and computing have enabled the creation of more capable and versatile robots.
+
+-> Industrial Robotics: Industrial robots have revolutionized manufacturing processes, increasing efficiency, precision, and productivity in factories worldwide.
+
+-> Autonomous Systems: Autonomous robots and vehicles have become increasingly prevalent, with applications in transportation, agriculture, exploration, and more.
+
+-> Human-Robot Interaction: Research in human-robot interaction has focused on making robots more intuitive to use and improving communication between humans and machines.
+
+-> Artificial Intelligence: Progress in AI and machine learning has empowered robots with the ability to learn from data, make decisions, and adapt to changing environments.
+
+------------- Question 3 ---------------- Describe Robot Anatomy with neat sketch
+
+-> Robot anatomy refers to the structural components and systems that make up a robot, allowing it to perform various tasks.
+
+=> Body/Frame
+	-> The skeleton or structure that supports the robot, providing a base for other components.
+
+=> Actuators
+	-> The "muscles" of the robot, actuators move parts of the robot's body. They can be motors (electric, hydraulic, pneumatic) that control limbs, wheels, or other moving parts. 
+
+=> Sensors
+	-> The "senses" of the robot, sensors help the robot to perceive its environment. They can detect light, sound, heat, pressure, and other physical quantities.
+
+=> Control System
+	-> The "brain" of the robot, the control system processes information from the sensors and sends commands to the actuators. It includes onboard computers, software, and sometimes connections to external systems.
+
+=> End Effectors
+	-> The "hands" of the robot, end effectors are tools or devices attached to the robot to interact with the environment. Examples include grippers, welders, and cameras.
+
+------------- Question 4 --------------- from assignmet 
+Draw neat sketch of work envelope of below robotic configuration(i)
+Cartesian configuration (ii) Cylindrical configuration (iii) Articulated configuration (iv) Polar configuration (v) SCARA configuration
+
+
+------------- Question 5 --------------- Study human Arm anatomy & Describe features of robot.
+
+-> Human arm anatomy serves as a blueprint for the design and functionality of robotic arms, with several key features mirrored in robot design:
+
+=> Jointed Structure
+	-> Similar to the human arm's joints (shoulder, elbow, wrist), robotic arms often feature multiple articulated joints allowing for versatile movement and flexibility.
+
+=> Muscle Equivalents (Actuators)
+	-> Just as muscles enable human arm movement, actuators in robotic arms generate force to move the arm segments.
+
+=> Sensors for Feedback
+	-> Human arms rely on sensory feedback from nerves to control movement and interact with the environment. Similarly, robotic arms are equipped with sensors to provide feedback on position, force, and other variables for precise control.
+
+=> End Effectors (Hands)
+	-> The human hand's dexterity and ability to manipulate objects inspire the design of robotic end effectors. Grippers, fingers, suction cups, and specialized tools attached to robot arms mimic the functionality of human hands.
+
+=> Control System (Brain)	
+	-> Just as the brain controls the human arm's movements, a robot's control system directs the operation of its robotic arm. This system processes sensor inputs and generates commands for the actuators to achieve desired tasks.
+
+------------- Question 6 --------------- RYP wrist configuration
+
+=> Description
+	-> The RYP wrist configuration is a type of robotic wrist mechanism designed to provide three degrees of freedom (DOF) for orienting and positioning the end-effector of a robotic arm. 
+
+=> Components
+	-> Roll Joint (R): The roll joint allows rotation around the axis perpendicular to the robot arm's longitudinal axis. It enables the end-effector to rotate sideways or roll, facilitating orientation adjustments.
+	-> Yaw Joint (Y): The yaw joint allows rotation around the axis parallel to the robot arm's longitudinal axis. It enables the end-effector to rotate horizontally or yaw, providing additional flexibility in positioning.
+	-> Pitch Joint (P): The pitch joint allows rotation around the axis perpendicular to both the roll and yaw axes. It enables the end-effector to tilt or pitch, allowing for adjustments in vertical orientation.
+
+
+------------- Terminalogies --------------- 
+
+=> Work Volume
+	-> The space within which a robot can operate, determined by its reach and range of motion.
+
+=> Degree of Freedom
+	-> The number of independent motions a robot can perform, indicating its flexibility in movement.
+
+=> Resolution 
+	-> The smallest increment of movement or adjustment that a robot can make, determining its precision in positioning.
+
+=> Accuracy
+	-> The closeness of the robot's actual performance to the intended target or position, reflecting its ability to achieve precise results.
+
+=> Repeatability
+	-> The ability of a robot to consistently return to the same position or follow the same path, indicating its reliability over multiple operations.
+
+=> Dexterity 
+	-> The agility and versatility of a robot in manipulating objects or performing tasks with complex motions and orientations.
+
+=> Compliance
+ 	-> The ability of a robot's end-effector to yield or adapt to external forces or constraints, enhancing its interaction with the environment or objects.
+
+=> Payload Capacity
+	-> The maximum weight that a robot can lift or carry, determining its suitability for handling objects of different sizes and weights.
+
+=> Speed of Response
+	-> The time it takes for a robot to react to input commands or changes in its environment, influencing its efficiency and responsiveness in real-time operations.
+
+------------- applcations of robotics --------------- 
+
+=> Manufacturing
+	-> Robots are employed in production lines to fabricate goods efficiently and consistently.
+
+=> Material Handling 
+	-> They move, lift, and transport materials within factories and warehouses, optimizing logistics.
+
+=> Welding 
+	-> Robots perform precise and repetitive welding tasks, ensuring high-quality welds in various industries.
+
+=> Painting
+	-> Automated painting systems coat surfaces evenly and efficiently, enhancing product finishing.
+
+=> Assembly
+	-> Robots assemble components with accuracy and speed, streamlining production processes.
+
+=> Inspection
+	-> They use sensors and vision systems to detect defects and ensure product quality.
+
+=> Packaging
+	-> Robots package products into boxes or containers swiftly and accurately, readying them for distribution.
+
+=> Food Processing 
+	-> Robots handle, process, and package food products hygienically and efficiently in the food industry.
+
+=> Pharmaceuticals
+	-> They assist in pharmaceutical manufacturing, handling medications and ensuring compliance with regulations.
