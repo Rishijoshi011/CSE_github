@@ -1,5 +1,6 @@
 def setters():
-    x = int(input("Enter: "))
-    y = int(input("Enter: "))
+    x = int(input("Enter any Number: "))
+    y = int(input("Enter any Number: "))
+    z = int(input("Enter any Number: "))
     
-    return x, y
+    return x, y, z

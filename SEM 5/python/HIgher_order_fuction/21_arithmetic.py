@@ -1,5 +1,8 @@
-import Asetters as a
+import Asetters as setters
 
-a, b = a.setters()
+a, b, c = setters.setters()
 
-print(f"A: {a}, b: {b}")
+print(f"Addition: {a + b + c}")
+print(f"Substraction: {a - b - c}")
+print(f"Multiplication: {a * b * c}")
+print(f"Division: {(a * b) / c}")
