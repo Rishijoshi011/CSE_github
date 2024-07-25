@@ -8,7 +8,7 @@ def fibonacci(fibo):
 
 def print_fibonacci(fibo):
     fibo_series = [fibonacci(i) for i in range(fibo)]
-    print(f"Fibonacci series up to {fibo} terms:")
+    print(f"Fibonacci series up to {fibo} terms: ")
     print(fibo_series)
 
 # ! using fibo func as an obj
