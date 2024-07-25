@@ -1,4 +1,4 @@
-num = 7;
+num = 7
 
 def show():
     print(num) # * using global variable
