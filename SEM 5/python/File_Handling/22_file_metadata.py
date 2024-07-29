@@ -17,6 +17,8 @@ try:
         print(f"Word Occured: {occurrences(data, "dolor")}")
         print(f"Char Occured: {occurrences(data, "e")}")
         print(f"Blank Spaces: {occurrences(data, " ")}")
+        
+    file_obj.close()
 
 except FileNotFoundError:
     print("File is not found")
