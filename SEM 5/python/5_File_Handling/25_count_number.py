@@ -1,5 +1,5 @@
-from curses.ascii import isdigit
 import os
+import re
 
 try:
     currunt_dir = os.path.dirname(__file__)
@@ -7,10 +7,8 @@ try:
 
     with open(file_path, "r") as file_obj:
         data = file_obj.read()
-        # split_data = data.split()
-        
-        number_count = isdigit(data)
-        print(number_count)
+        numbers = re.findall(r'\d+\.?\d*', data)
+        print(f"These are the numbers: {numbers}")
         
     file_obj.close()
     
