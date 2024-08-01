@@ -1,5 +1,4 @@
-import os
-import re
+import os,re
 
 try:
     currunt_dir = os.path.dirname(__file__)
