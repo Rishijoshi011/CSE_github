@@ -19,7 +19,9 @@ class EvenOdd:
     @classmethod
     def classify_numbers(cls, numbers):
         for i in numbers:
-            if i % 2 == 0:
+            if i == 0:
+                return ""
+            elif i % 2 == 0:
                 cls.even_numbers.append(i)
             else:
                 cls.odd_numbers.append(i)
