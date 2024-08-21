@@ -145,19 +145,19 @@
         let operator = null;
         let isOperatorPressed = false;
     
-        // Handle number button clicks
+        
         buttons.forEach(function(button) {
             button.addEventListener('click', function() {
                 if (result.innerText === '0' || isOperatorPressed) {
                     result.innerText = this.innerText;
-                    isOperatorPressed = false; // Reset after setting the first digit
+                    isOperatorPressed = false; 
                 } else {
                     result.innerText += this.innerText;
                 }
             });
         });
     
-        // Clear button logic
+        
         document.getElementById('clear').addEventListener('click', () => {
             result.innerText = '0';
             firstValue = null;
@@ -165,7 +165,7 @@
             isOperatorPressed = false;
         });
     
-        // Toggle positive/negative
+       
         document.getElementById('abs').addEventListener('click', () => {
             let currentValue = result.innerText;
             if (currentValue.charAt(0) === '-') {
@@ -175,12 +175,12 @@
             }
         });
     
-        // Operator button logic
+       
         document.querySelectorAll('#adds, #subs, #mul, #divi, #mod').forEach(function(button) {
             button.addEventListener('click', function() {
                 if (result.innerText !== '') {
                     if (firstValue !== null && operator !== null) {
-                        // Perform the previous operation
+                        
                         const secondValue = parseFloat(result.innerText);
                         let computation;
                         switch (operator) {
@@ -206,12 +206,11 @@
                         firstValue = parseFloat(result.innerText);
                     }
                     operator = this.innerText === 'x' ? '*' : (this.innerText === '÷' ? '/' : this.innerText);
-                    isOperatorPressed = true; // Mark operator pressed to handle the next input
+                    isOperatorPressed = true; 
                 }
             });
         });
     
-        // Equals button logic
         document.getElementById('exe').addEventListener('click', () => {
             if (firstValue !== null && operator !== null) {
                 const secondValue = parseFloat(result.innerText);
@@ -236,15 +235,11 @@
                         computation = secondValue;
                 }
                 result.innerText = computation.toString();
-                firstValue = computation; // Store result for further operations
-                operator = null; // Reset operator
-                isOperatorPressed = false; // Allow further operations
+                firstValue = computation; 
+                operator = null; 
+                isOperatorPressed = false;
             }
         });
     </script>
-    
-    
-    
-    
-    
+
 </html>
