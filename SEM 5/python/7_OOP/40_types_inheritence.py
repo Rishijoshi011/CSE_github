@@ -2,7 +2,6 @@
 # ! Single inheritence
 
 from abc import abstractmethod
-from calendar import TUESDAY
 
 class Base(object):
     num = 11
