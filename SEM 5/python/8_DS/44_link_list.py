@@ -72,7 +72,7 @@ if __name__ == "__main__":
         elif choice == 4:
             break
         else:
-            print("Invalid choice, please try again.")
+            print("Invalid choice")
 
 
 # ** caution: chatgpt genererated code
