@@ -16,6 +16,7 @@ else:
 # else:
 #     print("Match not found")  
 
+
 # ! 1.2 :- Write a Python Program that returns a match where the string contains a white space character.
 
 str2 = "This is a string with some whitespace"
@@ -36,14 +37,24 @@ else:
 # ! 1.3: Write a Python program that matches a string that has an a followed by three 'b'.
 
 str3 = "hello therebbb test stringbbb"
-pattern3 = re.compile(r"bbb")
+pattern3 = re.compile("bbb")
 
-match3 = re.finditer(pattern3, str3)
+match3 = list(re.finditer(pattern3, str3))
 if match3:
-    print("words found", list(match3))
+    print("words found: ")
+    for i in match3:
+        print(i.group())
 else:
     print("words not found")
 
 
 # ! 1.4:- Write a Regular Expression to find Words or strings having three characters and with ‘m’ as first character
 
+str4 = "hello mmmthis is mmmtest msg"
+pattern4 = re.compile("mmm")
+
+match4 = re.finditer(pattern4, str4)
+if match4:
+    print("Format found", list(match4))
+else:
+    print("Format not found")

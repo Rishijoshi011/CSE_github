@@ -15,8 +15,8 @@ for i in index:
 
 new_array = list_[::]
 for i in index:
-      new_array[i] = -1
-      
+    new_array[i] = -1
+
 print(f"\n{new_array}") 
 
 # ! C
