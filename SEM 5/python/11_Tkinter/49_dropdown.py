@@ -8,11 +8,11 @@ window.title("Dropdown menu")
 def dp():
     label.config(text=clicked.get())  
     
-options = ["RDR2", "GTAV", "Watch Dogs 2", "Wildlands", "MW3"]
+options = ["Los Santos", "San Ferro", "Las Ventures", "Chicago", "Liberty"]
 
 clicked = tk.StringVar()
 
-clicked.set("RDR2")
+clicked.set("San Ferro")
 
 drop = tk.OptionMenu(window, clicked, *options)
 drop.grid(row = 0, column = 0)
