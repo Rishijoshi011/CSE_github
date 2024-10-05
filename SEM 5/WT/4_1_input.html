@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app="app_box" ng-controller="controller_search">
+
+    <h2>Search Box</h2>
+    <input type="text" ng-model="inp_search" placeholder="Type here" ng-keypress="check_input($event)" />
+    <p>Search Term Entered: {{ search_result }}</p>
+
+    <script>
+        var app = angular.module('app_box', []);
+
+        app.controller('controller_search', function($scope) {
+            $scope.search_result = "";
+            $scope.check_input = function(event) {
+                if (event.which === 13) {
+                    $scope.search_result = $scope.inp_search;
+                }
+            };
+        });
+    </script>
+</body>
+
+</html>
