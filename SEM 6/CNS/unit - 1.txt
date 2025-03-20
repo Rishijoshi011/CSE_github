@@ -1,0 +1,154 @@
+
+
+UNIT- 1
+
+1. Explain all key objectives of cryptography.
+2. Draw and Explain OSI Architecture.
+
+# todo 3. Compare Symmetric and Asymmetric Encryption with a proper table.
+
++--------------+-------------------------------------+-----------------------------------------+
+| Feature      |      Symmetric Encryption           |        Asymmetric Encryption            |
++--------------+-------------------------------------+-----------------------------------------+
+| Definition   | Uses the same key for encryption and| Uses a pair of keys (public and private)|
+|              | decryption.                         | for encryption and decryption.          |
++--------------+-------------------------------------+-----------------------------------------+
+| Key Used     | Single secret key.                  | Public key for encryption, private key  |
+|              |                                     | for decryption.                         |
++--------------+-------------------------------------+-----------------------------------------+
+| Speed        | Faster, as encryption and decryption| Slower, due to complex mathematical     |
+|              | require less computational power.   | operations.                             |
++--------------+-------------------------------------+-----------------------------------------+
+| Security     | Less secure, as sharing the secret  | More secure, since private key is never |
+|              | key can lead to compromise.         | shared.                                 |
++--------------+-------------------------------------+-----------------------------------------+
+| Usage        | Used for bulk data encryption       | Used for secure key exchange and digital|
+|              | (e.g., AES, DES).                   | signatures (e.g., RSA, ECC).            |
++--------------+-------------------------------------+-----------------------------------------+
+| Ex Algorithms| AES, DES, Blowfish.                 | RSA, ECC, Diffie-Hellman.               |
++--------------+-------------------------------------+-----------------------------------------+
+| Applications | File encryption, VPNs, database     | Digital signatures, SSL/TLS, email      |
+|              |encryption.                          | encryption.                             |
++--------------+-------------------------------------+-----------------------------------------+
+
+
+# todo 4. Define Active and Passive attacks with Example.
+
+    1. Active Attack:  
+    An active attack occurs when an attacker modifies, alters, or disrupts the communication between two parties. The attacker tries to manipulate the transmitted data or system operations.  
+
+    Examples of Active Attacks:  
+    - Man-in-the-Middle (MITM) Attack: The attacker intercepts and modifies the communication between two parties.  
+    - Denial of Service (DoS) Attack: The attacker floods a system with excessive requests to make it unavailable.  
+    - Session Hijacking: The attacker takes over an active session between two parties.  
+
+    Characteristics of Active Attacks:  
+    - Data is altered or injected.  
+    - Can be detected but not always prevented.  
+    - Requires countermeasures like encryption and authentication.  
+
+    ---
+
+    2. Passive Attack:  
+    A passive attack occurs when an attacker only monitors and listens to the communication without altering the data. The goal is to gather sensitive information without being detected.  
+
+    Examples of Passive Attacks:  
+    - Eavesdropping: The attacker secretly listens to a conversation or network communication.  
+    - Traffic Analysis: The attacker analyzes patterns in network traffic to infer sensitive information.  
+    - Shoulder Surfing: Physically observing someone’s screen or keyboard to steal information.  
+
+    Characteristics of Passive Attacks:  
+    - No modification of data occurs.  
+    - Difficult to detect since communication remains unaffected.  
+    - Can be prevented using encryption and secure communication channels.  
+
+
+
+
+
+5. Write a short note on Security Services.
+6. Explain playfair cipher substitution technique in detail. Find out cipher text for the following given key and plaintext.Key = ENGINEERING Plaintext=COMPUTER SCIENCE AND ENGINEERING
+7. Encrypt using HILL CIPHER the P.T “ATTACK CHINAA” using the keyGYDNSKURT
+8. Differentiate between Monoalphabetic and Polyalphabetic cipher.
+9. Explain the Vigener Cipher with an example.
+10.Explain the Vernam Cipher with an example.
+11. Explain Block cipher mode of operation.
+12.Why is it important to study Feistel cipher?
+13.Explain a single round function in DES.
+14.Explain Byte substitution and Shift row operation of AES in detail.
+15.Elaborate AES encryption with neat sketches.
+
+   +-----------------------+
+   |   Plaintext (128-bit) |
+   +-----------------------+
+             |
+             v
+   +-----------------------+
+   |    AddRoundKey        |  <-- Initial Round Key Addition
+   +-----------------------+
+             |
+             v
+   +-----------------------+
+   |     Main Rounds       |
+   |   (Repeated Rounds)   |
+   |                       |
+   |  +-----------------+  |   Each Main Round:
+   |  |  SubBytes       |  |   - Substitute bytes (S-Box)
+   |  +-----------------+  |   - ShiftRows (row shifts)
+   |         |             |   - MixColumns (column mixing)
+   |         v             |   - AddRoundKey (XOR with round key)
+   |  +-----------------+  |
+   |  |  ShiftRows      |  |
+   |  +-----------------+  |
+   |         |             |
+   |         v             |
+   |  +-----------------+  |
+   |  |  MixColumns     |  |
+   |  +-----------------+  |
+   |         |             |
+   |         v             |
+   |  +-----------------+  |
+   |  |  AddRoundKey    |  |
+   |  +-----------------+  |
+   +-----------------------+
+             |
+             v
+   +-----------------------+
+   |     Final Round       |  <-- Similar to Main Round but NO MixColumns
+   |                       |
+   |  +-----------------+  |   - SubBytes
+   |  |  SubBytes       |  |   - ShiftRows
+   |  +-----------------+  |   - AddRoundKey
+   |         |             |
+   |         v             |
+   |  +-----------------+  |
+   |  |  ShiftRows      |  |
+   |  +-----------------+  |
+   |         |             |
+   |         v             |
+   |  +-----------------+  |
+   |  |  AddRoundKey    |  |
+   |  +-----------------+  |
+   +-----------------------+
+             |
+             v
+   +-----------------------+
+   |   Ciphertext (128-bit)|
+   +-----------------------+
+
+
+
+16.Explain avalanche effect in DES and discuss strength of DES in brief.
+17.Explain function of S-BOX in DES and also Explain avalanche effect.
+18.What are the different Types of Attack on Encrypted Messages.
+19.Write a short note on Blowfish with a diagram.
+20.Specify the difference between diffusion and confusion.
+21.Differentiate between a block cipher and a stream cipher.
+22.Define meet-in-the-middle attack.
+23.Explain Transposition Technique.
+24.Write a short note on Triple DES.
+25.Discuss the following terms in brief:
+i) brute force attack ii) cryptography
+
+
+UNIT- 2

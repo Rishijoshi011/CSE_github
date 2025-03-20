@@ -1,0 +1,60 @@
+Got it. I'll extract the questions from the PDF and categorize them unit-wise based on the syllabus screenshots you provided. Give me a moment.
+
+Here is the unit-wise list of questions extracted from the DPA (1).pdf based on the syllabus screenshots you provided:  
+
+---
+
+ UNIT-I: Introduction to Data Analysis  
+1. What is data analysis? Explain different types of data analysis.  
+2. Why is data analysis important in decision-making?  
+3. Define data transformation. Explain data transformation techniques like smoothing, aggregation, normalization, and feature construction.  
+4. What are data gathering and preparation techniques?  
+5. Explain real-time data and its challenges.  
+6. What is missing data? Explain different methods to handle missing data.  
+7. What is exploratory data analysis (EDA)?  
+8. What is the role of data visualization in data analysis?  
+9. Explain different types of data visualization tools.  
+10. What are different data processing techniques?  
+
+---
+
+ UNIT-II: Exploratory Data Analysis (EDA)  
+11. Explain data cleaning techniques and their importance.  
+12. What are consistency checking techniques?  
+13. What is segmentation? Explain different segmentation techniques.  
+14. What is clustering and association analysis? Give an example.  
+15. What is hypothesis generation? Explain with an example.  
+16. What is geospatial and geolocation data?  
+17. What is time series analysis? Explain different methods.  
+18. What are the key steps in exploratory data analysis?  
+19. Explain comparative analysis with an example.  
+20. Explain descriptive analysis and its role in data processing.  
+
+---
+
+ UNIT-III: Data Visualization  
+21. What are the principles of designing effective visualizations?  
+22. What are time series visualizations? Explain with examples.  
+23. How can visualizations show correlations and connections in data?  
+24. What are hierarchies in data visualization?  
+25. Explain the importance of network visualizations.  
+26. What are some common visualization tools?  
+27. Explain the concept of interactive data visualization.  
+28. What are different types of graphs and charts used in data visualization?  
+
+---
+
+ UNIT-IV: Ethics in Data Analysis  
+29. Why is ethics important in computing, statistics, and communication?  
+30. What are ethical issues in data analysis?  
+31. What is the role of professional ethics in data processing?  
+32. Explain the ethical principles outlined in ACM’s code of ethics.  
+33. What are IEEE’s professional ethics guidelines?  
+34. How does data privacy impact ethical decision-making?  
+35. What are the legal implications of data misuse?  
+36. How do ethical considerations apply to artificial intelligence and data security?  
+37. Explain the importance of fairness and transparency in data analysis.  
+
+---
+
+This list is fully extracted and categorized from the DPA (1).pdf and matches the syllabus structure you uploaded. Let me know if you need any corrections or more details! 🚀

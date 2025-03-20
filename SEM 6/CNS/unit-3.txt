@@ -1,0 +1,463 @@
+---
+
+    Unit - 3
+
+---
+
+1️⃣Explain MACs based on Hash functions.
+
+    Message Authentication Codes (MACs) Based on Hash Functions  
+
+    Introduction  
+    A Message Authentication Code (MAC) is a cryptographic technique used to ensure message integrity and authenticity. It verifies that the message has not been altered and that it comes from a legitimate sender.  
+
+    One of the most commonly used methods for generating MACs is using hash functions, known as HMAC (Hash-based Message Authentication Code).  
+
+    ---
+
+    Working of MACs Using Hash Functions  
+
+    Step 1: Choosing a Secure Hash Function  
+    - A cryptographic hash function like SHA-256 or SHA-512 is selected.  
+    - The hash function must be collision-resistant and one-way to ensure security.  
+
+    Step 2: Generating the MAC  
+    - A secret key (K) is shared between the sender and receiver.  
+    - The MAC is computed using the formula:  
+        [MAC = Hash(K || message)] Here, `||` represents concatenation (joining key and message).  
+
+    Step 3: Sending the Message and MAC  
+    - The sender transmits both the message and the MAC to the receiver.  
+
+    Step 4: Verifying the MAC  
+    - The receiver computes the MAC using the same hash function and secret key:  
+        [MAC' = Hash(K || received\_message)]
+    - If MAC' matches the received MAC, the message is authentic; otherwise, it has been tampered with.  
+
+    ---
+    HMAC (Hash-based Message Authentication Code)  
+    HMAC is a widely used MAC that provides extra security by hashing the key twice. It uses the formula:  
+    [HMAC(K, message) = Hash((K ⊕ opad) || Hash((K ⊕ ipad) || message))]
+
+    Where:  
+    - K = Secret key  
+    - opad = Outer padding (fixed constant)  
+    - ipad = Inner padding (fixed constant)  
+
+    HMAC ensures that even if the hash function is vulnerable to attacks, the secret key strengthens security.  
+
+    ---
+
+    Security Features of MACs Using Hash Functions  
+    ✅ Integrity – Ensures message is not modified.  
+    ✅ Authenticity – Confirms the sender is legitimate.  
+    ✅ Efficiency – Uses fast hash functions like SHA-256.  
+    ✅ Resistant to Attacks – Prevents tampering and replay attacks.  
+
+    ---
+
+    Applications of MACs in Cryptography  
+    🔹 Digital Signatures (Authenticating data in secure communication)  
+    🔹 TLS/SSL Security (Used in HTTPS for secure browsing)  
+    🔹 Banking Transactions (Verifying the authenticity of financial messages)  
+    🔹 Token-Based Authentication (Used in OAuth, API authentication, etc.)  
+
+    --- 
+
+
+2️⃣.Discuss SHA-1 with proper diagrams.
+
+    SHA-1 is a cryptographic hash function that generates a 160-bit (20-byte) hash value from any input message. It was developed by the National Security Agency (NSA) and published by NIST in 1995. SHA-1 was widely used in digital signatures, certificates, and cryptographic protocols, but it is now considered insecure due to collision attacks.
+
+    Key Features of SHA-1
+    ✅ Fixed Output Size → 160-bit hash (40 hexadecimal characters).
+    ✅ Deterministic → Same input always gives the same output.
+    ✅ Avalanche Effect → Small input changes result in large hash changes.
+    ✅ Preimage Resistance → Hard to find the original input from the hash.
+    ✅ Collision Vulnerability → No longer secure due to attacks.
+
+SHA-1 processes input data in 512-bit blocks and outputs a 160-bit hash value after multiple rounds of transformations.
+
+1. Message Preprocessing The input message is padded so that its length becomes 64 bits short of a multiple of 512. Padding starts with a 1-bit, followed by zeros, and the last 64 bits store the original message length.
+
+2. Dividing into 512-bit Blocks The padded message is split into 512-bit blocks for processing.
+
+3. Initialize Hash Values SHA-1 uses five 32-bit registers (H0 to H4) with fixed initial Values
+
+4. Processing Each Block (80 Rounds) Each 512-bit block undergoes 80 rounds of operations using:
+    Bitwise operations (AND, OR, XOR, NOT)
+    Logical shifts and rotations
+    Modular additions
+    Four constant values (K0 to K3) and different functions in four stages:
+    Rounds 0-19: Uses Ch (choice function)
+    Rounds 20-39: Uses Parity function
+    Rounds 40-59: Uses Maj (majority function)
+    Rounds 60-79: Uses Parity function again
+5. Final Hash Computation
+After processing all blocks, the final 160-bit hash value is obtained by concatenating:
+    H0 || H1 || H2 || H3 || H4
+This final hash is the SHA-1 digest.
+
++---------------------------+
+|      Input Message        |
++---------------------------+
+            |
+            v
++---------------------------+
+|  Preprocessing (Padding)  |  
++---------------------------+
+            |
+            v
++---------------------------+
+| Divide into 512-bit Blocks|
++---------------------------+
+            |
+            v
++---------------------------+
+|  Initialize Hash Values   |
++---------------------------+
+            |
+            v
++---------------------------------+
+| Process Each Block (80 Rounds)  |
+| - Bitwise Operations            |
+| - Logical Shifts/Rotations      |
+| - Modular Addition              |
++---------------------------------+
+            |
+            v
++---------------------------+
+|  Final Hash Computation   |
++---------------------------+
+            |
+            v
++----------------------------+
+|  160-bit SHA-1 Hash Output |
++----------------------------+
+
+Security Issues and Deprecation of SHA-1
+🔴 Vulnerable to Collision Attacks – Google cracked SHA-1 in 2017.
+🔴 Not recommended for cryptographic security – Replaced by SHA-2 and SHA-3.
+🔴 Many applications have moved to SHA-256 or SHA-512 for better security.
+
+Applications (Before Deprecation)
+🔹 Digital Signatures (DSA, RSA, ECDSA)
+🔹 TLS/SSL Certificates (HTTPS Security)
+🔹 Software Integrity Verification (Checksum)
+🔹 Git Version Control System (SHA-1 for file commits, now moving to SHA-256)
+
+
+
+3. Explain HMAC with a diagram.
+
+    HMAC (Hash-based Message Authentication Code)  
+
+    Definition:  
+    HMAC (Hash-based Message Authentication Code) is a mechanism for ensuring message integrity and authentication using cryptographic hash functions and a secret key. It prevents data tampering and verifies message authenticity.  
+
+    ---
+
+    Working of HMAC:  
+    HMAC combines a hash function (such as SHA-256 or MD5) with a secret key to create a secure message authentication code. The process involves the following steps:  
+
+    1. Key Preparation:  
+    - If the key length is greater than the block size of the hash function, it is first hashed.
+    - If the key length is smaller, it is padded with zeros.  
+
+    2. Inner Padding (ipad) and Outer Padding (opad):  
+    - Two fixed padding values are defined:  
+        - ipad = 0x36 repeated to match the block size.  
+        - opad = 0x5C repeated to match the block size.  
+    - The key is XORed separately with both ipad and opad.
+
+    3. Hashing Process:  
+    - The message is concatenated with the (Key ⊕ ipad) and hashed.
+    - The output of this hash is then concatenated with (Key ⊕ opad).
+    - Finally, this combined value is hashed again to generate the final HMAC.
+
+    ---
+
+    Formula for HMAC:  [HMAC(K, M) = H((K ⊕ opad) || H((K ⊕ ipad) || M))]
+    Where:  
+        - (K) = Secret key  
+        - (M) = Message  
+        - (H) = Cryptographic hash function  
+        - (⊕) = XOR operation  
+        - (||) = Concatenation  
+        - (ipad= 0x36), ( opad = 0x5C)  
+
+---
+
+    Diagram of HMAC:  
+
+                +-------------------------------------+
+                | Secret Key (K)                      |
+                +-------------------------------------+
+                                |
+            +-------------------+----------------------+
+            |                                          |
+    XOR with ipad                               XOR with opad
+            |                                          |
+            +-------------------+                      |
+            | Message (M)       |                      |
+            | Concatenation     |                      |
+            +-------------------+                      |
+            | Hash Function (H) |                      |
+            | Applied           |                      |
+            +-------------------+                      |
+                                |                      |
+                                +----------------------+
+                                            |
+                                    Hash Function (H)  
+                                            |
+                                    +----------------+
+                                    |   Final HMAC   |
+                                    +----------------+
+
+---
+
+    Advantages of HMAC:  
+    1. Stronger Security – Uses a cryptographic hash function and a secret key, making it more secure than simple hashing.  
+    2. Resistant to Collision Attacks – Harder for an attacker to forge a valid HMAC.  
+    3. Widely Used – Implemented in protocols like TLS, IPsec, and SSH for secure communications.  
+
+    ---
+
+4.Explain Elgamal and Schnorr Digital Signature algorithm with examples.
+
+ ElGamal and Schnorr Digital Signature Algorithms  
+
+ 1. ElGamal Digital Signature Algorithm:  
+
+Introduction:  
+The ElGamal digital signature algorithm is a cryptographic method used for message authentication and integrity. It is based on the Discrete Logarithm Problem (DLP), making it computationally secure.  
+
+---
+
+Steps of ElGamal Digital Signature:  
+
+1. Key Generation:  
+   - Select a large prime number \( p \) and a generator \( g \).  
+   - Choose a private key \( x \) such that \( 1 < x < p-1 \).  
+   - Compute the public key \( y = g^x \mod p \).  
+   - Public Key: \( (p, g, y) \), Private Key: \( x \).  
+
+2. Signature Generation:  
+   - Choose a random number \( k \) such that \( 1 < k < p-1 \) and \( \gcd(k, p-1) = 1 \).  
+   - Compute \( r = g^k \mod p \).  
+   - Compute \( s = (H(M) - x \cdot r) \cdot k^{-1} \mod (p-1) \), where \( H(M) \) is the hash of the message.  
+   - The signature is \( (r, s) \).  
+
+3. Signature Verification:  
+   - Compute \( v_1 = y^r \cdot r^s \mod p \).  
+   - Compute \( v_2 = g^{H(M)} \mod p \).  
+   - If \( v_1 = v_2 \), the signature is valid; otherwise, it is rejected.  
+
+---
+
+Example of ElGamal Digital Signature:  
+- Let \( p = 23 \), \( g = 5 \), and \( x = 6 \).  
+- Public Key: \( (p=23, g=5, y=5^6 \mod 23 = 8) \).  
+- Private Key: \( x=6 \).  
+- Choose \( k=3 \), compute \( r = 5^3 \mod 23 = 10 \).  
+- Compute \( s \) and verify using the above steps.  
+
+---
+
+ 2. Schnorr Digital Signature Algorithm:  
+
+Introduction:  
+The Schnorr Signature Algorithm is a more efficient digital signature scheme based on modular arithmetic and the discrete logarithm problem. It is known for its simplicity and security.  
+
+---
+
+Steps of Schnorr Digital Signature:  
+
+1. Key Generation:  
+   - Choose a large prime \( p \) and a generator \( g \).  
+   - Select a private key \( x \) such that \( 1 < x < p-1 \).  
+   - Compute the public key \( y = g^x \mod p \).  
+
+2. Signature Generation:  
+   - Choose a random number \( k \) such that \( 1 < k < p-1 \).  
+   - Compute \( r = g^k \mod p \).  
+   - Compute the hash value \( e = H(M || r) \).  
+   - Compute \( s = k - x \cdot e \mod (p-1) \).  
+   - Signature: \( (r, s) \).  
+
+3. Signature Verification:  
+   - Compute \( v = g^s \cdot y^e \mod p \).  
+   - Compute \( e' = H(M || v) \).  
+   - If \( e' = e \), the signature is valid; otherwise, it is rejected.  
+
+---
+
+Example of Schnorr Digital Signature:  
+- Let \( p = 23 \), \( g = 5 \), and \( x = 4 \).  
+- Public Key: \( y = 5^4 \mod 23 = 4 \).  
+- Choose \( k=3 \), compute \( r = 5^3 \mod 23 = 10 \).  
+- Compute \( e = H(M || r) \).  
+- Compute \( s \) and verify using the above steps.  
+
+---
+
+ Comparison of ElGamal and Schnorr Signature:  
+
+| Feature      | ElGamal Signature  | Schnorr Signature  |
+|-------------|------------------|------------------|
+| Security Basis | Discrete Logarithm Problem (DLP) | Discrete Logarithm Problem (DLP) |
+| Efficiency | Less efficient (longer signatures) | More efficient (shorter signatures) |
+| Randomness | Uses random \( k \) | Uses random \( k \) |
+| Verification | Two-step verification | One-step verification |
+
+---
+
+
+
+5. What is Kerberos and its requirements?
+
+ Kerberos and Its Requirements  
+
+# Introduction to Kerberos:  
+Kerberos is a network authentication protocol designed to provide secure authentication for users and services over an untrusted network. It was developed at MIT and is widely used in enterprise environments, including Windows Active Directory, UNIX systems, and cloud-based authentication.  
+
+Kerberos uses symmetric key cryptography and requires a trusted Key Distribution Center (KDC) to verify identities securely.  
+
+---
+
+ Key Requirements of Kerberos:  
+
+1. Secure Authentication:  
+   - Kerberos ensures that a user's identity is verified before granting access to resources.  
+   - It uses ticket-based authentication to avoid sending passwords over the network.  
+
+2. Mutual Authentication:  
+   - Both the client and the server authenticate each other, preventing man-in-the-middle attacks.  
+
+3. Single Sign-On (SSO):  
+   - Users need to authenticate only once per session, and Kerberos will provide access to multiple services without requiring re-login.  
+
+4. Time Synchronization:  
+   - Kerberos relies on timestamps to prevent replay attacks.  
+   - All systems using Kerberos must have their clocks synchronized within a few minutes of each other.  
+
+5. Key Distribution Center (KDC):  
+   - The KDC is responsible for issuing and managing authentication tickets.  
+   - It has two main components:  
+     - Authentication Server (AS): Verifies user identity and issues a Ticket Granting Ticket (TGT).  
+     - Ticket Granting Server (TGS): Issues service tickets based on the TGT.  
+
+6. Session Key Encryption:  
+   - Kerberos uses symmetric key cryptography (AES or DES) to encrypt authentication data.  
+   - The session key is shared securely between the client and the service.  
+
+7. Scalability:  
+   - Kerberos can be used in large networks with thousands of users and services.  
+
+---
+
+ Kerberos Authentication Process:  
+1. User Authentication: The client requests authentication from the Authentication Server (AS).  
+2. Ticket Granting Ticket (TGT): If the credentials are valid, the AS provides a TGT, encrypted with the user's secret key.  
+3. Request for Service Ticket: The client sends the TGT to the Ticket Granting Server (TGS) to request access to a specific service.  
+4. Service Ticket Issuance: The TGS issues a service ticket, encrypted with the server’s key.  
+5. Access to the Service: The client presents the service ticket to the application server to gain access.  
+
+---
+
+ Conclusion:  
+Kerberos is a widely used authentication protocol that ensures secure, scalable, and efficient authentication for users and services in a network. It prevents password theft and replay attacks while providing a seamless Single Sign-On experience. 🚀
+
+
+
+
+6. What isPGP ?How authentication and confidentiality is maintained in PGP.
+
+
+7. Explain authentication services of X.509 .
+
+ Authentication Services of X.509  
+
+Introduction:  
+X.509 is a widely used standard for Public Key Infrastructure (PKI) that defines the format for digital certificates and provides authentication services using a Certificate Authority (CA).  
+
+---
+
+ Authentication Services Provided by X.509:  
+
+1. Certificate-Based Authentication:  
+   - X.509 uses digital certificates to verify the identity of users and entities.  
+   - Each certificate contains the subject’s public key, issuer details, validity period, and a digital signature from a trusted CA.  
+
+2. Public Key Verification:  
+   - Ensures that the public key in the certificate belongs to the claimed owner.  
+   - The certificate is validated using the CA's signature.  
+
+3. Secure Communication (SSL/TLS):  
+   - X.509 certificates are widely used in SSL/TLS protocols to establish secure communication over the internet (e.g., HTTPS).  
+
+4. Certificate Chain and Trust Model:  
+   - X.509 uses a hierarchical trust model where multiple CAs can issue and validate certificates.  
+   - A root CA issues certificates to intermediate CAs, which then issue certificates to end users.  
+
+5. Non-Repudiation:  
+   - Prevents an entity from denying its digital transactions.  
+   - Digital signatures in X.509 ensure authenticity and integrity.  
+
+6. Revocation Mechanisms:  
+   - X.509 provides Certificate Revocation Lists (CRLs) and Online Certificate Status Protocol (OCSP) to check the validity of a certificate.  
+
+---
+
+ Diagram Representation of X.509 Authentication:
+```
+ +----------------------------+
+ |        Root CA             |
+ +----------------------------+
+           |
+           v
+ +----------------------------+
+ |  Intermediate CA           |
+ +----------------------------+
+           |
+           v
+ +----------------------------+
+ |  User Certificate          |
+ |  (Public Key, Identity,    |
+ |   CA Signature, Validity)  |
+ +----------------------------+
+```
+---
+
+
+8.Explain MD5 algorithm with diagram.
+9.Explain NIST Digital Signature algorithm.
+
+10.Differentiate between SHA-1 and MD5
+
+
+Key Differences Between SHA-1 and MD5:
+
++------------------------+----------------------------------+----------------------------------------+
+| Feature                | SHA-1                            | MD5                                    |
++------------------------+----------------------------------+----------------------------------------+
+| Hash Length            | 160 bits (40 hexadecimal chars)  | 128 bits (32 hexadecimal chars)        |
++------------------------+----------------------------------+----------------------------------------+
+| Security               | More secure than MD5 but still   | Weaker security, highly vulnerable to  |
+|                        | vulnerable to attacks            | collision attacks                      |
++------------------------+----------------------------------+----------------------------------------+
+| Speed                  | Slower than MD5 due to more      | Faster than SHA-1 but at the cost of   |
+|                        | rounds of computation            | security                               |
++------------------------+----------------------------------+----------------------------------------+
+| Number of Rounds       | 80 rounds                        | 64 rounds                              |
++------------------------+----------------------------------+----------------------------------------+
+| Collision Resistance   | Less secure, vulnerable to       | Highly insecure, collisions can be     |
+|                        | collision attacks                | generated easily                       |
++------------------------+----------------------------------+----------------------------------------+
+| Vulnerability          | Collision attacks discovered     | Broken since 1996, widely considered   |
+|                        | in 2005                          | insecure                               |
++------------------------+----------------------------------+----------------------------------------+
+| Usage                  | Used in old TLS versions, GPG,   | Previously used for password hashing,  |
+|                        | and software updates (now        | digital signatures, and checksums      |
+|                        | replaced by SHA-256)             | (deprecated)                           |
++------------------------+----------------------------------+----------------------------------------+

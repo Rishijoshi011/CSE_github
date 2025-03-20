@@ -1,0 +1,88 @@
+    UNIT-III: Data Visualization  
+
+21. What are the principles of designing effective visualizations?  
+
+Principles of Designing Effective Visualizations   CAS CRE PEA
+
+    1. Clarity  
+    - The visualization should be clear and easy to understand.  
+    - Avoid unnecessary complexity, clutter, and redundant information.  
+
+    2. Accuracy  
+    - Ensure that the data is represented correctly without any distortions.  
+    - Use appropriate scales, labels, and units to prevent misinterpretation.  
+
+    3. Simplicity  
+    - Use minimal design elements to convey the message effectively.  
+    - Avoid excessive colors, 3D effects, and decorative elements that do not add value.  
+
+    4. Consistency  
+    - Maintain uniformity in fonts, colors, scales, and chart styles across multiple visualizations.  
+    - This helps users compare and interpret data easily.  
+
+    5. Relevance  
+    - Choose the right type of visualization (e.g., bar chart, pie chart, line graph) based on the data type.  
+    - Ensure that the visualization answers the intended question.  
+
+    6. Emphasis on Key Insights  
+    - Highlight important trends, patterns using contrasting colors, or labels.  
+    - Use data storytelling techniques to guide the viewer's attention.  
+
+    7. Proper Use of Color  
+    - Use colors meaningfully to differentiate categories or indicate trends.  
+    - Avoid too many colors, .  
+
+    8. Efficient Use of Space  
+    - Optimize spacing and layout to avoid unnecessary empty spaces or overcrowding.  
+    - Arrange elements logically for better readability.  
+
+    9. Accessibility  
+    - Ensure the visualization is readable for all audiences, including those with visual impairments.  
+    - Use descriptive labels, legible fonts, and appropriate contrast levels.  
+
+
+
+22. What are time series visualizations? Explain with examples.  
+
+    Time Series Visualizations  
+
+    Definition:  
+    Time series visualizations are graphical representations of data points collected or recorded over a specific period. These visualizations help in understanding trends, patterns, and variations in data over time.  
+
+    Types of Time Series Visualizations with Examples:  
+
+    1. Line Chart  
+    - The most common type of time series visualization.  
+    - It uses a continuous line to show trends over time.  
+    - Example: Stock prices of a company over the last year.  
+
+    2. Bar Chart (Time-Based)  
+    - Used when data is collected at regular intervals and needs to be compared.  
+    - Bars represent values at different time points.  
+    - Example: Monthly sales revenue of a company.  
+
+    3. Area Chart  
+    - Similar to a line chart but with the area under the line filled with color.  
+    - Helps visualize cumulative trends.  
+    - Example: Growth of website traffic over time.  
+
+    4. Scatter Plot  
+    - Displays individual data points over time to analyze relationships or outliers.  
+    - Example: Daily temperature variations over a year.  
+
+    Importance of Time Series Visualizations:  
+    - Helps in identifying trends (upward/downward).  
+    - Detects seasonality (patterns that repeat over a specific period).  
+    - Useful for forecasting future values.  
+    - Assists in anomaly detection (sudden spikes or drops in data).  
+
+
+
+23. How can visualizations show correlations and connections in data?  
+24. What are hierarchies in data visualization?  
+25. Explain the importance of network visualizations.  
+26. What are some common visualization tools?  
+27. Explain the concept of interactive data visualization.  
+28. What are different types of graphs and charts used in data visualization?  
+
+---

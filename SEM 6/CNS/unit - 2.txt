@@ -1,0 +1,178 @@
+UNIT- 2
+
+1. Define Asymmetric Key Encryption with a proper Diagram.
+
+# todo: 2. Explain RSA public key cryptography with all steps.
+
+
+
+# todo: 3. Explain Diffie Hellman Key Exchange with all steps.
+
+
+
+# todo: 4. Justify Diffie Hellman Key Exchange vulnerable to Man in Middle Attack.
+
+    Diffie-Hellman Key Exchange Vulnerability to Man-in-the-Middle (MITM) Attack  
+
+    The Diffie-Hellman (DH) key exchange allows two parties to establish a shared secret key over an insecure channel. However, it is vulnerable to a Man-in-the-Middle (MITM) attack because it does not provide authentication of communicating parties.
+
+---
+
+    How Man-in-the-Middle Attack Works in Diffie-Hellman  
+
+    1. Normal Diffie-Hellman Key Exchange
+    - Two users, Alice (A) and Bob (B), want to establish a shared secret key.
+    - They agree on public values:  
+    - A large prime number (P)  
+    - A primitive root (G) of P  
+    - Each selects a private key (Xa for Alice, Xb for Bob) and computes their public keys (Ya and Yb).
+    - They exchange public keys and compute the shared secret.  
+
+---
+
+    2. Man-in-the-Middle Attack Scenario  
+
+    1. Attacker (Eve) intercepts the public keys exchanged between Alice and Bob.  
+    - Instead of allowing Alice and Bob to communicate directly, Eve acts as an intermediary.  
+    
+    2. Eve establishes two separate Diffie-Hellman key exchanges:  
+    - With Alice: Eve generates her own private key Xe and computes her public key Ye.  
+    - With Bob: Eve generates another private key Xe' and computes a second public key Ye'.  
+
+    3. Eve sends her own public key to both parties:  
+    - Alice thinks she is communicating with Bob but actually shares a key with Eve.  
+    - Bob thinks he is communicating with Alice but actually shares a key with Eve.  
+
+    4. Both Alice and Bob now establish shared keys with Eve instead of each other:  
+    - Alice’s shared key:  
+        [K_A = (Ye)^{Xa} mod P]  
+    - Bob’s shared key:  
+        [K_B = (Ye')^{Xb} mod P]  
+    - Eve knows both keys and can now decrypt, modify, and re-encrypt messages between Alice and Bob without them knowing.  
+
+    ---
+
+    Why is Diffie-Hellman Vulnerable?  
+    1. No Authentication  
+    - The algorithm does not verify whether the received public key actually belongs to the intended recipient.  
+    
+    2. Key Exchange Happens Over an Insecure Channel  
+    - Since public keys are exchanged openly, an attacker can intercept and modify them.  
+
+    3. MITM Attack Is Undetectable Without Authentication  
+    - Alice and Bob assume they are communicating securely, but Eve is controlling the entire exchange.
+
+    ---
+
+    How to Prevent MITM Attacks in Diffie-Hellman?  
+    ✅ Use Digital Signatures  
+    - Signing the exchanged public keys using a trusted certificate authority (CA) ensures the authenticity of the keys.  
+    - Example: RSA or Elliptic Curve Digital Signature Algorithm (ECDSA) can verify identities.  
+
+    ✅ Use Public Key Infrastructure (PKI)  
+    - A PKI system ensures that public keys are valid and have not been tampered with.  
+
+    ✅ Use Authenticated Diffie-Hellman (e.g., DH with TLS/SSL)  
+    - The TLS (Transport Layer Security) protocol includes authentication, preventing MITM attacks.  
+
+
+
+# todo: 5. P and Q are two prime numbers. P=7, and Q=17. Take public key E=5. If the plaintext value is 6, then what will be the cipher text value according to the RSA algorithm? Explain in detail.
+
+
+
+
+6. Solve this example Using Knapsack algorithm Super Increasing sequence={1, 2, 4, 10, 20, 40} Do solve.
+7. Explain in detail about Elliptic Curve Architecture.
+
+# todo: 8. Write a short note on Man in the Middle Attack.
+
+    Man-in-the-Middle (MITM) Attack  
+
+    A Man-in-the-Middle (MITM) attack is a cyberattack where an attacker secretly intercepts and manipulates communication between two parties without their knowledge. The attacker positions themselves between the sender and receiver, allowing them to eavesdrop, alter, or steal sensitive information.  
+
+---
+
+    How MITM Attack Works  
+
+    1. Interception:  
+    - The attacker intercepts the communication between two parties, such as a user and a website or two individuals in a key exchange.  
+
+    2. Decryption & Modification:  
+    - The attacker decrypts, modifies, or injects false data into the communication before passing it along.  
+
+    3. Forwarding Data:  
+    - The altered or intercepted message is then forwarded to the intended recipient, making both parties unaware of the attack.  
+
+---
+
+Examples of MITM Attacks  
+
+🔹 Eavesdropping on Public Wi-Fi: Attackers set up fake Wi-Fi hotspots to intercept user data.  
+🔹 Session Hijacking: Stealing authentication tokens to gain unauthorized access to accounts.  
+🔹 SSL Stripping: Downgrading HTTPS to HTTP, making communication unencrypted.  
+🔹 DNS Spoofing: Redirecting users to malicious websites by altering DNS responses.  
+
+---
+
+How to Prevent MITM Attacks  
+
+✅ Use End-to-End Encryption: Encrypt communications using SSL/TLS.  
+✅ Verify Digital Certificates: Always check for HTTPS and valid SSL certificates in websites.  
+✅ Avoid Public Wi-Fi: Use VPNs when connecting to unsecured networks.  
+✅ Implement Two-Factor Authentication (2FA): Adds an extra security layer.  
+✅ Use Secure Key Exchange Protocols: Authenticated Diffie-Hellman and RSA-based encryption prevent MITM.  
+
+---
+
+
+9. Write a short note on Key Distribution and also define Master and Session Key.
+10.List four general categories of schemes for the distribution of public keys.
+
+11. Write a note on simple secret key distribution.
+
+ Simple Secret Key Distribution  
+
+ Introduction:  
+Secret key distribution is a crucial aspect of symmetric key cryptography, where both the sender and receiver use the same key for encryption and decryption. The main challenge is securely sharing the secret key between the two parties without an attacker intercepting it.  
+
+---
+
+ Methods of Simple Secret Key Distribution:  
+
+1. Using a Secure Channel:  
+   - The sender and receiver exchange the key physically or over a pre-established secure channel (e.g., a USB drive, direct meeting).  
+   - This method is secure but impractical for large networks.  
+
+2. Using a Trusted Third Party (Key Distribution Center - KDC):  
+   - A KDC generates and distributes secret keys securely.  
+   - Both parties trust the KDC to provide them with the correct secret key.  
+   - Example: Kerberos authentication protocol.  
+
+3. Public Key Encryption for Key Exchange:  
+   - A secret key can be shared using asymmetric encryption (e.g., RSA or Diffie-Hellman).  
+   - The sender encrypts the secret key using the receiver's public key, ensuring that only the receiver (who has the private key) can decrypt it.  
+
+4. Key Distribution via Pre-Shared Keys (PSK):  
+   - The secret key is manually shared before communication begins.  
+   - Used in Wi-Fi networks (WPA2-PSK) and VPNs.  
+
+5. Session Key Exchange:  
+   - Instead of using a long-term secret key, a temporary session key is created for each communication session.  
+   - This minimizes the risk of key compromise.  
+   - Example: TLS (Transport Layer Security) uses ephemeral session keys for secure connections.  
+
+---
+
+ Challenges in Secret Key Distribution:  
+- Man-in-the-Middle Attacks (MITM): An attacker can intercept key exchange messages.  
+- Key Management Issues: Distributing and managing keys in large networks is complex.  
+- Scalability: Exchanging keys securely for many users becomes difficult.  
+
+---
+
+ Conclusion:  
+Simple secret key distribution methods like KDC, public-key encryption, and pre-shared keys help establish a secure communication channel. However, these methods must be carefully implemented to prevent unauthorized access and man-in-the-middle attacks. 🚀
+
+12.Draw a neat sketch showing the key distribution scenario.
+13.Specify the application of public key cryptography.

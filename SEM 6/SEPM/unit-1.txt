@@ -1,0 +1,53 @@
+1. Cost-Effective
+A good software should be developed within the planned budget and time constraints.
+It should minimize development, maintenance, and operational costs while delivering high performance.
+
+2. Easy to Understand 
+The software should have a clear structure and well-organized code so that developers can easily understand and modify it.
+A user-friendly interface with proper navigation ensures that end-users can operate the software without extensive training.
+
+3. Efficient
+Efficiency refers to how well the software utilizes system resources like memory, CPU, and storage.
+A good software should execute tasks quickly and consume minimal resources without unnecessary delays.
+
+4. Modifiable
+The software should be flexible and easy to modify when new requirements arise.
+A modular design helps in making changes without affecting the entire system, ensuring long-term adaptability.
+
+5. Properly Documented
+Good software should include well-written documentation for both developers and end-users.
+Developer documentation includes code comments, design details, and user manuals, which help in future maintenance and upgrades.
+
+6. Reliable
+Reliability means the software should perform consistently without failures under normal conditions.
+A good software should handle errors gracefully, ensuring system stability and data security.
+
+7. Reusable
+The software components should be designed in a way that they can be reused in other projects or modules.
+Reusability reduces development effort and cost while improving efficiency and consistency.
+
+
+# What is Software Engineering? Explain 3-R of Software Engineering.
+
+definition from the book
+
+1. Reuse
+Definition: Software reuse is the process of using existing software components, modules, or code in new projects to save time and reduce development costs.
+
+Importance: It improves software reliability and reduces errors since the reused components have already been tested.
+
+Example: Using pre-built libraries like Bootstrap for UI design or existing API integrations in web applications.
+
+2. Reengineering
+Definition: Software reengineering is the process of analyzing, modifying, and improving an existing software system to enhance its functionality and maintainability.
+
+Importance: It helps modernize outdated systems, optimize performance, and adapt to new technologies without completely rewriting the software.
+
+Example: Converting a legacy desktop application into a modern web-based system to improve accessibility and scalability.
+
+3. Retooling
+Definition: Retooling involves upgrading or changing the development tools, frameworks, or technologies used in software engineering to improve productivity and efficiency.
+
+Importance: It ensures that software development processes remain up-to-date with industry standards, leading to better performance and maintainability.
+
+Example: Migrating from manual testing to automated testing tools like Selenium or switching from traditional databases to cloud-based solutions.

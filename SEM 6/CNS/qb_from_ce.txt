@@ -1,0 +1,59 @@
+UNIT- 1
+
+1. Explain all key objectives of cryptography.
+2. Draw and Explain OSI Architecture.
+3. Differentiate symmetric and asymmetric encryption?
+4. Define Active and Passive attacks with Example.
+5. Write a short note on Security Services.
+6. Explain playfair cipher substitution technique in detail. Find out cipher text for the following given key and plaintext.Key = ENGINEERING Plaintext=COMPUTER SCIENCE AND ENGINEERING
+7. Encrypt using HILL CIPHER the P.T “ATTACK CHINAA” using the keyGYDNSKURT
+8. Differentiate between Monoalphabetic and Polyalphabetic cipher.
+9. Explain the Vigener Cipher with an example.
+10.Explain the Vernam Cipher with an example.
+11. Explain Block cipher mode of operation.
+12.Why is it important to study Feistel cipher?
+13.Explain a single round function in DES.
+14.Explain Byte substitution and Shift row operation of AES in detail.
+15.Elaborate AES encryption with neat sketches.
+16.Explain avalanche effect in DES and discuss strength of DES in brief.
+17.Explain function of S-BOX in DES and also Explain avalanche effect.
+18.What are the different Types of Attack on Encrypted Messages.
+19.Write a short note on Blowfish with a diagram.
+20.Specify the difference between diffusion and confusion.
+21.Differentiate between a block cipher and a stream cipher.
+22.Define meet-in-the-middle attack.
+23.Explain Transposition Technique.
+24.Write a short note on Triple DES.
+25.Discuss the following terms in brief:
+i) brute force attack ii) cryptography
+
+
+UNIT- 2
+
+1. Define Asymmetric Key Encryption with a proper Diagram.
+2. Explain RSA public key cryptography with all steps.
+3. Explain Diffie Hellman Key Exchange with all steps.
+4. Justify Diffie Hellman Key Exchange vulnerable to Man in Middle Attack.
+5. P and Q are two prime numbers. P=7, and Q=17. Take public key E=5. If the plaintext value is 6, then what will be the cipher text value according to the RSA algorithm? Explain in detail.
+6. Solve this example Using Knapsack algorithm Super Increasing sequence={1, 2, 4, 10, 20, 40} Do solve.
+7. Explain in detail about Elliptic Curve Architecture.
+8. Write a short note on Man in the Middle Attack.
+9. Write a short note on Key Distribution and also define Master and Session Key.
+10.List four general categories of schemes for the distribution of public keys.
+11. Write a note on simple secret key distribution.
+12.Draw a neat sketch showing the key distribution scenario.
+13.Specify the application of public key cryptography.
+
+
+Unit 3
+
+1.Explain MACs based on Hash functions.
+2.Discuss SHA-1 with proper diagrams.
+3. Explain HMAC with a diagram.
+4.Explain Elgamal and Schnorr Digital Signature algorithm with examples.
+5. What is Kerberos and its requirements?
+6. What isPGP ?How authentication and confidentiality is maintained in PGP.
+7. Explain authentication services of X.509 .
+8.Explain MD5 algorithm with diagram.
+9.Explain NIST Digital Signature algorithm.
+10.Differentiate between SHA-1 and MD5

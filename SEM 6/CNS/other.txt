@@ -1,0 +1,134 @@
+1️⃣ Explain all key objectives of cryptography.
+
+	Cryptography is used to secure information by transforming it into an unreadable format, making it accessible only to authorized users. It ensures data security and privacy through different cryptographic techniques.
+
+1. Confidentiality (Secrecy)  CIANA
+Confidentiality ensures that only authorized users can access sensitive information. Encryption techniques are used to convert plain text into an unreadable format, preventing unauthorized access.
+
+📌 Example: End-to-End Encryption in messaging apps like WhatsApp.
+
+2. Integrity
+Integrity ensures that data remains unaltered during transmission or storage. Cryptographic hash functions help detect unauthorized modifications.
+
+📌 Example: Hash functions like SHA-256 are used to verify file integrity.
+
+3. Authentication
+Authentication verifies the identity of users, systems, or devices before granting access to data. It ensures that the data originates from a legitimate source.
+
+📌 Example: Digital signatures are used to authenticate documents and emails.
+
+4. Non-Repudiation
+Non-repudiation prevents the sender from denying their actions. It provides proof of data origin and transaction authenticity.
+
+📌 Example: Digital signatures in legal documents ensure the sender cannot deny signing them.
+
+5. Availability
+Availability ensures that authorized users can access data and services whenever needed. It protects systems from attacks like Denial-of-Service (DoS).
+
+📌 Example: Backup encryption and cloud security measures ensure data availability even after system failures.
+
+2️⃣ Draw and Explain OSI Architecture.
+	
+	The OSI(Open Systems Interconnection Model) Model is a 7-layer framework that standardizes how devices communicate over a network. It was developed by the International Organization for Standardization (ISO) to provide a universal networking standard. Each layer has a specific role in data transmission.
+
+1. Physical Layer
+🔹 Responsible for the actual transmission of data as electrical, optical, or radio signals.
+🔹 Deals with cables, network interfaces, and wireless signals.
+📌 Example: Ethernet cables, Fiber optics, Wi-Fi signals.
+
+2. Data Link Layer
+🔹 Ensures error-free transmission between two directly connected nodes.
+🔹 Uses MAC (Media Access Control) addresses for device identification.
+📌 Example: Ethernet, Switches, ARP (Address Resolution Protocol).
+
+3. Network Layer
+🔹 Determines the best route for data transmission.
+🔹 Uses IP (Internet Protocol) addresses for device identification.
+📌 Example: Routers, IP addressing, IPv4 & IPv6.
+
+4. Transport Layer
+🔹 Ensures reliable data delivery and error checking.
+🔹 Uses TCP (reliable) and UDP (faster, but no guarantee of delivery).
+📌 Example: TCP (for web browsing, emails), UDP (for live streaming, gaming).
+
+5. Session Layer
+🔹 Establishes, manages, and terminates communication sessions.
+🔹 Handles login sessions, authentication, and reconnections.
+📌 Example: Logging into a website, remote desktop sessions.
+
+6. Presentation Layer
+🔹 Translates data into a readable format for applications.
+🔹 Handles encryption, compression, and formatting.
+📌 Example: SSL/TLS encryption (HTTPS), JPEG/MP3 compression.
+
+7. Application Layer
+🔹 Provides services for user applications to communicate over a network.
+🔹 Supports web browsing, email, and file transfers.
+📌 Example: HTTP, FTP, SMTP (email), DNS.
+
+List of OSI Layers with Network Protocols  
+
+1. Physical Layer: Ethernet, Wi-Fi (802.11), Bluetooth, DSL, USB  
+2. Data Link Layer: Ethernet (IEEE 802.3), ARP, PPP, MAC, VLAN  
+3. Network Layer: IP (IPv4, IPv6), ICMP, IGMP, RIP, OSPF  
+4. Transport Layer: TCP, UDP, SCTP  
+5. Session Layer: NetBIOS, PPTP, RPC, SIP  
+6. Presentation Layer: SSL/TLS, JPEG, MPEG, ASCII, EBCDIC  
+7. Application Layer: HTTP, FTP, SMTP, DNS, SNMP, POP3, IMAP
+
+
+Feature           | Symmetric Encryption            | Asymmetric Encryption              
+------------------|---------------------------------|---------------------------------
+Definition        | Uses a single key for both      | Uses a pair of keys:       
+                  | encryption and decryption.      | public key for encryption and  
+                  |                                 | private key for decryption.   
+                  |                                 |   
+Speed             | Faster due to simple key usage. | Slower due to complex key      
+                  |                                 | operations.
+                  |                                 |                       
+Key Used          | One secret key (shared          | Two keys: Public key (shared)  
+                  | between sender and receiver).   | and Private key (kept secret).
+                  |                                 |    
+Security          | Less secure (risk of key        | More secure (private key is    
+                  | compromise).                    | never shared).
+                  |                                 |                    
+Use Case          | Used for bulk data encryption,  | Used for digital signatures,   
+                  | file encryption, and VPNs.      | SSL/TLS, and secure email      
+                  |                                 | communication.
+                  |                                 |                    
+Examples          | AES, DES, 3DES, Blowfish.       | RSA, ECC, Diffie-Hellman, DSA. 
+
+
+3️⃣Define Active and Passive attacks with Example.
+
+### Active and Passive Attacks in Cybersecurity  
+
+In network security, attacks are generally classified into active and passive attacks based on how the attacker interacts with the system.  
+
+### 1. Active Attacks  
+An active attack occurs when an attacker modifies, disrupts, or alters the data during transmission. In this type of attack, the integrity and availability of data are compromised. Active attacks can be easily detected, but they require immediate action to prevent further damage.  
+
+#### Examples of Active Attacks:  
+✔ Man-in-the-Middle (MITM) Attack – The attacker intercepts communication between two parties and modifies the data without their knowledge.  
+✔ Denial of Service (DoS) Attack – The attacker floods a network or server with excessive requests, making it unavailable to legitimate users.  
+✔ Spoofing Attack – The attacker impersonates a trusted entity (such as a website or person) to deceive users and steal sensitive data.  
+
+### 2. Passive Attacks  
+A passive attack occurs when an attacker monitors, captures, or listens to network communication without modifying it. The main goal of a passive attack is to gather sensitive information, such as usernames, passwords, or confidential messages, without alerting the victim. These attacks are difficult to detect because they do not cause any direct harm or disruption to the system.  
+
+#### Examples of Passive Attacks:  
+✔ Eavesdropping (Packet Sniffing) – Hackers secretly listen to network traffic to capture sensitive data like login credentials or personal messages.  
+✔ Traffic Analysis – Even if data is encrypted, an attacker analyzes the pattern of communication to infer useful information.  
+✔ Keylogging – A malware program records keystrokes on a victim's computer to steal passwords and other sensitive information.  
+
+
+4️⃣ Write a short note on Security Services.
+
+	same as the 1st question 
+
+
+
+
+
+
+

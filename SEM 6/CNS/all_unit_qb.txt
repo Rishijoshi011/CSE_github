@@ -1,0 +1,66 @@
+
+---
+
+### **UNIT-I: Cryptography Fundamentals & Block Ciphers**  
+1. What are the basic objectives of cryptography?  
+2. Explain various security mechanisms in cryptography.  
+3. Describe the OSI Security Architecture.  
+4. What are classical encryption techniques? Explain with examples.  
+5. Define cipher principles and their role in encryption.  
+6. What is cryptanalysis? Discuss its importance.  
+7. Explain different attack models in cryptography.  
+8. Describe block cipher design principles and their modes of operation.  
+9. Explain the Feistel cipher structure.  
+10. Write a short note on the Data Encryption Standard (DES).  
+11. Explain the International Data Encryption Algorithm (IDEA).  
+12. What is Blowfish? Explain its structure.  
+13. Discuss different variants of DES.  
+14. Explain the structure and transformation functions of AES.  
+15. What is key expansion in AES?  
+
+---
+
+### **UNIT-II: Public Key Cryptography & Key Management**  
+16. Explain the concept of Asymmetric Key Cryptography with examples.  
+17. Describe the RSA algorithm and its computational aspects.  
+18. What is the security mechanism of RSA?  
+19. Explain Elliptic Curve Cryptography (ECC).  
+20. Discuss the Knapsack Algorithm in cryptography.  
+21. Explain the Diffie-Hellman key exchange algorithm.  
+22. What is a Man-in-the-Middle (MITM) attack? How can it be prevented?  
+23. What is key management in cryptography?  
+24. Discuss symmetric key distribution methods.  
+25. Explain asymmetric key distribution techniques.  
+26. How are public keys distributed securely?  
+
+---
+
+### **UNIT-III: Hash Functions & Network Security**  
+27. Define Message Authentication Code (MAC) and its requirements.  
+28. What are hash functions? Explain their role in security.  
+29. Discuss the security aspects of hash functions.  
+30. Explain the Secure Hash Algorithm (SHA) in detail.  
+31. What is HMAC? How does it work?  
+32. Define digital signature and its applications.  
+33. Explain different digital signature schemes (ElGamal & Schnorr).  
+34. What is the NIST Digital Signature Algorithm?  
+35. Describe authentication applications like Kerberos.  
+36. Explain the X.509 authentication service.  
+37. What is PGP (Pretty Good Privacy)? How is it used?  
+
+---
+
+### **UNIT-IV: IP & Web Security & System Level Security**  
+38. Explain the IPSec architecture and its applications.  
+39. What are the benefits of IPSec?  
+40. Describe different IPSec protocols.  
+41. What are common web security threats?  
+42. Explain the Secure Socket Layer (SSL) protocol.  
+43. What is Secure Electronic Transaction (SET)?  
+44. Define intrusion detection and its importance.  
+45. What are viruses and related threats in cybersecurity?  
+46. Explain virus countermeasures used in security systems.  
+47. Describe firewall design principles.  
+48. What are trusted systems in cybersecurity?  
+
+---
