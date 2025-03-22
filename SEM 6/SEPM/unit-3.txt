@@ -1,0 +1,152 @@
+Unit - 3: 
+
+1. 4 P's of Effective Project Management 
+
+    The 4 P's of Effective Project Management are People, Product, Process, and Project. These four elements play a crucial role in ensuring the successful execution of a software project. Proper management of these factors helps in achieving project goals efficiently.  
+
+    ---
+
+    1. People  
+    People are the most important part of a project, as they are responsible for planning, designing, developing, testing, and managing the software. The success of a project depends on how well the people involved communicate and collaborate.  
+
+    Key Roles in a Project:  
+    - Project Manager: Responsible for planning, execution, and monitoring.  
+    - Developers: Write the code and build the software.  
+    - Testers: Ensure software quality by finding and fixing bugs.  
+    - Stakeholders: Provide requirements and feedback.  
+
+    A well-organized team with clearly defined roles ensures the smooth progress of the project.  
+
+    ---
+
+    2. Product  
+    The product is the final software or system that is being developed. A clear understanding of the product is necessary to ensure that it meets the user’s needs and business requirements.  
+
+    Types of Product Requirements:  
+    - Functional Requirements: Define what the system should do (e.g., user login, data storage, report generation).  
+    - Non-functional Requirements: Define performance, security, reliability, and usability aspects.  
+
+    Proper planning and requirement analysis help in delivering a high-quality product.  
+
+    ---
+
+    3. Process  
+    The process refers to the methodology followed for software development. A well-defined process ensures smooth execution, efficiency, and high-quality output. Different projects require different approaches based on complexity, time, and budget.  
+
+    Common Software Development Processes:  
+    - Waterfall Model: Linear approach with sequential phases (Requirement → Design → Development → Testing → Deployment).  
+    - Agile Model: Iterative approach with continuous feedback and improvements.  
+    - Spiral Model: Focuses on risk assessment and iterative development.  
+
+    Choosing the right process model is essential for the success of a project.  
+
+    ---
+
+    4. Project  
+    A project is a planned effort to develop a specific software system within a defined time and budget. Project management ensures proper planning, execution, monitoring, and completion of the project.  
+
+    Key Aspects of Project Management:  
+    - Planning: Defining scope, objectives, and requirements.  
+    - Scheduling: Setting deadlines and milestones.  
+    - Resource Allocation: Assigning people, tools, and technology.  
+    - Risk Management: Identifying and mitigating project risks.  
+
+    Efficient project management ensures timely delivery, cost-effectiveness, and quality output.  
+
+    ---
+
+    Conclusion  
+    The 4 P’s of Project Management (People, Product, Process, and Project) are essential for the successful development and delivery of software. Managing these factors effectively helps in achieving project goals, meeting deadlines, and ensuring customer satisfaction.
+
+
+
+2.Explain PERT & CPM techniques in brief.
+
+    PERT & CPM Techniques  
+
+    PERT (Program Evaluation and Review Technique) and CPM (Critical Path Method) are two widely used project management techniques for planning, scheduling, and controlling projects. Both methods help in ensuring timely project completion by identifying critical tasks and dependencies.
+
+    ---
+
+    1. PERT (Program Evaluation and Review Technique)  
+    - Description: PERT is a probabilistic technique used for scheduling and managing complex projects where activity durations are uncertain.  
+    - Focus: It focuses on identifying the minimum time required to complete a project using a weighted average of optimistic, pessimistic, and most likely time estimates.  
+    - Best For: Research and development projects, software development, and projects with high uncertainty.  
+
+    Key Features of PERT:  
+    - Uses a network diagram to represent project activities.  
+    - Estimates time using three values:  
+    - Optimistic Time (O) – Minimum possible time.  
+    - Pessimistic Time (P) – Maximum possible time.  
+    - Most Likely Time (M) – Expected realistic time.  
+    - The expected time is calculated as:  
+    TE = O + 4M + P
+        -------------
+            6
+    - Calculates the variance and standard deviation of project duration.  
+    - Helps in identifying the Critical Path, which determines the shortest time required to complete a project.  
+
+    ---
+
+    2. CPM (Critical Path Method)  
+    - Description: CPM is a deterministic technique used for project planning and scheduling when activity durations are known with certainty.  
+    - Focus: It focuses on determining the longest sequence of dependent tasks (the critical path) that dictates the project’s duration.  
+    - Best For: Construction, manufacturing, and projects with well-defined activities.  
+
+    Key Features of CPM:  
+    - Uses a network diagram (like PERT).  
+    - Identifies the Critical Path, which consists of activities with zero slack (i.e., any delay in these tasks will delay the entire project).  
+    - Helps in resource allocation and cost estimation.  
+    - Uses single time estimates for each activity.  
+
+    ---
+
+    Difference Between PERT & CPM:  
++---------------+--------------------------------+--------------------------------+
+| Feature       | PERT                           |          CPM                   |
+|---------------|--------------------------------|--------------------------------|
+| Type          | Probabilistic                  | Deterministic                  |
+| Focus         | Time estimation                | Cost and time optimization     |
+| Suitable For  | Research, software development | Construction, manufacturing    |
+| Activity Time | Estimated using 3-time values  | Fixed and known                |
+| Critical Path | Focuses on time variability    | Focuses on cost and scheduling |
++---------------+--------------------------------+--------------------------------+
+---
+
+
+
+3.Explain the concept of Product metrics, Process metrics and Project metrics.
+
+from book:- page no.113
+
+4. Software Project Management and W5HH Principle
+
+    The W5HH Principle is a project management approach introduced by Barry Boehm. It provides a structured way to analyze and manage software projects by answering seven key questions related to project planning and execution.  
+
+    1. What (Objectives and Goals)?  
+    - Defines the purpose of the project and its expected outcome.  
+    - Answers: *What problem does the project solve?*  
+
+    2. Why (Justification)?  
+    - Explains the reason for undertaking the project.  
+    - Answers: *Why is this project important? What are the benefits?*  
+
+    3. Who (Stakeholders and Responsibilities)?  
+    - Identifies who is involved in the project, including developers, testers, managers, and customers.  
+    - Answers: *Who will develop, test, and use the software?*  
+
+    4. When (Timeline and Schedule)?  
+    - Defines the project schedule, including deadlines and milestones.  
+    - Answers: *When will each phase be completed?*  
+
+    5. Where (Resources and Work Environment)?  
+    - Specifies where the work will be done, including development locations, tools, and infrastructure.  
+    - Answers: *Where will development, testing, and deployment take place?*  
+
+    6. How (Process and Approach)?  
+    - Determines the development methodology, tools, and technologies used.  
+    - Answers: *How will the project be executed? (Agile, Waterfall, etc.)*  
+
+    7. How Much (Cost and Budget)?  
+    - Estimates costs and resources needed for successful project completion.  
+    - Answers: *How much will the project cost in terms of money, time, and effort?*  

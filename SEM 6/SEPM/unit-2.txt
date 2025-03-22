@@ -1,0 +1,82 @@
+Unit - 2
+
+
+1.What do you mean by SRS? Explain characteristics of a good SRS.
+
+ Software Requirements Specification (SRS)  
+A Software Requirements Specification (SRS) is a formal document that defines the functional and non-functional requirements of a software system. It serves as a bridge between the client's needs and the development team, ensuring clear understanding and smooth implementation of the project.  
+
+ Characteristics of a Good SRS  
+
+1. Correctness :- The SRS should accurately describe the system's requirements without errors or contradictions.  
+2. Completeness :- It should cover all functional, non-functional, and domain-specific requirements.  
+3. Unambiguity :- The document should be clear and precise, avoiding any vague or confusing terms.  
+4. Consistency :- There should be no conflicting requirements; all specifications should align.  
+5. Verifiability :- Every requirement must be testable to ensure its implementation can be validated.  
+6. Modifiability :- The SRS should be structured in a way that allows easy updates when requirements change.  
+7. Traceability :- Each requirement should be linked to its source and be trackable throughout development.  
+8. Feasibility :- The specified requirements must be realistic and achievable within technical and resource constraints.  
+
+A well-defined SRS ensures effective communication, smooth development, and successful project delivery while minimizing misunderstandings.
+
+
+2. What do you mean by requirement engineering? Explain types of requirements in Software Engineering.
+
+ Requirement Engineering  
+Requirement Engineering (RE) is the process of gathering, analyzing, documenting, and managing software requirements to ensure that the final product meets user expectations. It involves systematic steps to define and refine requirements before development begins.  
+
+ Types of Requirements in Software Engineering  
+
+1. Functional Requirements  
+   - Define what the system should do.  
+   - Describe specific functionalities and operations.  
+   - Example: "The system must allow users to log in using a username and password."  
+
+2. Non-Functional Requirements (NFRs)  
+   - Define the quality attributes of the system.  
+   - Includes performance, security, usability, scalability, etc.  
+   - Example: "The system should handle 1000 concurrent users without performance degradation."  
+
+3. Domain Requirements  
+   - Requirements specific to the industry or domain where the software is used.  
+   - Often derived from business rules or legal constraints.  
+   - Example: "A hospital management system must comply with HIPAA regulations for patient data privacy."  
+
+A well-defined requirement engineering process ensures that software is developed as per user needs, minimizing future errors and redesign efforts.
+
+3.What is feasibility study? Explain types of feasibility studies.
+
+
+
+4. What is Software Requirement Analysis? Explain various activities involved in Software Requirement Analysis.
+
+ Software Requirement Analysis  
+Software Requirement Analysis (SRA) is the process of gathering, analyzing, and refining the requirements to develop a software system that meets user needs. It ensures that the software’s functionalities and constraints are well understood before development begins.  
+
+---
+
+ Activities Involved in Software Requirement Analysis  
+
+1. Requirement Elicitation  
+   - Identifying user needs through discussions, interviews, and surveys.  
+   - Example: Asking hospital staff about the necessary features of a Hospital Management System.  
+
+2. Requirement Analysis  
+   - Examining collected requirements for feasibility, consistency, and completeness.  
+   - Example: Checking if a banking system should allow password reset via SMS and ensuring it aligns with security policies.  
+
+3. Requirement Specification  
+   - Documenting requirements clearly in the Software Requirement Specification (SRS) document.  
+   - Example: Writing detailed functional requirements like "The system should generate a sales report in PDF format."  
+
+4. Requirement Validation  
+   - Ensuring requirements are correct, complete, and achievable through reviews and prototyping.  
+   - Example: Creating a mock interface for a retail website and getting user feedback before full development.  
+
+5. Requirement Management  
+   - Handling changes in requirements due to evolving business needs or new technologies.  
+   - Example: Updating the SRS document when a mobile app feature is added later in the project.  
+
+---
+
+

@@ -1,53 +1,106 @@
-1. Cost-Effective
-A good software should be developed within the planned budget and time constraints.
-It should minimize development, maintenance, and operational costs while delivering high performance.
+    1. Cost-Effective
+    A good software should be developed within the planned budget and time constraints.
+    It should minimize development, maintenance, and operational costs while delivering high performance.
 
-2. Easy to Understand 
-The software should have a clear structure and well-organized code so that developers can easily understand and modify it.
-A user-friendly interface with proper navigation ensures that end-users can operate the software without extensive training.
+    2. Easy to Understand 
+    The software should have a clear structure and well-organized code so that developers can easily understand and modify it.
+    A user-friendly interface with proper navigation ensures that end-users can operate the software without extensive training.
 
-3. Efficient
-Efficiency refers to how well the software utilizes system resources like memory, CPU, and storage.
-A good software should execute tasks quickly and consume minimal resources without unnecessary delays.
+    3. Efficient
+    Efficiency refers to how well the software utilizes system resources like memory, CPU, and storage.
+    A good software should execute tasks quickly and consume minimal resources without unnecessary delays.
 
-4. Modifiable
-The software should be flexible and easy to modify when new requirements arise.
-A modular design helps in making changes without affecting the entire system, ensuring long-term adaptability.
+    4. Modifiable
+    The software should be flexible and easy to modify when new requirements arise.
+    A modular design helps in making changes without affecting the entire system, ensuring long-term adaptability.
 
-5. Properly Documented
-Good software should include well-written documentation for both developers and end-users.
-Developer documentation includes code comments, design details, and user manuals, which help in future maintenance and upgrades.
+    5. Properly Documented
+    Good software should include well-written documentation for both developers and end-users.
+    Developer documentation includes code comments, design details, and user manuals, which help in future maintenance and upgrades.
 
-6. Reliable
-Reliability means the software should perform consistently without failures under normal conditions.
-A good software should handle errors gracefully, ensuring system stability and data security.
+    6. Reliable
+    Reliability means the software should perform consistently without failures under normal conditions.
+    A good software should handle errors gracefully, ensuring system stability and data security.
 
-7. Reusable
-The software components should be designed in a way that they can be reused in other projects or modules.
-Reusability reduces development effort and cost while improving efficiency and consistency.
+    7. Reusable
+    The software components should be designed in a way that they can be reused in other projects or modules.
+    Reusability reduces development effort and cost while improving efficiency and consistency.
 
 
-# What is Software Engineering? Explain 3-R of Software Engineering.
+3.What is Software Engineering? Explain 3-R of Software Engineering.
 
 definition from the book
 
-1. Reuse
-Definition: Software reuse is the process of using existing software components, modules, or code in new projects to save time and reduce development costs.
+    1. Reuse
+    Definition: Software reuse is the process of using existing software components, modules, or code in new projects to save time and reduce development costs.
 
-Importance: It improves software reliability and reduces errors since the reused components have already been tested.
+    Importance: It improves software reliability and reduces errors since the reused components have already been tested.
 
-Example: Using pre-built libraries like Bootstrap for UI design or existing API integrations in web applications.
+    Example: Using pre-built libraries like Bootstrap for UI design or existing API integrations in web applications.
 
-2. Reengineering
-Definition: Software reengineering is the process of analyzing, modifying, and improving an existing software system to enhance its functionality and maintainability.
+    2. Reengineering
+    Definition: Software reengineering is the process of analyzing, modifying, and improving an existing software system to enhance its functionality and maintainability.
 
-Importance: It helps modernize outdated systems, optimize performance, and adapt to new technologies without completely rewriting the software.
+    Importance: It helps modernize outdated systems, optimize performance, and adapt to new technologies without completely rewriting the software.
 
-Example: Converting a legacy desktop application into a modern web-based system to improve accessibility and scalability.
+    Example: Converting a legacy desktop application into a modern web-based system to improve accessibility and scalability.
 
-3. Retooling
-Definition: Retooling involves upgrading or changing the development tools, frameworks, or technologies used in software engineering to improve productivity and efficiency.
+    3. Retooling
+    Definition: Retooling involves upgrading or changing the development tools, frameworks, or technologies used in software engineering to improve productivity and efficiency.
 
-Importance: It ensures that software development processes remain up-to-date with industry standards, leading to better performance and maintainability.
+    Importance: It ensures that software development processes remain up-to-date with industry standards, leading to better performance and maintainability.
 
-Example: Migrating from manual testing to automated testing tools like Selenium or switching from traditional databases to cloud-based solutions.
+    Example: Migrating from manual testing to automated testing tools like Selenium or switching from traditional databases to cloud-based solutions.
+
+
+
+10.Explain Agile Development Model with advantages and disadvantages.
+
+ Agile Development Model  
+
+ Introduction  
+The Agile Development Model is an iterative and incremental approach to software development that focuses on flexibility, collaboration, and customer feedback. Unlike traditional models, Agile allows continuous improvement and adaptation throughout the development process.  
+
+---
+
+ Phases of Agile Development  
+
+1. Requirement Gathering  
+   - Collect initial requirements with flexibility to accommodate changes.  
+   - Example: Gathering requirements for an e-commerce website with an option to modify features later.  
+
+2. Design  
+   - High-level system architecture and component design.  
+   - Example: Deciding database structure and user interface layout.  
+
+3. Development  
+   - Divided into small cycles (sprints), each delivering a functional module.  
+   - Example: In Sprint 1, developing a user login system; in Sprint 2, adding a shopping cart feature.  
+
+4. Testing  
+   - Continuous testing during each sprint to ensure software quality.  
+   - Example: Unit testing, integration testing, and automated regression tests.  
+
+5. Deployment  
+   - After each sprint, a working version is deployed for feedback.  
+   - Example: Deploying a beta version of a mobile app for user testing.  
+
+6. Review & Feedback  
+   - Gather client feedback after each sprint and make necessary improvements.  
+   - Example: Users request a dark mode feature, which is added in the next sprint.  
+
+---
+
+ Advantages of Agile Model  
+- ✅ Flexibility to changes: Requirements can evolve with time.  
+- ✅ Customer collaboration: Regular feedback ensures user satisfaction.  
+- ✅ Faster delivery: Working features are delivered at the end of each sprint.  
+- ✅ Better risk management: Early detection and resolution of issues.  
+- ✅ Continuous improvement: Iterative process refines the product gradually.  
+
+ Disadvantages of Agile Model  
+- ❌ Less predictability: Frequent changes make project timelines uncertain.  
+- ❌ High client involvement: Requires continuous interaction with stakeholders.  
+- ❌ Difficult for large teams: Managing coordination can be challenging.  
+- ❌ Less documentation: Focuses more on working software than detailed documentation.  
+
