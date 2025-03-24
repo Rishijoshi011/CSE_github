@@ -1,0 +1,525 @@
+Unit - 3
+
+7. Write down Benefits of ADO.Net.
+
+ Benefits of ADO.NET  
+ADO.NET (ActiveX Data Objects for .NET) is a data access technology in the .NET framework used for interacting with databases. It provides a bridge between applications and data sources like SQL Server, Oracle, and XML files. Below are the key benefits of using ADO.NET:  
+
+--- SFXDOTEHS
+
+
+
+ 1️⃣ Scalability & Efficiency 🔄  
+✅ Works in a multi-user environment without overloading the database.  
+✅ Uses Connection Pooling to optimize database connections, reducing overhead.  
+✅ Supports Asynchronous Data Access for better performance in large applications.  
+
+---
+
+ 2️⃣ Flexibility & Support for Multiple Data Sources 🛠  
+✅ Supports SQL Server, MySQL, Oracle, MS Access, XML, and more.  
+✅ Works with both connected (DataReader) and disconnected (DataSet) models.   
+
+---
+
+ 3️⃣ XML Integration 📄  
+✅ Supports XML natively for storing and exchanging data.  
+✅ Can easily convert datasets to XML for web services and APIs.  
+
+---
+
+ 4️⃣ Data Binding Support 🔗  
+✅ Easily binds data to GridView, ListView, DropDownList, Repeater, and other controls in ASP.NET.  
+✅ Allows two-way binding, enabling real-time updates.   
+
+---
+
+ 5️⃣ Object-Oriented Approach 🎯  
+✅ Uses ADO.NET classes like `SqlConnection`, `SqlCommand`, `SqlDataAdapter`, making code modular and maintainable.  
+✅ Data can be stored in DataTables, making it easy to work with.  
+
+---
+
+ 6️⃣ Transactions & Concurrency Control 🔄  
+✅ Supports ACID (Atomicity, Consistency, Isolation, Durability) transactions.  
+✅ Uses Optimistic & Pessimistic Concurrency models to prevent data conflicts.  
+
+---
+
+ 7️⃣ Easy to Use & Maintain 🛠  
+✅ Simple and readable syntax, making it beginner-friendly.  
+✅ Uses managed code with exception handling (`try-catch`) for stability. 
+
+---
+
+ 8️⃣ High Performance 🚀  
+✅ Disconnected Architecture – Uses datasets that work independently, reducing database hits.  
+✅ Optimized Data Access – Uses SQLConnection & DataReader, which provide fast, forward-only access to data. 
+
+---
+
+ 9️⃣ Secure & Reliable 🔒  
+✅ Uses parameterized queries and stored procedures, reducing SQL injection risks.  
+✅ Supports transaction management (Commit/Rollback) for data consistency.  
+
+---
+
+
+
+
+
+10.List out ADO.NET objects. Explain all the ADO.NET objects.
+
+ ADO.NET Objects in ASP.NET  
+
+ADO.NET is a data access technology in .NET that allows applications to interact with databases. It consists of several objects that help in retrieving, manipulating, and storing data.
+
+---
+
+ 🔹 List of ADO.NET Objects:
+1. Connection (`SqlConnection`)
+2. Command (`SqlCommand`)
+3. DataReader (`SqlDataReader`)
+4. DataAdapter (`SqlDataAdapter`)
+5. DataSet (`DataSet`)
+6. DataTable (`DataTable`)
+7. DataView (`DataView`)
+8. Transaction (`SqlTransaction`)
+9. Parameter (`SqlParameter`)
+10. CommandBuilder (`SqlCommandBuilder`)
+
+---
+
+ 🔹 Explanation of ADO.NET Objects:
+
+ 1️⃣ Connection Object (`SqlConnection`)
+- Used to establish a connection between the application and the database.
+- Requires a connection string to define the database location and credentials.
+
+Example:
+```csharp
+SqlConnection conn = new SqlConnection("server=localhost; database=MyDB; integrated security=true;");
+conn.Open();
+Console.WriteLine("Connection Established!");
+conn.Close();
+```
+
+---
+
+ 2️⃣ Command Object (`SqlCommand`)
+- Executes SQL queries (`SELECT`, `INSERT`, `UPDATE`, `DELETE`).
+- Works with Stored Procedures.
+
+Example:
+```csharp
+SqlCommand cmd = new SqlCommand("SELECT  FROM Employees", conn);
+SqlDataReader reader = cmd.ExecuteReader();
+```
+
+---
+
+ 3️⃣ DataReader Object (`SqlDataReader`)
+- Used to read data fast and forward-only (better for performance).
+- Connected Architecture (requires an open connection).
+
+Example:
+```csharp
+SqlDataReader reader = cmd.ExecuteReader();
+while (reader.Read()) {
+    Console.WriteLine(reader["Name"].ToString());
+}
+reader.Close();
+```
+
+---
+
+ 4️⃣ DataAdapter Object (`SqlDataAdapter`)
+- Acts as a bridge between the `DataSet` and the database.
+- Supports Disconnected Architecture (loads data into `DataSet`).
+
+Example:
+```csharp
+SqlDataAdapter adapter = new SqlDataAdapter("SELECT  FROM Employees", conn);
+DataSet ds = new DataSet();
+adapter.Fill(ds, "Employees");
+```
+
+---
+
+ 5️⃣ DataSet Object (`DataSet`)
+- Stores multiple tables from the database.
+- Works in disconnected mode (reduces database load).
+
+Example:
+```csharp
+DataSet ds = new DataSet();
+adapter.Fill(ds);
+GridView1.DataSource = ds;
+GridView1.DataBind();
+```
+
+---
+
+ 6️⃣ DataTable Object (`DataTable`)
+- Represents a single table inside a `DataSet`.
+- Can be used without connecting to a database.
+
+Example:
+```csharp
+DataTable dt = ds.Tables["Employees"];
+foreach (DataRow row in dt.Rows) {
+    Console.WriteLine(row["Name"]);
+}
+```
+
+---
+
+ 7️⃣ DataView Object (`DataView`)
+- Provides a custom view of a `DataTable` (like filtering and sorting).
+
+Example:
+```csharp
+DataView dv = new DataView(ds.Tables["Employees"]);
+dv.RowFilter = "Department = 'HR'";
+```
+
+---
+
+ 8️⃣ Transaction Object (`SqlTransaction`)
+- Ensures atomicity (all queries succeed or none apply).
+- Used for banking systems, order placements, etc.
+
+Example:
+```csharp
+SqlTransaction transaction = conn.BeginTransaction();
+SqlCommand cmd = new SqlCommand("UPDATE Accounts SET Balance = Balance - 500 WHERE ID = 1", conn, transaction);
+try {
+    cmd.ExecuteNonQuery();
+    transaction.Commit();
+} catch {
+    transaction.Rollback();
+}
+```
+
+---
+
+ 9️⃣ Parameter Object (`SqlParameter`)
+- Prevents SQL injection by using parameterized queries.
+
+Example:
+```csharp
+SqlCommand cmd = new SqlCommand("SELECT  FROM Employees WHERE Department = @dept", conn);
+cmd.Parameters.AddWithValue("@dept", "HR");
+```
+
+---
+
+ 🔟 CommandBuilder Object (`SqlCommandBuilder`)
+- Auto-generates `INSERT`, `UPDATE`, and `DELETE` SQL commands for a `DataAdapter`.
+
+Example:
+```csharp
+SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
+adapter.Update(ds, "Employees");
+```
+
+---
+
+ 🔹 Summary Table
+| Object | Purpose |
+|-----------|------------|
+| `SqlConnection` | Establishes connection to database |
+| `SqlCommand` | Executes SQL queries |
+| `SqlDataReader` | Reads data in a fast, forward-only way |
+| `SqlDataAdapter` | Fills `DataSet` with data from the database |
+| `DataSet` | Stores multiple tables and relations in memory |
+| `DataTable` | Represents a single table |
+| `DataView` | Provides sorting and filtering on `DataTable` |
+| `SqlTransaction` | Ensures safe execution of multiple queries |
+| `SqlParameter` | Protects against SQL injection |
+| `SqlCommandBuilder` | Auto-generates commands for `DataAdapter` |
+
+---
+
+
+13.Write a note on Connected Data Access.
+
+ Connected Data Access in ADO.NET
+
+ 🔹 What is Connected Data Access?
+Connected Data Access refers to a method in ADO.NET where the database connection remains open while fetching and processing data. It is primarily used when real-time data retrieval is needed.
+
+This approach is best suited for scenarios where you need to read large datasets quickly but do not need to modify them frequently.
+
+---
+
+ 🔹 Key Features of Connected Data Access
+1. Uses `SqlConnection` and `SqlCommand` to interact with the database.
+2. Uses `SqlDataReader`, which provides a fast, forward-only way to read data.
+3. Requires an active database connection during data retrieval.
+4. Performs well for quick read-only operations but is not ideal for long transactions.
+5. Does not store data in memory like `DataSet`, reducing memory consumption.
+
+---
+
+ 🔹 Example of Connected Data Access in C
+```csharp
+using System;
+using System.Data.SqlClient;
+
+class Program {
+    static void Main() {
+        string connectionString = "server=localhost; database=MyDB; integrated security=true;";
+        using (SqlConnection conn = new SqlConnection(connectionString)) {
+            conn.Open();  // Open connection
+
+            SqlCommand cmd = new SqlCommand("SELECT Name, Age FROM Employees", conn);
+            SqlDataReader reader = cmd.ExecuteReader();  // Execute and get data
+
+            while (reader.Read()) {
+                Console.WriteLine("Name: " + reader["Name"] + ", Age: " + reader["Age"]);
+            }
+
+            reader.Close();
+        }  // Connection automatically closed here due to 'using'
+    }
+}
+```
+
+---
+
+ 🔹 Advantages of Connected Data Access
+✅ Fast Performance – Fetches data quickly using `SqlDataReader`.  
+✅ Lower Memory Usage – Does not store the entire dataset in memory.  
+✅ Efficient for Read-Only Operations – Ideal for reports, logs, and lists.  
+
+---
+
+ 🔹 Disadvantages of Connected Data Access
+❌ Requires an Open Connection – Can overload the database if many users access it simultaneously.  
+❌ Not Suitable for Data Manipulation – Does not support editing like `DataSet`.  
+❌ Limited to Forward-Only Access – Cannot move backward in records like `DataTable`.  
+
+---
+
+ 🔹 When to Use Connected Data Access?
+- When real-time data access is needed (e.g., displaying live reports).  
+- When you are fetching a large dataset and don't need to modify it.  
+- When memory usage is a concern, and you only need to read data quickly.  
+
+
+14.Write difference between Manual Data binding, simple data binding,
+complex data binding.
+
+ Difference between Manual Data Binding, Simple Data Binding, and Complex Data Binding in ADO.NET
+
+Data binding in ADO.NET refers to the process of connecting UI controls (like TextBox, DropDownList, GridView, ListBox, etc.) to a data source (like SQL Server, DataSet, List, etc.) to display or manipulate data.
+
+There are three main types of data binding:
+1. Manual Data Binding  
+2. Simple Data Binding  
+3. Complex Data Binding  
+
+---
+
+ 🔹 1. Manual Data Binding
+ Definition:  
+- In manual data binding, data is retrieved from the database and assigned manually to a control using code.
+- This provides full control over the data, but it requires more effort to implement.
+
+ Example:
+Binding data manually to a Label:
+```csharp
+using System;
+using System.Data.SqlClient;
+
+protected void Page_Load(object sender, EventArgs e) {
+    string connectionString = "server=localhost; database=MyDB; integrated security=true;";
+    using (SqlConnection conn = new SqlConnection(connectionString)) {
+        conn.Open();
+        SqlCommand cmd = new SqlCommand("SELECT Name FROM Employees WHERE ID=1", conn);
+        SqlDataReader reader = cmd.ExecuteReader();
+
+        if (reader.Read()) {
+            lblEmployeeName.Text = reader["Name"].ToString();  // Manually assigning data
+        }
+        reader.Close();
+    }
+}
+```
+ 📝 Key Points:
+✅ Provides full control over how and when data is loaded.  
+✅ No automatic updates; must manually refresh data.  
+❌ Requires more lines of code.  
+
+---
+
+ 🔹 2. Simple Data Binding
+ Definition:  
+- Simple Data Binding is used when a single value from a data source is bound to a control.  
+- It is commonly used for TextBox, Label, CheckBox, and DropDownList.
+
+ Example:
+Binding data to a TextBox:
+```csharp
+txtEmployeeName.DataBindings.Add("Text", myDataSet.Tables["Employees"], "Name");
+```
+OR, in ASP.NET WebForms:
+```html
+<asp:TextBox ID="txtEmployee" runat="server" Text='<% Bind("Name") %>'></asp:TextBox>
+```
+
+ 📝 Key Points:
+✅ Best for single-value controls (TextBox, Label).  
+✅ Supports automatic updates when data changes.  
+❌ Not ideal for displaying multiple records.  
+
+---
+
+ 🔹 3. Complex Data Binding
+ Definition:  
+- Complex Data Binding is used to bind a collection of data to controls like GridView, ListBox, DropDownList, etc.  
+- It allows the UI control to display multiple records at once.
+
+ Example:
+Binding data to a GridView:
+```csharp
+using System.Data;
+using System.Data.SqlClient;
+
+protected void Page_Load(object sender, EventArgs e) {
+    if (!IsPostBack) {
+        string connectionString = "server=localhost; database=MyDB; integrated security=true;";
+        using (SqlConnection conn = new SqlConnection(connectionString)) {
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT ID, Name FROM Employees", conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+
+            GridView1.DataSource = dt;
+            GridView1.DataBind();  // Binding multiple records
+        }
+    }
+}
+```
+In ASP.NET WebForms:
+```html
+<asp:GridView ID="GridView1" runat="server"></asp:GridView>
+```
+
+ 📝 Key Points:
+✅ Best for displaying multiple records (GridView, ListBox, etc.).  
+✅ Supports automatic updates if configured properly.  
+❌ Requires a data source like `DataTable`, `List<T>`, or `DataSet`.  
+
+---
+
+ 🔹 Summary Table:
+| Type | Usage | Best For | Example Controls | Automatic Updates |
+|------|------|------|------|------|
+| Manual Data Binding | Manually fetching and assigning data | Full control over data | Label, TextBox, DropDownList | ❌ No |
+| Simple Data Binding | Binding a single value to a control | Displaying one field at a time | TextBox, Label, CheckBox | ✅ Yes |
+| Complex Data Binding | Binding multiple records from a collection | Displaying list or grid of data | GridView, DropDownList, ListBox | ✅ Yes |
+
+---
+
+ 🔹 Conclusion
+- Use Manual Data Binding when you need full control over data retrieval and updates.
+- Use Simple Data Binding for single-value fields like `TextBox.Text`.
+- Use Complex Data Binding for lists, tables, and grids where multiple records need to be displayed.
+
+Would you like an example of how to update and delete records in a GridView? 🚀
+
+11.Explain the Disconnected Data Access without IDE.
+
+
+ Disconnected Data Access Without IDE in ADO.NET  
+
+Disconnected data access in ADO.NET allows applications to retrieve and manipulate data without maintaining a continuous connection to the database. This is achieved using DataSet and DataAdapter, which store data in memory and work independently of the database connection.
+
+---
+
+ Key Components of Disconnected Data Access  
+1. DataSet  
+   - Acts as an in-memory database that holds data tables, relationships, and constraints.  
+   - Can hold multiple tables and establish relations between them.
+
+2. DataAdapter  
+   - Acts as a bridge between the database and the DataSet.  
+   - Uses SQL commands to fill the DataSet and update the database.  
+   - Works with Connection and Command objects.
+
+3. CommandBuilder (Optional)  
+   - Automatically generates Insert, Update, and Delete commands based on the Select command of the DataAdapter.
+
+---
+
+ Steps to Implement Disconnected Data Access Without IDE  
+
+1. Establish a connection to the database using `SqlConnection`.
+2. Create a SqlDataAdapter to fetch data from the database.
+3. Fill a DataSet with the retrieved data.
+4. Modify the data in the DataSet (if needed).
+5. Update the database using the DataAdapter.
+6. Close the connection once updates are complete.
+
+---
+
+ Example: Disconnected Data Access in C Without IDE  
+
+```csharp
+using System;
+using System.Data;
+using System.Data.SqlClient;
+
+class Program {
+    static void Main() {
+        string connectionString = "Data Source=SERVER_NAME;Initial Catalog=DATABASE_NAME;Integrated Security=True";
+
+        // Step 1: Establish Connection
+        SqlConnection con = new SqlConnection(connectionString);
+        
+        // Step 2: Create DataAdapter with SQL Query
+        SqlDataAdapter da = new SqlDataAdapter("SELECT  FROM Students", con);
+
+        // Step 3: Create DataSet
+        DataSet ds = new DataSet();
+
+        // Step 4: Fill DataSet with data from database
+        da.Fill(ds, "Students");
+
+        // Display Data
+        foreach (DataRow row in ds.Tables["Students"].Rows) {
+            Console.WriteLine("ID: " + row["StudentID"] + ", Name: " + row["Name"]);
+        }
+
+        // Step 5: Modify Data in DataSet (Example: Adding a new row)
+        DataRow newRow = ds.Tables["Students"].NewRow();
+        newRow["StudentID"] = 101;
+        newRow["Name"] = "John Doe";
+        ds.Tables["Students"].Rows.Add(newRow);
+
+        // Step 6: Create CommandBuilder to generate Update Commands
+        SqlCommandBuilder cb = new SqlCommandBuilder(da);
+
+        // Step 7: Update Database
+        da.Update(ds, "Students");
+
+        Console.WriteLine("Database Updated Successfully.");
+    }
+}
+```
+
+---
+
+ Advantages of Disconnected Data Access  
+✔ Reduces database load – No need to maintain a constant connection.  
+✔ Faster performance – Works on local memory without querying the database repeatedly.  
+✔ Supports multiple tables and relationships within a single DataSet.  
+✔ Good for distributed applications where direct database access is not always possible.
+
+ Disadvantages of Disconnected Data Access  
+✖ More memory usage – DataSet stores data in memory, which can be inefficient for large datasets.  
+✖ Data concurrency issues – Since changes are made offline, conflicts may arise when updating the database.  
+✖ Slower updates – Batch updates may take longer compared to connected access.
+
+---
