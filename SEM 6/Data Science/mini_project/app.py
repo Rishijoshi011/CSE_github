@@ -2,19 +2,14 @@ import pandas as pd
 import spotipy
 import time
 import os
-import requests
 from flask import Flask, redirect, request, session, url_for, Response
 from spotipy.oauth2 import SpotifyOAuth
 from functools import wraps
-from datetime import datetime
-from spotipy import Spotify
-from model import build_model_from_csv
-
 
 app = Flask(__name__)
 app.secret_key = '974d0cf178894c9ebf71ad2814ffc592'
 
-# Configure Spotify OAuth.
+# ! Configure Spotify OAuth.
 sp_oauth = SpotifyOAuth(
     client_id='cc89a5c9ddfb430c9bf6ec1971462dde',
     client_secret='974d0cf178894c9ebf71ad2814ffc592',
@@ -23,6 +18,7 @@ sp_oauth = SpotifyOAuth(
 )
 
 # ==================== Basic Authentication ====================
+'''
 def check_auth(username, password):
     return username == 'rishi' and password == '123'
 
@@ -39,20 +35,21 @@ def requires_auth(f):
         if not auth or not check_auth(auth.username, auth.password):
             return authenticate()
         return f(*args, **kwargs)
-    return decorated
+    return decorated 
+'''
 
-# ==================== Token Refresh ====================
+#todo ==================== Token Refresh ====================
 def refresh_token_if_needed():
     token_info = session.get('token_info', None)
     if token_info:
         if sp_oauth.is_token_expired(token_info):
             print("Token expired, refreshing...")
             token_info = sp_oauth.refresh_access_token(token_info['refresh_token'])
-            session['token_info'] = token_info  # Save refreshed token
+            session['token_info'] = token_info  # Saving refreshed token 
         return token_info['access_token']
     return None
 
-# ==================== Spotify Client Getter ====================
+#todo ==================== Spotify Client Getter ====================
 def get_spotify_client():
     try:
         token_info = session.get('token_info', None)
@@ -69,7 +66,7 @@ def get_spotify_client():
         print("[ERROR] Failed to get Spotify client:", e)
         return None
 
-# ==================== Get Audio Features ====================
+#todo ==================== Get Audio Features ====================
 def get_audio_features_filtered(sp, track_ids, chunk_size=20):
     all_features = {}
     failed_track_ids = []
@@ -99,7 +96,7 @@ def get_audio_features_filtered(sp, track_ids, chunk_size=20):
             print(f"[FAIL] Could not fetch {tid}: {sub_e}")
     return all_features
 
-# ==================== Routes ====================
+#! ==================== Routes ====================
 @app.route('/')
 def home():
     return '''
@@ -110,17 +107,17 @@ def home():
         <a href="/create_playlist">Create Playlist</a>
     '''
 
-# -------------------- LOGIN (Force New Login) --------------------
+#! -------------------- LOGIN (Force New Login) --------------------
 @app.route('/login')
 def login():
-    # Clear session to force new login (including 'users')
+    # Clearing session to force new login (including 'users')
     session.clear()
-    if os.path.exists(".cache"):
+    if os.path.exists(".cache"): # Cleaning old user token data
         os.remove(".cache")
     auth_url = sp_oauth.get_authorize_url() + "&show_dialog=true"
     return redirect(auth_url)
 
-# -------------------- LOGOUT --------------------
+#! -------------------- LOGOUT --------------------
 @app.route('/logout')
 def logout():
     if os.path.exists(".cache"):
@@ -128,17 +125,17 @@ def logout():
     session.clear()
     return redirect('/')
 
-# -------------------- CALLBACK --------------------
+#! -------------------- CALLBACK --------------------
 @app.route('/callback')
 def callback():
-    code = request.args.get('code')
+    code = request.args.get('code') # Code is temporary to get access token
     token_info = sp_oauth.get_cached_token()
     if not token_info:
         token_info = sp_oauth.get_access_token(code, as_dict=True)
     session['token_info'] = token_info
-    return redirect(url_for('add_user'))  # After login, go to add user page
+    return redirect(url_for('add_user'))
 
-# -------------------- ADD ANOTHER USER --------------------
+#todo ======================== ADD ANOTHER USER ======================
 @app.route('/add_user')
 def add_user():
     token_info = session.get('token_info', None)
@@ -153,14 +150,10 @@ def add_user():
         except Exception as e:
             print(f"❌ Error fetching user info: {e}")
             return "❌ Failed to fetch user info."
-
-        # Make sure to clear the session users list if we want a fresh start for a new group.
-        # If you want to support multiple distinct groups, you may want to use different session keys.
-        # For this example, we want to avoid appending duplicate user data.
-        if 'users' not in session:
+        
+        if 'users' not in session: # Check if user is already in session
             session['users'] = []
-        else:
-            # Option: if the same user is already added, do not add duplicate.
+        else:    
             if any(u['id'] == user['id'] for u in session['users']):
                 return f'''
                     <h3>⚠️ User {user["display_name"]} is already added in this session.</h3>
@@ -168,7 +161,7 @@ def add_user():
                     <a href="/create_playlist">Create Playlist</a>
                 '''
         
-        # Get user's top tracks (you can also add saved tracks if needed)
+        # Get user's top tracks
         top_tracks = sp.current_user_top_tracks(limit=50, time_range='long_term')
         
         track_data = []
@@ -223,7 +216,7 @@ def add_user():
     else:
         return "❌ Token expired. Please login again."
 
-# -------------------- CREATE PLAYLIST --------------------
+#todo ===================== CREATE PLAYLIST ========================
 @app.route('/create_playlist')
 def create_playlist():
     if 'users' not in session or not session['users']:

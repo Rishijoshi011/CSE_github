@@ -5,7 +5,7 @@ import random
 import string
 import os
 
-def generate_synthetic_data(output_file='data/synthetic_user_music_data.csv', target_rows=2000, users_file='data/user_music_data.csv'):
+def generate_synthetic_data(output_file='data/synthetic_user_music_data.csv', target_rows=5000, users_file='data/user_music_data.csv'):
     synthetic_data = []
 
     # Load existing users from CSV
