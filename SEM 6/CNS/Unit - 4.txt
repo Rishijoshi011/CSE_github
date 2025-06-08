@@ -1,0 +1,25 @@
+# todo: 1 What is IPSec? Briefly elaborate applications of IPSec.
+
+A) IPSec (Internet Protocol Security) is a set of communication rules or protocols for setting
+up secure connections over a network. It provides a set of security services, including data
+confidentiality, data integrity, and authentication, to protect the confidentiality and
+authenticity of data transmitted over the internet.
+
+Applications:
+● Secure branch office connectivity over the Internet: A company can build a secure
+virtual private network over the Internet or over a public WAN. This enables a business to
+rely heavily on the Internet and reduce its need for private networks, saving costs and
+network management overhead.
+
+● Secure remote access over the Internet: An end user whose system is equipped with IP
+security protocols can make a local call to an Internet service provider and gain secure
+access to a company network. This reduces the cost of toll charges for travelling
+employees and telecommuters.
+
+● Establishing extranet and intranet connectivity with partners: IPsec can be used to
+secure communication with other organizations, ensuring authentication and
+confidentiality and providing a key exchange mechanism.
+
+● Enhancing electronic commerce security: Even though some Web and electronic
+commerce applications have built-in security protocols, the use of IPsec enhances that
+security.
