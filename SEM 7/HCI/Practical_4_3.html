@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Digits</title>
+
+    <style>
+        html {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(173, 216, 230, 0.800), rgba(173, 216, 230, 0.700), rgba(173, 216, 230, 0.600), rgba(173, 216, 230, 0.500)); 
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            height: 40%;
+            width: 40%;
+            padding: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            background-color: whitesmoke;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        input[type="text"] {
+            width: 200px;
+            height: 25px;
+            text-align: center;
+            padding: 0.5rem;
+            margin: 0.5rem 0.25rem;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            border: 1.5px solid #a777e3;
+            outline-color: #6e8efb;
+        }
+
+        #header_text {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #333;
+            text-align: center;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 1.3rem;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" onsubmit="return false;">
+        <p id="header_text">Enter a Number</p>
+        <input type="text" id="num" name="num" placeholder="Enter number" />
+        <label id="result"></label>
+    </form>
+
+    <script>
+        const numInput = document.getElementById('num');
+        const resultLabel = document.getElementById('result');
+
+        numInput.addEventListener('input', function () {
+            const value = numInput.value;
+            const digitMatches = value.match(/\d/g); 
+            if (value === '') {
+                resultLabel.textContent = '';
+            } else {
+                const count = digitMatches ? digitMatches.length : 0;
+                resultLabel.textContent = `The number of digits is: ${count}`;
+            }
+        });
+
+    </script>
+</body>
+</html>

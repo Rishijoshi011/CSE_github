@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Simple Calculator</title>
+    <style>
+      body {
+        background: linear-gradient(#e66465, #9198e5, rgb(1, 59, 250));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .calculator {
+        background: #ffffffdd;
+        padding: 2rem 3rem;
+        border-radius: 15px;
+        box-shadow: rgba(0, 0, 0, 0.548) 20px 10px 30px 20px;
+        text-align: center;
+        width: 300px;
+      }
+      input[type="number"] {
+        width: 120px;
+        padding: 0.5rem;
+        margin: 0.5rem 0.25rem;
+        font-size: 1.1rem;
+        border-radius: 8px;
+        border: 1.5px solid #a777e3;
+        outline-color: #6e8efb;
+      }
+      button {
+        padding: 0.55rem 1.5rem;
+        margin: 0.5rem 0.5rem 1rem 0.5rem;
+        font-size: 1.3rem;
+        border: none;
+        border-radius: 12px;
+        background-color: #6e8efb;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      button:hover {
+        background-color: #a777e3;
+      }
+      #result {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #4a2c9f;
+        min-height: 2em;
+        margin-top: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <input type="number" name="num1" id="num1" placeholder="Enter a number" />
+      <input type="number" name="num2" id="num2" placeholder="Enter a number" />
+      <div>
+        <button id="plus" title="Add">+</button>
+        <button id="mul" title="Multiply">*</button>
+      </div>
+      <label id="result" aria-live="polite"></label>
+    </div>
+
+    <script type="text/javascript">
+      let btnPlus = document.getElementById("plus");
+      let btnMul = document.getElementById("mul");
+      let input1 = document.getElementById("num1");
+      let input2 = document.getElementById("num2");
+      let resultLabel = document.getElementById("result");
+
+      function parseInputs() {
+        let val1 = parseFloat(input1.value);
+        let val2 = parseFloat(input2.value);
+        return { val1, val2 };
+      }
+
+      btnPlus.addEventListener("click", function (event) {
+        const { val1, val2 } = parseInputs();
+        if (isNaN(val1) || isNaN(val2)) {
+          resultLabel.textContent =
+            "Please enter valid numbers in both fields.";
+          return;
+        }
+        const sum = val1 + val2;
+        resultLabel.textContent = `${val1} + ${val2} = ${sum}`;
+      });
+
+      btnMul.addEventListener("click", function (event) {
+        const { val1, val2 } = parseInputs();
+        if (isNaN(val1) || isNaN(val2)) {
+          resultLabel.textContent =
+            "Please enter valid numbers in both fields.";
+          return;
+        }
+        const product = val1 * val2;
+        resultLabel.textContent = `${val1} × ${val2} = ${product}`;
+      });
+    </script>
+  </body>
+</html>

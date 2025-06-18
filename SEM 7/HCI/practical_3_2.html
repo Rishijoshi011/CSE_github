@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registration Form</title>
+
+        <style>
+            html {
+                width: 100%;
+                height: 100%;
+                background: linear-gradient( rgba(173, 216, 230, 0.800), rgba(173, 216, 230, 0.700), rgba(173, 216, 230, 0.600), rgba(173, 216, 230, 0.500)); 
+                background-repeat: no-repeat;
+            }
+
+            form {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 70%;
+                width: 35%;
+                font-family: Arial, sans-serif;
+                background-color: whitesmoke;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(10px);
+                border-radius: 10px;
+                padding: 20px;
+                box-sizing: border-box;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            input[type="text"], input[type="email"], input[type="tel"]{
+                width: 200px;
+                height: 25px;
+                text-align: center;
+                padding: 0.5rem;
+                margin: 0.5rem 0.25rem;
+                font-size: 1.1rem;
+                border-radius: 8px;
+                border: 1.5px solid #a777e3;
+                outline-color: #6e8efb;
+            }
+            
+            select{
+                width: 217px;
+                margin: 0.5rem 0.25rem;
+                padding: 0.5rem;
+                font-size: 1.1rem;
+                border-radius: 8px;
+                border: 1.5px solid #a777e3;
+                outline-color: #6e8efb;
+                
+            }
+
+            button {
+                padding: 0.55rem 1.5rem;
+                margin: 0.5rem 0.5rem 1rem 0.5rem;
+                font-size: 1.3rem;
+                border: none;
+                border-radius: 12px;
+                background-color: #6e8efb;
+                color: white;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+        
+            button:hover {
+                background-color: #a777e3;
+            }
+        </style>
+
+    </head>
+    <body>
+        <form action="#" enctype="multipart/form-data">
+            <table align="center" width="400px" height="400px">
+                <caption> <h2>Admission Form</h2> </caption>
+                <tr>
+                    <td><label for="name">Full Name:</label></td>
+                    <td><input type="text" name="name" id="name" placeholder="ex John Marston"></td>
+                </tr>
+                <tr>
+                    <td><label for="marks">Marks(Diploma/12th):</label></td>
+                    <td><input type="text" name="marks" id="marks" placeholder="CGPA/percentage"></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" name="email" id="email" placeholder="example@gmail.com"></td>
+                </tr>
+                <tr>
+                    <td><label for="gender">Gender:</label></td>
+                    <td>
+                        <input type="radio" name="gender" id="male" value="male">
+                        <label for="male">Male</label>
+                        <input type="radio" name="gender" id="female" value="female">
+                        <label for="female">Female</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="city">City:</label></td>
+                    <td>
+                        <select name="city" id="city">
+                            <option value="new_york">New York</option>
+                            <option value="los_angeles">Los Angeles</option>
+                            <option value="chicago">Chicago</option>
+                            <option value="houston">Houston</option>
+                            <option value="phoenix">Tahiti</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="phone">Personal Phone Number:</label></td>
+                    <td><input type="tel" name="phone" id="phone" placeholder="+91 123456789"></td>
+                </tr>
+                <tr>
+                    <td><label for="phone">Parent's Phone Number:</label></td>
+                    <td><input type="tel" name="phone" id="phone" placeholder="+91 123456789"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <button type="submit">Submit</button>
+                        <button type="reset">Reset</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

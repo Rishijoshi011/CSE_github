@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculator</title>
+    </head>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f7f7f7;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(whitesmoke, rgb(196, 219, 226), lightblue, rgb(140, 186, 201));
+            background-repeat: no-repeat;
+        }
+
+        table {
+            width: 300px;
+            height: 400px;
+            background-color: #333;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        #result {
+            background-color: #222;
+            font-size: 32px;
+            font-weight: 800;
+            color: white;
+            text-align: right;
+            padding-right: 10px;
+            border-bottom: 1px solid #444;
+        }
+        
+        #result td {
+            width: 100%;
+        }
+        
+        #textbox {
+            display: block;
+            width: 100%;
+        }
+        
+        button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 18px;
+            border: none;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btns td {
+            width: 25%;
+        }
+        #zero { 
+            width: 110px;
+            border-radius: 25px;
+        }
+        #clear {
+            background-color: #ff9500;
+        }
+        #abs, #mod, #divi, #mul, #subs, #adds {
+            background-color: #ff9500;
+        }
+        #exe {
+            background-color: #ff9500;
+        }
+        button:hover {
+            background-color: #ffbf47;
+        }
+        .nums {
+            background-color: #505050;
+        }
+    </style>
+
+    <body>
+        <table>
+            <tr id="result" name="result">
+                <td colspan="4"> <label for="result" id="textbox">0</label></td>
+            </tr>            
+            <tr class="btns">
+                <td align="center"><button type="button"
+                        id="clear">AC</button></td>
+                <td align="center"><button type="button"
+                        id="abs">+/-</button></td>
+                <td align="center"><button type="button" id="mod"
+                        class="nums">%</button></td>
+                <td align="center"><button type="button" id="divi"
+                        class="nums">&divide;</button></td>
+            </tr>
+            <tr class="btns">
+                <td align="center"><button class="nums"
+                        type="button">7</button></td>
+                <td align="center"><button class="nums"
+                        type="button">8</button></td>
+                <td align="center"><button class="nums"
+                        type="button">9</button></td>
+                <td align="center"><button type="button" id="mul"
+                        class="nums">x</button></td>
+            </tr>
+            <tr class="btns">
+                <td align="center"><button class="nums"
+                        type="button">4</button></td>
+                <td align="center"><button class="nums"
+                        type="button">5</button></td>
+                <td align="center"><button class="nums"
+                        type="button">6</button></td>
+                <td align="center"><button type="button" id="subs"
+                        class="nums">-</button></td>
+            </tr>
+            <tr class="btns">
+                <td align="center"><button class="nums"
+                        type="button">1</button></td>
+                <td align="center"><button class="nums"
+                        type="button">2</button></td>
+                <td align="center"><button class="nums"
+                        type="button">3</button></td>
+                <td align="center"><button type="button" id="adds"
+                        class="nums">+</button></td>
+            </tr>
+            <tr class="btns">
+                <td colspan="2" align="center"><button type="button" id="zero"
+                        class="nums">0</button></td>
+                <td align="center"><button type="button"
+                        class="nums">.</button></td>
+                <td align="center"><button type="button"
+                        id="exe">=</button></td>
+            </tr>
+        </table>
+    </body>
+
+    <script>
+        const buttons = document.querySelectorAll('button.nums');
+        const result = document.getElementById('textbox');
+        let firstValue = null;
+        let operator = null;
+        let isOperatorPressed = false;
+    
+        
+        buttons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                if (result.innerText === '0' || isOperatorPressed) {
+                    result.innerText = this.innerText;
+                    isOperatorPressed = false; 
+                } else {
+                    result.innerText += this.innerText;
+                }
+            });
+        });
+    
+        
+        document.getElementById('clear').addEventListener('click', () => {
+            result.innerText = '0';
+            firstValue = null;
+            operator = null;
+            isOperatorPressed = false;
+        });
+    
+
+        document.getElementById('abs').addEventListener('click', () => {
+            let currentValue = result.innerText;
+            if (currentValue.charAt(0) === '-') {
+                result.innerText = currentValue.slice(1);
+            } else {
+                result.innerText = '-' + currentValue;
+            }
+        });
+    
+
+        document.querySelectorAll('#adds, #subs, #mul, #divi, #mod').forEach(function(button) {
+            button.addEventListener('click', function() {
+                if (result.innerText !== '') {
+                    if (firstValue !== null && operator !== null) {
+                        
+                        const secondValue = parseFloat(result.innerText);
+                        let computation;
+                        switch (operator) {
+                            case '+':
+                                computation = firstValue + secondValue;
+                                break;
+                            case '-':
+                                computation = firstValue - secondValue;
+                                break;
+                            case '*':
+                                computation = firstValue * secondValue;
+                                break;
+                            case '/':
+                                computation = firstValue / secondValue;
+                                break;
+                            case '%':
+                                computation = firstValue % secondValue;
+                                break;
+                        }
+                        result.innerText = computation.toString();
+                        firstValue = computation;
+                    } else {
+                        firstValue = parseFloat(result.innerText);
+                    }
+                    operator = this.innerText === 'x' ? '*' : (this.innerText === '÷' ? '/' : this.innerText);
+                    isOperatorPressed = true; 
+                }
+            });
+        });
+    
+        document.getElementById('exe').addEventListener('click', () => {
+            if (firstValue !== null && operator !== null) {
+                const secondValue = parseFloat(result.innerText);
+                let computation;
+                switch (operator) {
+                    case '+':
+                        computation = firstValue + secondValue;
+                        break;
+                    case '-':
+                        computation = firstValue - secondValue;
+                        break;
+                    case '*':
+                        computation = firstValue * secondValue;
+                        break;
+                    case '/':
+                        computation = firstValue / secondValue;
+                        break;
+                    case '%':
+                        computation = firstValue % secondValue;
+                        break;
+                    default:
+                        computation = secondValue;
+                }
+                result.innerText = computation.toString();
+                firstValue = computation; 
+                operator = null; 
+                isOperatorPressed = false;
+            }
+        });
+    </script>
+
+</html>

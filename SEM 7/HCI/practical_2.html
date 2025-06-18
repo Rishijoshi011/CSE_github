@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grade</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: "Times New Roman", Times, serif;
+      }
+
+      html {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(#e66465, #9198e5, rgb(1, 59, 250));
+        background-repeat: no-repeat;
+      }
+      #box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-direction: column;
+        width: 50%;
+        height: 60%;
+        background-color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: none;
+        z-index: 999;
+        border-radius: 18px;
+        background-color: rgba(255, 255, 255, 0.479);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+      }
+
+      input[type="text"] {
+        width: 200px;
+        text-align: center;
+        height: 25px;
+        padding: 0.5rem;
+        margin: 0.5rem 0.25rem;
+        font-size: 1.1rem;
+        border-radius: 8px;
+        border: 1.5px solid #a777e3;
+        outline-color: #6e8efb;
+      }
+
+      button {
+        padding: 0.55rem 1.5rem;
+        margin: 0.5rem 0.5rem 1rem 0.5rem;
+        font-size: 1.3rem;
+        border: none;
+        border-radius: 12px;
+        background-color: #6e8efb;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #a777e3;
+      }
+
+      #result {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #4a2c9f;
+        min-height: 2em;
+        margin-top: 0.5rem;
+      }
+      
+      .header_text {
+        color: black;
+        font-size: 18px;
+        font-weight: 600;
+        margin: 10px 0px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div id="box">
+      <label for="marks" class="header_text"> Enter Marks to see your grade</label>
+      <input type="text" id="marks" name="marks" placeholder="Enter Grade" />
+      <label id="result"></label> 
+      <label for="num" class="header_text"> Enter numbers in comma seprated to see Ascending order and Descending order</label>
+      <input type="text" id="num" name="num" placeholder="Enter number" />
+      <label id="result2"></label>
+      <label id="result3"></label>
+      <label for="num2" class="header_text"> Enter Two numbers to perform subtraction </label>
+      <div>
+        <input type="text" id="num2" name="num2" placeholder="Enter first operand" />
+        <input type="text" id="num3" name="num3" placeholder="Enter second operand" />
+      </div>
+      <label id="result4"></label>
+      <button id="subtraction">Subtraction</button>
+    </div>
+
+    <script>
+      let inp_grade = document.getElementById("marks");
+      let result = document.getElementById("result");
+      
+      let inp_num = document.getElementById("num");
+      let result2 = document.getElementById("result2");
+      let result3 = document.getElementById("result3");
+
+      let inp_num2 = document.getElementById("num2");
+      let inp_num3 = document.getElementById("num3");
+      let result4 = document.getElementById("result4");
+      let subtraction = document.getElementById("subtraction");
+
+      subtraction.addEventListener("click", function () {
+        let num1 = Number(inp_num2.value);
+        let num2 = Number(inp_num3.value);
+        if (isNaN(num1) || isNaN(num2)) {
+          result4.textContent = "Please enter valid numbers.";
+        } else {
+          result4.textContent = "Subtraction Result: " + (num1 - num2);
+        }
+      });
+    
+
+      inp_num.addEventListener("input", function () {
+        let numbers = inp_num.value.split(",").map(Number);
+        if (numbers.some(isNaN)) {
+          result2.textContent = "Please enter valid numbers.";
+          result3.textContent = "";
+        } else {
+          let asc = [...numbers].sort((a, b) => a - b);
+          let desc = [...numbers].sort((a, b) => b - a);
+          result2.textContent = "Ascending Order: " + asc.join(", ");
+          result3.textContent = "Descending Order: " + desc.join(", ");
+        }
+      });
+
+      inp_grade.addEventListener("input", function () {
+        let grade = Number(inp_grade.value);
+        if (grade >= 80 && grade <= 100) {
+          result.textContent = "Grade is A";
+        } else if (grade >= 70 && grade < 80) {
+          result.textContent = "Grade is B";
+        } else if (grade >= 60 && grade < 70) {
+          result.textContent = "Grade is C";
+        } else if (grade >= 50 && grade < 60) {
+          result.textContent = "Grade is D";
+        } else if (grade >= 0 && grade < 50) {
+          result.textContent = "Grade is F";
+        } else {
+          result.textContent = "";
+        }
+      });
+    </script>
+  </body>
+</html>

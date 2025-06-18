@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leap Year Checker</title>
+    <style>
+      html {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(173, 216, 230, 0.8),rgba(173, 216, 230, 0.7),rgba(173, 216, 230, 0.6),rgba(173, 216, 230, 0.5));
+        background-repeat: no-repeat;
+      }
+      form {
+        height: 40%;
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        align-items: center;
+        padding: 20px;
+        
+        font-family: Arial, sans-serif;
+        background-color: whitesmoke;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        box-sizing: border-box;
+      }
+      input[type="text"] {
+        width: 200px;
+        height: 25px;
+        text-align: center;
+        padding: 0.5rem;
+        margin: 0.5rem 0.25rem;
+        font-size: 1.1rem;
+        border-radius: 8px;
+        border: 1.5px solid #a777e3;
+        outline-color: #6e8efb;
+      }
+      .header_text {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+    </style>
+  </head>
+  <body>
+    <form action="#" enctype="multipart/form-data">
+      <label for="num" class="header_text">
+        Enter year to Check Leap Year</label>
+      <input type="text" id="num" name="num" placeholder="Enter year" />
+      <label id="result2"></label>
+    </form>
+    <script>
+        const num = document.getElementById("num");
+        const result2 = document.getElementById("result2");
+
+        num.addEventListener("input", () => {
+            const year = parseInt(num.value);
+            if (isNaN(year)) {
+                result2.textContent = "Please enter a valid year.";
+                return;
+            }
+            if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+                result2.textContent = year + " is a leap year.";
+            } else {
+                result2.textContent = year + " is not a leap year.";
+            }
+        });
+    </script>
+  </body>
+</html>
