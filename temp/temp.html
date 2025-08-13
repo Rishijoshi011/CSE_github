@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getUserData() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    const success = true;
+                    if (success) {
+                        resolve({ name: "Rishi", age: 19 });
+                    } else {
+                        reject("Failed to fetch user");
+                    }
+                }, 2000); // 2 seconds delay
+            });
+        }
+
+        getUserData()
+            .then((user) => {
+                return user.age;
+            })
+            .then((age)=>{
+                console.log("User Age:", age);
+            } )
+            .catch((err) => {
+                console.error   ("Error:", err);
+            });
+
+    </script>
+</body>
+
+</html>
