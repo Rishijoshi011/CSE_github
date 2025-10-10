@@ -4,9 +4,9 @@
 using namespace std;
 
 // ! left, middle and right triangle pattern is dependent on the space given in ""
-// * left triangle space = ""
-// * middle triangle space = " "
-// * right triangle space = "  "
+// * left triangle space = "" 0
+// * middle triangle space = " " 1
+// * right triangle space = "  " 2
     
 int main() {
 
